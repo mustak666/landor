@@ -1,0 +1,173 @@
+@use '../utils' as *;
+
+.tp-btn {
+	display: flex;
+    align-items: center;
+	background-color: var(--tp-secoundery-color);
+	font-weight: 600;
+	color: var(--tp-theme-color);
+	padding: 0 27px;
+    padding-right: 21px;
+	line-height: 1;
+	border-radius: 52px;
+    width: fit-content;
+    height: 52px;
+	@media #{$md,$xs,$sm}{
+		height: 45px;
+        padding: 0 20px;
+        padding-right: 15px;
+        font-size: 15px;
+	}
+    &-icon{
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        background-color: var(--tp-theme-color);
+        color: var(--tp-white-color);
+        text-align: center;
+        line-height: 34px;
+        border-radius: 50px;
+        margin-left: 27px;
+        @include transition(.3s);
+        & svg{
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.3s);
+        }
+        @media #{$md,$xs,$sm}{
+            margin-left: 20px;
+            line-height: 23px;
+        }
+    }
+    &-border{
+        background-color: transparent;
+        border: 1px solid var(--tp-theme-color);
+        & .tp-btn-icon{
+            margin-left: 25px;
+        }
+        &-white{
+            border-color: var(--tp-white-color);
+            color: var(--tp-white-color);
+            & .tp-btn-icon{
+                background-color: var(--tp-white-color);
+                & svg{
+                    color: var(--tp-theme-color);
+                }
+            }
+            &:hover{
+                color: var(--tp-white-color);
+            }
+        }
+    }
+    &-white{
+        background-color: var(--tp-white-color);
+    }
+    &-submit {
+        background-color: var(--tp-white-color);
+        line-height: 1;
+        width: 100%;
+        border-radius: 56px;
+        padding: 19px;
+        font-weight: 600;
+        color: var(--tp-theme-color);
+        &:hover{
+            background-color: var(--tp-secoundery-color);
+        }
+        @media #{$xs,$sm}{
+            padding: 15px;
+        }
+    }
+    &-black {
+        background-color: var(--tp-theme-color);
+        color: var(--tp-white-color);
+        & .tp-btn-icon{
+            background-color: var(--tp-white-color);
+            & svg{
+                color: var(--tp-theme-color);
+            }
+        }
+    }
+    &-orange {
+        background-color: var(--tp-orange-color);
+        color: var(--tp-white-color);
+        & .tp-btn-icon{
+            background-color: var(--tp-white-color);
+            & svg{
+                color: var(--tp-theme-color);
+            }
+        }
+        &:hover{
+            color: var(--tp-white-color);
+        }
+    }
+    &-swiper {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 54px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background-color: var(--tp-secoundery-color);
+            border-color: transparent;
+        }
+    }
+    &-circle{
+        height: 140px;
+        width: 140px;
+        background: var(--tp-theme-color);
+        @include flex-center();
+        border-radius: 140px;
+        color: var(--tp-white-color);
+        @media #{$xl}{
+           height: 110px;
+           width: 110px;
+           & svg{
+            width: 25px;
+           }
+        }
+        @media #{$lg,$md}{
+           height: 80px;
+           width: 80px;
+           & svg{
+            width: 20px;
+           }
+        }
+        @media #{$xs,$sm}{
+           height: 60px;
+           width: 60px;
+           & svg{
+            width: 15px;
+           }
+        }
+    }
+
+    &:hover{
+        padding: 8px 8px 8px 25px;
+        font-weight: 700;
+        @media #{$md,$xs,$sm}{
+            padding-left: 20px;
+        }
+        & .tp-btn-icon{
+            width: 36px;
+            height: 36px;
+            margin-left: 15px;
+            @media #{$md,$xs,$sm}{
+               width: 25px;
+               height: 25px;
+            }
+            & svg{
+                opacity: 1;
+                visibility: visible;
+                @media #{$md,$xs,$sm}{
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+

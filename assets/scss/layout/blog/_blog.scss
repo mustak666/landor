@@ -1,0 +1,360 @@
+@use '../../utils' as *;
+
+.tpblogpost {
+	background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 10px;
+    @include transition(.3s);
+    &__meta{
+        & span{
+            display: inline-block;
+            font-weight: 500;
+            background-color: var(--tp-white-color);
+            border: 1px solid transparent;
+            border-radius: 30px;
+            line-height: 1;
+            padding: 12px 19px;
+            @include transition(.3s);
+            @media #{$lg,$md}{
+                padding: 7px 15px;
+                font-size: 14px;
+            }
+            @media #{$xs,$sm}{
+                padding: 7px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+    &__author{
+        @media #{$xs,$sm}{
+            margin-bottom: 15px;
+        }
+        &-title{
+            font-size: 18px;
+            margin-bottom: 2px;
+            @media #{$xs,$sm}{
+                margin-bottom: 0;
+            }
+        }
+        &-thumb{
+            @media #{$md,$xs,$sm}{
+                margin-right: 10px;
+            }      
+           & img{
+                @media #{$md,$xs,$sm}{
+                    width: 40px;
+                    height: 40px;
+                }
+           } 
+        }
+    }
+    &__title{
+        @media #{$lg}{
+            font-size: 25px;
+            margin-bottom: 35px;
+        }
+        @media #{$md,$xs,$sm}{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &__thumb{
+        height: 100px;
+        @include transition(.4s);
+        @media #{$md,$xs,$sm}{
+            height: 60px;
+        }
+        @media #{$xs,$sm}{
+            margin-bottom: 20px;
+        }
+        & a{
+            & img{
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include transition(.5s);
+            }
+        }
+    }
+    &__content {
+        @media #{$lg,$md,$xs,$sm}{
+            padding-top: 10px;
+        }
+        &-down{
+            margin-bottom: -198px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(.4s);
+            @media #{$lg}{
+               margin-bottom: -162px;
+            }
+            @media #{$md}{
+              margin-bottom: -126px;
+            }
+            @media #{$xs,$sm}{
+              margin-bottom: -120px;
+            }
+        }
+    }
+    &__button{
+        margin-right: 23px;
+        @media #{$md}{
+            margin-right: 0;
+            margin-left: -10px;
+        }
+        @media #{$xs,$sm}{
+            justify-content: start;
+        }
+        @media #{$sm}{
+           transform: translateY(-8px);
+        }
+    }
+    &:hover,&.active{
+        border-color: transparent;
+        background-color: var(--tp-white-color);
+        & .tpblogpost__meta{
+            & span{
+                border-color: rgba(0, 0, 0, 0.15);
+                background-color: transparent;
+            }
+        }
+        & .tpblogpost__thumb{
+            height: 300px;
+            @media #{$xl}{
+               height: 250px;
+            }
+            @media #{$lg}{
+               height: 200px;
+            }
+            @media #{$md,$xs,$sm}{
+               height: 150px;
+            }
+        }
+        & .tpblogpost__content-down{
+            margin-bottom: 0%;
+            opacity: 1;
+            visibility: visible;
+        }
+        & .tpblogpost__button{
+            & .tp-btn.tp-btn-border{
+                background-color: var(--tp-secoundery-color);
+                border-color: transparent;
+            }
+        }
+    }
+}
+.tp-blog{
+    &-spacing{
+        margin-bottom: 50px;
+        @media #{$lg}{
+           padding: 120px 0;
+           margin-bottom: 30px;
+        }
+        @media #{$md}{
+           padding: 100px 0;
+           margin-bottom: 20px;
+        }
+        @media #{$xs,$sm}{
+           padding: 70px 0;
+           margin-bottom: 0;
+        }
+    }
+    &-heading{
+        @media #{$lg}{
+           margin-bottom: 50px;
+        }
+        @media #{$md}{
+           margin-bottom: 40px;
+        }
+        @media #{$xs,$sm}{
+           margin-bottom: 35px;
+        }
+    }
+    &-area{
+        @media #{$xs,$sm}{
+            border-radius: 0;
+        } 
+    }
+}
+
+.tp-postbox{
+    &-spacing{
+        padding-top: 150px;
+        padding-bottom: 115px;
+        @media #{$lg,$md}{
+          padding-top: 100px;
+          padding-bottom: 70px;
+        }
+        @media #{$xs,$sm}{
+            padding-top: 70px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+.tppostbox{
+    overflow: hidden;
+    &__shape{
+        background-color: #fff;
+        border-radius: 0 0 20px 0;
+        padding: 0 10px 10px 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        &::before {
+            background-color: transparent;
+            border-top-left-radius: 20px;
+            bottom: -40px;
+            box-shadow: 0 -18px #fff;
+            content: "";
+            height: 40px;
+            position: absolute;
+            left: 0;
+            width: 20px;
+        }
+        &::after{
+            background-color: transparent;
+            border-top-right-radius: 20px;
+            bottom: 12px;
+            box-shadow: 0 -18px #fff;
+            content: "";
+            height: 40px;
+            position: absolute;
+            right: -30px;
+            width: 20px;
+            transform-origin: center;
+            transform: rotate(273deg);
+        }
+    }
+    &__title {
+        font-size: 24px;
+    }
+    &__meta {
+        display: inline-block;
+        background: var(--tp-gray-color);
+        border-radius: 30px;
+        padding: 8px 15px;
+        font-weight: 500;
+        line-height: 1;
+        position: relative;
+        z-index: 1;
+    }
+    &__thumb{
+        overflow: hidden;
+        &::before{
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        z-index: 0;
+        position: absolute;
+        background: var(--tp-theme-color);
+        opacity: .3;
+        top: 0;
+        left: 110px;
+        transform: scale3d(1, 1, 1);
+        transform-style: preserve-3d;
+        transition: transform .8s ease;
+        pointer-events: none;
+        }
+    }
+    &__btn{
+        bottom: 50%;
+        z-index: 9;
+    }
+    &:hover{
+        & .tppostbox__btn{
+            bottom: 50%;
+            opacity: 1;
+            visibility: visible;
+        }
+        & .tppostbox__thumb{
+            &::before{
+                transform: scale3d(45, 45, 1);
+                will-change: transform;
+            }
+        }
+
+    }
+}
+
+.tppostbox2{
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    @include transition(.3s);
+    &__meta {
+        display: inline-block;
+        color: var(--tp-theme-color);
+        font-weight: 500;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 30px;
+        border-radius: 30px;
+        line-height: 1;
+        padding: 5px 14px;
+    }
+    &__content {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        grid-gap: 20px;
+        @media #{$xs,$sm}{
+            grid-gap: 10px;
+        } 
+    }
+    &__title{
+        @media #{$lg}{
+          font-size: 22px;
+        } 
+        @media #{$xs,$sm}{
+          font-size: 20px;
+          & br{
+            display: none;
+          }
+        } 
+    }
+    &__link{
+        & a{
+            width: 60px;
+            height: 70px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            @include flex-center();
+            color: var(--tp-theme-color);
+            @media #{$xs,$sm}{
+              width: 40px;
+              height: 50px;
+              & svg{
+                width: 13px;
+              }
+            } 
+            &:hover{
+                background-color: var(--tp-secoundery-color);
+            }
+        }
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        background-color: var(--tp-orange-color);
+        width: 0%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        @include transition(.3s);
+    }
+    &:hover{
+        border-color: transparent;
+        &::before{
+            width: 100%;
+        }
+        & .tppostbox2__link{
+            & a{
+                background-color: var(--tp-secoundery-color);
+            }
+        }
+    }
+}
+

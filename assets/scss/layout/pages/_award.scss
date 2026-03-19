@@ -1,0 +1,156 @@
+@use '../../utils' as *;
+
+
+.tp-awards{
+    &-badge {
+        width: 308px;
+        height: 308px;
+        border-radius: 100%;
+        text-align: center;
+        padding-top: 107px;
+        @media #{$lg,$md}{
+           width: 250px;
+           height: 250px;
+           padding-top: 75px;
+        }
+        @media #{$xs,$sm}{
+           width: 200px;
+           height: 200px;
+           padding-top: 80px;
+        }
+        & span {
+            font-size: 18px;
+            display: inline-block;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+        &-up{
+            margin-top: -178px;
+            @media #{$lg,$md}{
+                margin-top: -120px;
+            }
+            @media #{$xs,$sm}{
+                margin-top: -75px;
+            }
+        }
+        &-wrap{
+            @media #{$md,$xs,$sm}{
+               margin-bottom: 40px;
+               display: flex;
+               justify-content: center;
+            }
+        }
+    }
+    &-num {
+        font-size: 120px;
+        font-weight: 800;
+        line-height: 80px;
+        letter-spacing: -0.04em;
+        margin-bottom: 17px;
+        @media #{$md}{
+           font-size: 80px;
+           line-height: 60px;
+        }
+        @media #{$xs,$sm}{
+           font-size: 60px;
+           line-height: 15px;
+        }
+    }
+    &-shape {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50px;
+    }
+    &-spacing{
+        @media #{$lg,$md}{
+            padding: 100px 0;
+        }
+        @media #{$xs,$sm}{
+            padding: 70px 0;
+        }
+    }   
+}
+
+.tpawards{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 25px 27px;
+    &__title {
+        font-size: 20px;
+        transform: translateY(-2px);
+        @include transition(.3s);
+        @media #{$xs,$sm}{
+          margin-bottom: 10px;
+        } 
+    }
+    &__arrow {
+        transform: translateY(-1px);
+    }
+    &__year{
+         @include transition(.3s);
+        @media #{$xs,$sm}{
+          margin-bottom: 10px;
+        } 
+    }
+    &__shape {
+        top: -48px;
+        right: 23%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+        @include transition(.3s);
+        @media #{$lg,$md}{
+           right: 5%;
+        }
+        & img{
+            @media #{$lg,$md,$sm}{
+                width: 70%;
+            }
+        }
+    }
+    &__content{
+        @include transition(.3s);
+        @media #{$xs}{
+           display: inline-block;
+        }
+        & p{
+            @media #{$xs}{
+            margin-bottom: 10px;
+            } 
+        }
+    }
+    &:hover{
+        & .tpawards__content{
+            .tpawards__year,.tpawards__title,.tpawards__arrow,p{
+                color: var(--tp-orange-color);
+            }
+        }
+        & .tpawards__shape{
+            top: -58px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__wrap{
+        & > .tpawards:first-child{
+           border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+
+.hover-reveal-img .tpawards__shape {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 9;
+	overflow: hidden;
+	pointer-events: none;
+	-webkit-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	-moz-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	-ms-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	-o-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transform: scale(0.4);
+    visibility: visible;
+}
