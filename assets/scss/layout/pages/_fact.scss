@@ -100,7 +100,6 @@
         align-items: end;
         justify-content: center;
         padding: 25px 17px;
-        margin-top: -334px;
         z-index: 1;
         position: relative;
         @media #{$lg}{
@@ -112,6 +111,20 @@
             margin-top: -250px;
             padding-bottom: 0;
         }
+        &-2{
+            @media #{$lg,$md,$xs,$sm}{
+                margin-top: 0;
+            }
+        }
+    }
+    &-up{
+        margin-top: -334px;
+        @media #{$lg}{
+            margin-top: -250px;
+        }
+        @media #{$md,$xs,$sm}{
+            margin-top: -250px;
+        }   
     }
 }
 .tpfunfect{

@@ -92,29 +92,6 @@ img{
 		}
 	}
 }
-.tp-fs{
-	&-16{
-		font-size: 16px;
-	}
-	&-20{
-		font-size: 20px;
-	}
-	&-24{
-		font-size: 24px;
-	}
-	&-30{
-		font-size: 30px;
-		@media #{$xs}{
-            font-size: 22px;
-        }
-	}
-	&-40{
-		font-size: 40px;
-        @media #{$lg}{
-            font-size: 32px;
-        }
-	}
-}
 
 .tp-upper{
 	text-transform: uppercase;
@@ -295,7 +272,7 @@ img{
 		background: linear-gradient(87.95deg, rgba(0, 0, 0, 0.6) 2.25%, rgba(0, 0, 0, 0) 98.79%);
 	}
 }
-.tp-linear-bg-4,.tp-linear-bg-6{
+.tp-linear-bg-4,.tp-linear-bg-6,.tp-linear-bg-7{
 	position: relative;
 	z-index: 2;
 	&::after{
@@ -316,6 +293,11 @@ img{
 		background: linear-gradient(360deg, #D9D813 0%, rgba(0, 0, 0, 0.55) 75%);
 	}
 }
+.tp-linear-bg-7{
+	&::after{
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, 0.8) 100%);
+	}
+}
 
 
 
@@ -331,6 +313,14 @@ img{
 		top: 0;
 		left: 0;
 		z-index: -1;
+	}
+}
+.tp-fs{
+	&-20{
+		font-size: 20px;
+	}
+	&-24{
+		font-size: 24px;
 	}
 }
 .tp-overlay-2{
@@ -361,31 +351,19 @@ img{
 .container-wide{
 	max-width: 1860px;
 	margin: 0 auto;
-    @media #{$x4l,$x3l,$xxl}{
+    @media #{$x4l,$x3l}{
         padding: 0 20px;
     }
-    @media #{$xl}{
-        padding: 0 20px;
-    }
-    @media #{$lg}{
-        padding: 0 15px;
-    }
-    @media #{$md}{
-        padding: 0 10px;
-    }
+	@media #{$xxl,$xl,$lg,$md,$xs,$sm}{
+	   padding: 0;
+	}
 }
 .default-margin{
 	margin: 0 30px;
-	@media #{$x4l,$x3l,$xxl,$xl}{
+	@media #{$x4l,$x3l}{
 		margin: 0 20px;
 	}
-	@media #{$lg}{
-		margin: 0 15px;
-	}
-	@media #{$md}{
-		margin: 0 10px;
-	}
-	@media #{$xs,$sm}{
+	@media #{$xxl,$xl,$lg,$md,$xs,$sm}{
 		margin: 0;
 	}
 }

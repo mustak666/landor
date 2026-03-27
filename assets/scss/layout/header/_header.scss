@@ -287,6 +287,22 @@
             }
         }
     }
+    &-area{
+        &.container-wide,& .container-wide{
+            @media #{$x4l,$x3l,$xxl}{
+                padding: 0 20px;
+            }
+            @media #{$xl}{
+                padding: 0 20px;
+            }
+            @media #{$lg}{
+                padding: 0 15px;
+            }
+            @media #{$md}{
+                padding: 0 10px;
+            }
+        }
+    }
 }
 
 

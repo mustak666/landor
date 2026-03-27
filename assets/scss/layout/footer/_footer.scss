@@ -176,17 +176,14 @@
     }
     &-margin{
         margin: 0 30px 30px 30px;
-        @media #{$x4l,$x3l,$xxl,$xl}{
+        @media #{$x4l,$x3l}{
             margin: 0 20px 20px 20px;
         }
-        @media #{$lg}{
-            margin: 0 15px 15px 15px;
-        }
-        @media #{$md}{
-            margin: 0 10px 10px 10px;
-        }
-        @media #{$xs,$sm,$sm}{
+        @media #{$xs,$sm,$md,$lg,$xl,$xxl}{
             margin: 0 ;
+            border-radius: 20px 20px 0 0;
+        }
+        @media #{$xs,$sm}{
             border-radius: 0;
         }
     }

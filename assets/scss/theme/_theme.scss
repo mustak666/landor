@@ -254,6 +254,7 @@ input[type="email"],
 input[type="tel"],
 input[type="number"],
 input[type="password"],
+input[type="search"],
 input[type="url"],
 textarea{
 	outline: none;
@@ -292,14 +293,12 @@ textarea{
 }
 
 *::-moz-placeholder {
-	color: var(--tp-common-black);
-	font-size: 15px;
+	color: var(--tp-body-black);
 	opacity: 1;
 	font-weight: 500;
 }
 *::placeholder {
-	color: var(--tp-common-black);
-	font-size: 15px;
+	color: var(--tp-body-black);
 	opacity: 1;
 	font-weight: 500;
 }

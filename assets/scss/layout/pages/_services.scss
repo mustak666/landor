@@ -166,6 +166,7 @@
         opacity: 0;
         visibility: hidden;
         padding: 34px 40px;
+        cursor: pointer;
         @include transition(.3s);
         @media #{$lg,$md,$sm}{
             margin-bottom: -71px;
@@ -251,6 +252,103 @@
             bottom: -20px; 
         }
     }
+    &-margin{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    &-details{
+        &-deg{
+            font-size: 36px;
+            @media #{$lg,$md,$xs,$sm}{
+               font-size: 30px;
+               margin-bottom: 30px;
+            } 
+        }
+        &-faq{
+            &-title{
+                font-size: 50px;
+                @media #{$lg,$md}{
+                    font-size: 40px;
+                } 
+                @media #{$xs,$sm}{
+                    font-size: 30px;
+                } 
+            }
+        }
+        &-wrap{
+            @media #{$lg}{
+               padding-left: 20px;
+            } 
+            @media #{$md,$xs,$sm}{
+               padding-left: 0;
+            } 
+        }
+        &-img{
+            @media #{$lg,$md,$xs,$sm}{
+              margin-bottom: 20px;
+            } 
+            @media #{$xs,$sm}{
+                height: 300px;
+                object-fit: cover;
+            } 
+        }
+        &-top{
+            @media #{$lg,$md,$xs,$sm}{
+                padding-bottom: 10px;
+            }   
+            & p{
+                &:not(:last-child){
+                    @media #{$lg,$md,$xs,$sm}{
+                      margin-bottom: 10px;
+                    } 
+                }
+            }
+        }
+    }
+    &-support{
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px; 
+        padding: 22px 25px;
+        @include transition(.3s);
+        @media #{$lg,$xs,$sm}{
+            padding: 15px;
+        } 
+        &-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--tp-gray-color);
+            border-radius: 50%;
+            @include flex-center();
+            color: var(--tp-orange-color);
+            @include transition(.3s);
+        } 
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0;
+            margin-bottom: 6px;
+            &-larg{
+                font-size: 36px;
+                @media #{$lg,$md,$xs,$sm}{
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                } 
+            }
+        }
+        &-content{
+            & p{
+                line-height: 24px;
+            }
+        }
+        &:hover{
+            background-color: var(--tp-gray-color);
+            border-color: transparent;
+            & .tp-services-support-icon{
+                background-color: var(--tp-orange-color);
+                color: var(--tp-white-color);
+            }
+        }
+    }
 }
 
 
@@ -296,7 +394,11 @@
         }
     }
     &__title{
+        font-size: 30px;
         @include transition(.3s);
+        @media #{$lg,$md,$xs,$sm}{
+            font-size: 25px;
+        } 
     }
     &__back{
         &-text{

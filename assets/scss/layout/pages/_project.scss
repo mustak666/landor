@@ -144,7 +144,7 @@
 		padding-top: 145px;
 		padding-bottom: 85px;
 		@media #{$md,$lg}{
-			padding: 100px;
+			padding: 100px 0;
 			padding-bottom: 40px;
 		}
 		@media #{$xs,$sm}{
@@ -222,11 +222,312 @@
 			display: inline-block;
 		}
 	}
+	&-short{
+		min-height: 930px;
+		padding: 75px;
+		padding-right: 60px;
+		padding-bottom: 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media #{$lg}{
+			min-height: 550px;
+			margin-bottom: 20px;
+		}
+		@media #{$md}{
+			min-height: 450px;
+			padding: 50px;
+			margin-bottom: 20px;
+		}
+		@media #{$xs,$sm}{
+			min-height: 350px;
+			padding: 20px;
+			margin-bottom: 10px;
+		}
+		&-heading{
+			@media #{$xs,$sm}{
+				margin-bottom: 35px;
+			}	
+		}
+	}
+	&-tabs{
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 80px;
+		padding: 10px;
+		@media #{$lg,$md}{
+			margin-bottom: 40px;
+		}
+		@media #{$sm,$xs}{
+			margin-bottom: 30px;
+		}
+		@media #{$md,$xs,$sm}{
+			border-radius: 40px;
+		}
+		& .nice-select {
+			border-color: transparent;
+			background: var(--tp-gray-color);
+			height: 60px;
+			padding: 0 20px;
+			@media #{$lg}{
+				padding: 0 20px;
+				&::after{
+					right: 20px;
+				}
+			}
+		}
+		& form{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			grid-gap: 13px;
+			@media #{$md,$xs,$sm}{
+				flex-wrap: wrap;
+			}
+		}
+	}
+	&-details{
+		&-info{
+			padding-top: 180px;
+			@media #{$md}{
+				margin-bottom: 50px;
+			}
+			@media #{$xs,$sm}{
+				padding-top: 100px;
+				margin-bottom: 20px;
+			}
+			&-icon{
+				width: 60px;
+				height: 60px;
+				background-color: var(--tp-secoundery-color);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: var(--tp-theme-color);
+			@media #{$xs,$sm}{
+				margin-right: 10px;
+			}
+			}
+			&-content{
+				& span{
+					font-size: 18px;
+					@media #{$md,$xs,$sm}{
+						font-size: 16px;
+					}
+				}
+			}
+			&-title{
+				font-size: 20px;
+				@media #{$md,$xs,$sm}{
+					font-size: 18px;
+				}
+			}
+			&-box{
+				padding: 60px;
+				border-radius: 20px 0 0 0;
+				@media #{$md}{
+					padding: 30px;
+				}
+				@media #{$xs,$sm}{
+					padding: 20px;
+					margin-left: 0;
+				}
+			}
+			&-item{
+				@media #{$xs,$sm}{
+					padding-bottom: 10px;
+				}
+			}
+		}	
+		&-list{
+			& ul li{
+				color: var(--tp-theme-color);
+			}
+		}
+		&-title{
+			font-size: 36px;
+			@media #{$lg,$xs,$sm}{
+				margin-bottom: 30px;
+				font-size: 30px;
+			}
+		}
+		&-heading{
+			@media #{$md}{
+				margin-bottom: 40px;
+			}
+			@media #{$xs,$sm}{
+				margin-bottom: 35px;
+			}
+		}
+	}
+	&-about{
+		@media #{$xs,$sm}{
+			margin-bottom: 10px;
+		}
+		&-main{
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			@media #{$md}{
+				padding-bottom: 30px;
+			}
+			@media #{$xs,$sm}{
+				padding-bottom: 20px;
+			}
+		}
+		&-wrap{
+			@media #{$xs,$sm}{
+				flex-wrap: wrap;
+			}
+		}
+	}
 	&:hover{
 		& .tp-project-btn{
 			opacity: 1;
 			visibility: visible;
 			top: 50%;
+		}
+	}
+	&-feature{
+		@media #{$md,$xs,$sm}{
+			padding-top: 50px;
+		}
+		&-icon{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #ddd;
+			border-radius: 50%;
+			@include flex-center();
+			margin: 0 auto;
+			@include transition(.3s);
+			@media #{$xs,$sm}{
+				width: 70px;
+				height: 70px;
+				& svg{
+					width: 35px;
+				}
+			}
+		}
+		&-item{
+			min-width: 219px;
+			padding: 60px 30px;
+			padding-top: 54px;
+			position: relative;
+			@media #{$lg}{
+				min-width: 155px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			@media #{$md}{
+				padding: 30px;
+			}
+			@media #{$xs,$sm}{
+				padding: 25px;
+				min-width: 100px;
+			}
+			@media #{$sm}{
+				min-width: 170px;
+			}
+			&:not(:last-child){
+				border-right: 1px solid var(--tp-white-color);
+			}
+			& span{
+				font-size: 18px;
+				font-weight: 600;
+			}
+			&:hover{
+				& .tp-project-feature-icon{
+					background-color: var(--tp-secoundery-color);
+					color: var(--tp-theme-color);
+					border-color: transparent;
+				}
+			}
+		}
+		&-wrap{
+			&:not(:last-child){
+				border-bottom: 1px solid var(--tp-white-color);
+			}
+			@media #{$md,$xs,$sm}{
+				flex-wrap: wrap;
+			}
+		}
+		&-dot{
+			width: 20px;
+			height: 20px;
+			background-color: var(--tp-gray-color);
+			border-radius: 50%;
+			display: inline-block;
+			position: absolute;
+			bottom: -10px;
+			right: -10px;
+			z-index: 1;
+		}
+	}
+	&-gallery{
+		&-active{
+			margin: 0 -130px;
+			@media #{$xs,$sm}{
+				margin: 0;
+			}
+		}
+		&-tabs{
+			& li{
+				@media #{$xs,$sm}{
+					margin-bottom: 5px;
+				} 
+				&:not(:last-child){
+					margin-right: 10px;
+					@media #{$xs,$sm}{
+						margin-right: 5px;
+					} 
+				}
+				& button{
+					color: #1D2132;
+					font-weight: 600;
+					border: 1px solid rgba(0, 0, 0, 0.15);
+					border-radius: 30px;
+					line-height: 1;
+					padding: 5px 9px;
+					@include transition(.3s);
+					&.active{
+						border-color: transparent;
+						background-color: var(--tp-secoundery-color);
+					}
+				}
+			}
+			&.tp-contect-tabs{
+				& li{
+					& button{
+						color: var(--tp-theme-color);
+						font-weight: 400;
+						letter-spacing: -0.02em;
+						padding: 7px 16px;
+					}
+				}
+			}
+		}
+		&-tab{
+			@media #{$xs,$sm}{
+				margin-bottom: 35px;
+			}
+		}
+	}
+	&-des{
+		&-main{
+			@media #{$md,$xs,$sm}{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&-location{
+		@media #{$md}{
+			padding-top: 30px;
+		}
+		@media #{$xs,$sm}{
+			padding-top: 20px;
+		}
+		&-des{
+			@media #{$md}{
+				padding-bottom: 10px;
+			}
 		}
 	}
 }
@@ -401,32 +702,4 @@
 	}
 }
 
-.tp-project-short {
-	min-height: 930px;
-	padding: 75px;
-	padding-right: 60px;
-	padding-bottom: 60px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	@media #{$lg}{
-		min-height: 550px;
-		margin-bottom: 20px;
-	}
-	@media #{$md}{
-		min-height: 450px;
-		padding: 50px;
-		margin-bottom: 20px;
-	}
-	@media #{$xs,$sm}{
-		min-height: 350px;
-		padding: 20px;
-		margin-bottom: 10px;
-	}
-	&-heading{
-		@media #{$xs,$sm}{
-			margin-bottom: 35px;
-		}	
-	}
-}
 

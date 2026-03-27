@@ -14,16 +14,6 @@
         $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
     })
 
-    // data bg color
-    $("[data-bg-color]").each(function () {
-        $(this).css("background-color", $(this).attr("data-bg-color"))
-    })
-
-    // data bg color
-    $("[data-color]").each(function () {
-        $(this).css("color", $(this).attr("data-color"))
-    })
-
     // hover active 
     var hoverClasses = $(".hover");
     hoverClasses.on("mouseenter", function() {
@@ -36,11 +26,51 @@
         type: 'image'
         // other options
     });
+
     $('.popup-video').magnificPopup({
         type: 'iframe'
         // other options
     });
-   
+
+    // niceSelect
+    $(document).ready(function(){
+        $('select').niceSelect();
+    });
+
+    // counterUp 
+    $('.counterUp').counterUp({
+        delay: 10,
+        time: 1000,
+    });
+
+    // marquee 
+    $('.marquee').marquee({
+        duration: 20000,
+        gap: 50,
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: true,
+        startVisible: true
+    });
+
+    // marquee right 
+    $('.marquee-right').marquee({
+        duration: 20000,
+        gap: 50,
+        delayBeforeStart: 0,
+        direction: 'right',
+        duplicated: true,
+        startVisible: true
+    });
+
+    // circle text 
+    gsap.to(".circle-text", {
+        rotation: 360,
+        duration: 8,
+        repeat: -1,
+        ease: "linear"
+    });
+
     // brand slider 
     var swiper = new Swiper(".tp-brand-active", {
         slidesPerView: 6,
@@ -74,7 +104,7 @@
     });
 
     // team slider 
-    var swiper = new Swiper(".tpteam__active", {
+    var swiper = new Swiper(".tp-team-active", {
         slidesPerView: 'auto',
         spaceBetween: 40,
         loop : true,
@@ -137,9 +167,25 @@
         }
         },
     });
+    // team slider 2 
+    var swiper = new Swiper(".tp-career-active", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".tp-testimonail-career-next",
+            prevEl: ".tp-testimonail-career-prev",
+        },
+        loop : true,
+        speed : 2000,
+        centeredSlides: true,
+        autoplay :{
+         delay : 2000,
+         disableOnInteraction : false,
+        },
+    });
 
     // testimonial slider
-    var testimonialSlider = new Swiper(".testimonail_active", {
+    var testimonialSlider = new Swiper(".tp-testimonail-active", {
         slidesPerView: 1,
         spaceBetween: 30,
         centeredSlides: true,
@@ -171,7 +217,12 @@
             },
 
         },
-
+        speed : 2000,
+        centeredSlides: true,
+        autoplay :{
+         delay : 2000,
+         disableOnInteraction : false,
+        },
     });
 
     function updateProgress(swiper){
@@ -183,45 +234,6 @@
             progressBar.style.setProperty('--progress', progress + "%");
         }
     }
-
-    // niceSelect
-    $(document).ready(function(){
-        $('select').niceSelect();
-    });
-
-    // counterUp 
-    $('.counterUp').counterUp({
-        delay: 10,
-        time: 1000,
-    });
-
-    // marquee 
-    $('.marquee').marquee({
-        duration: 20000,
-        gap: 50,
-        delayBeforeStart: 0,
-        direction: 'left',
-        duplicated: true,
-        startVisible: true
-    });
-
-    // marquee right 
-    $('.marquee-right').marquee({
-        duration: 20000,
-        gap: 50,
-        delayBeforeStart: 0,
-        direction: 'right',
-        duplicated: true,
-        startVisible: true
-    });
-
-    // circle text 
-    gsap.to(".circle-text", {
-        rotation: 360,
-        duration: 8,
-        repeat: -1,
-        ease: "linear"
-    });
 
     // gallery slider 
     var swiper = new Swiper(".swiper_gallery_active", {
@@ -235,6 +247,109 @@
         rotate: true,
     });
     
+    // team slider 2 
+    var swiper = new Swiper(".tp-project-gallery-active", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoplay:{
+        delay:2000,
+      },
+      speed: 2000,
+      breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        568: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 3,
+        }
+      },
+    });
+
+    // hero active 
+    var swiper = new Swiper(".tp-hero-slider-active", {
+        slidesPerView: 1,
+        effect: 'fade',
+        pagination: {
+            el: ".tp-hero-slider-pagination",
+            clickable: true,
+        },
+        loop: true,
+        autoplay:{
+            delay:2000,
+        },
+        speed: 2000
+    });
+
+    // gallery-slider
+    var gallerySlider = new Swiper('.gallery-slider', {
+		effect: 'coverflow',
+		loop: true,
+		centeredSlides: true,
+		slidesPerView: 2.5,
+		coverflowEffect: {
+			rotate: 0,
+			stretch: 450,
+			depth: 150,
+			modifier: 1.5,
+			slideShadows: false,
+		}
+    });
+
+    // contect active start
+    var swiper = new Swiper(".tp-contect-slider-active", {
+        slidesPerView: 1,
+        effect: 'slide',
+        loop: true,
+        centeredSlides: true,
+        speed: 1000,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            waitForTransition: true
+        },
+        navigation: {
+            nextEl: ".tp-contect-button-next",
+            prevEl: ".tp-contect-button-prev",
+        },
+    });
+
+   // contect active end
+
+    // // protfolio pin 
+    if (document.querySelector(".tp-protfolio-pin")) {
+        const pr = ScrollTrigger.matchMedia();
+        pr.add("(min-width: 1199px)", () => {
+            const sections = document.querySelectorAll(".tp-protfolio-panel");
+            const wrap = document.querySelector(".tp-protfolio-pin");
+            if (!sections.length || !wrap) return;
+            sections.forEach((section) => {
+                ScrollTrigger.create({
+                    trigger: section,
+                    start: "top 10%",
+                    end: "bottom bottom",
+                    pin: true,
+                    scrub: true,
+                    pinSpacing: false,
+                    endTrigger: wrap,
+                    markers: false
+                });
+            });
+            return () => {
+                ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+            };
+        });
+    }
+
     // project slider 
     if (document.querySelector(".project-slider-wrap")) {
         const pr = ScrollTrigger.matchMedia();
@@ -274,48 +389,7 @@
             };
         });
     }
-
-    
-    // hero active 
-    var swiper = new Swiper(".hero-slider-active", {
-        slidesPerView: 1,
-        effect: 'fade',
-        pagination: {
-            el: ".tp-hero-slider-pagination",
-            clickable: true,
-        },
-        loop: true,
-        autoplay:{
-            delay:2000,
-        },
-        speed: 2000
-    });
-
-    // // project slider 
-    if (document.querySelector(".tp-protfolio-pin")) {
-        const pr = ScrollTrigger.matchMedia();
-        pr.add("(min-width: 1199px)", () => {
-            const sections = document.querySelectorAll(".tp-protfolio-panel");
-            const wrap = document.querySelector(".tp-protfolio-pin");
-            if (!sections.length || !wrap) return;
-            sections.forEach((section) => {
-                ScrollTrigger.create({
-                    trigger: section,
-                    start: "top 10%",
-                    end: "bottom bottom",
-                    pin: true,
-                    scrub: true,
-                    pinSpacing: false,
-                    endTrigger: wrap,
-                    markers: false
-                });
-            });
-            return () => {
-                ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-            };
-        });
-    }
-
+    // project pin 
     if (document.querySelector(".tp-project-pin")) {
         const pr = ScrollTrigger.matchMedia();
         pr.add("(min-width: 1199px)", () => {
@@ -340,8 +414,6 @@
         });
     }
 
-
-
     var hoverRevealItems = document.querySelectorAll('.hover-reveal-img');
     function updateRevealPosition(e, el) {
         var rect   = el.getBoundingClientRect();
@@ -357,19 +429,7 @@
         });
     });
 
-    var gallerySlider = new Swiper('.gallery-slider', {
-		effect: 'coverflow',
-		loop: true,
-		centeredSlides: true,
-		slidesPerView: 2.5,
-		coverflowEffect: {
-			rotate: 0,
-			stretch: 450,
-			depth: 150,
-			modifier: 1.5,
-			slideShadows: false,
-		}
-    });
 
 
 })(jQuery);
+

@@ -68,6 +68,17 @@
         @media #{$xs,$sm}{
             padding: 70px 0;
         }
+        &-2{
+            @media #{$lg}{
+                padding-top: 120px;
+            }
+            @media #{$md}{
+                padding-top: 100px;
+            }
+            @media #{$xs,$sm}{
+                padding-top: 70px;
+            }
+        }
     }   
 }
 
@@ -154,3 +165,31 @@
 	transform: scale(0.4);
     visibility: visible;
 }
+.tpawpost {
+	background-color: var(--tp-gray-color);
+    &__icon {
+        width: 120px;
+        height: 120px;
+        background-color: var(--tp-white-color);
+        border-radius: 50%;
+        @include flex-center();
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 19px;
+        @media #{$xs,$sm}{
+            width: 90px;
+            height: 90px;
+            bottom: 10px;
+            & svg{
+                width: 50px;
+            }
+        }
+    }
+    &__thumb{
+        @media #{$xs,$sm}{
+          padding-bottom: 30px;
+        }
+    }
+}
+

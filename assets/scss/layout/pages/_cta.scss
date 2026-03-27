@@ -22,6 +22,10 @@
                 background-color: transparent;
                 border: 1px solid #FFFFFF;
             }
+            &-white{
+                background-color: var(--tp-white-color);
+                color: var(--tp-theme-color);
+            }
         }
     }
     &-spacing {
