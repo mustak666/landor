@@ -334,6 +334,9 @@
             &-inner{
                 @media #{$xs,$sm}{
                     margin-bottom: 0;
+                    & p{
+                        padding-top: 0;
+                    }
                 }
             }
         }
@@ -372,12 +375,14 @@
             @media #{$xs,$sm}{
                 padding-bottom: 20px;
             }
-            & p{
+        }
+        &-inner{
+            &-deg{
                 @media #{$lg,$md}{
-                   padding-top: 0;
+                  padding-top: 0;
                 }
                 @media #{$xs,$sm}{
-                   padding-top: 15px;
+                  padding-top: 15px;
                 }
             }
         }

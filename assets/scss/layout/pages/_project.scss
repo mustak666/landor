@@ -421,7 +421,11 @@
 			}
 			@media #{$xs,$sm}{
 				padding: 25px;
-				min-width: 100px;
+				min-width: inherit;
+				width: 50%;
+			}
+			@media #{$sm}{
+				width: 33.33%;
 			}
 			@media #{$sm}{
 				min-width: 170px;

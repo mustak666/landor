@@ -13,7 +13,7 @@
         }
         @media #{$lg,$md}{
            padding: 300px 0;
-           padding-top: 200px;
+           padding-top: 120px;
         }
         @media #{$xs,$sm}{
             padding: 275px 0;
@@ -110,20 +110,31 @@
             }
         }
     }
-    &-wrap {
+    &-wrap,&-wrap-2 {
         min-height: 930px;
         max-width: 1600px;
         height: 100%;
         margin: 0 auto;
         z-index: 1;
         @media #{$lg}{
-           min-height: 800px;
+          min-height: 700px;
         }
-        @media #{$md}{
-           min-height: 740px;
+        @media #{$md,$sm}{
+          min-height: 600px;
         }
         @media #{$xs}{
-           min-height: 750px;
+          min-height: 500px;
+        } 
+        &-2{
+            @media #{$lg}{
+              min-height: 800px;
+            }
+            @media #{$md}{
+              min-height: 740px;
+            }
+            @media #{$xs}{
+              min-height: 750px;
+            } 
         }
     }
     &-button{
@@ -170,7 +181,7 @@
         &-1{
             bottom: -200px;
             left: -30px;
-            @media #{$xl}{
+            @media #{$xl,$lg}{
                 left: 0;
             }
         }
@@ -245,9 +256,9 @@
     }
     &__2{
         max-width: 308px;
-            @media #{$lg,$md}{
-                max-width: 250px;
-            }
+        @media #{$lg,$md}{
+            max-width: 250px;
+        }
         &--item{
             &-1{
                 top: 26px;
@@ -256,6 +267,9 @@
             &-2{
                 bottom: 0;
                 left: 114px;
+                @media #{$sm}{
+                   display: none;
+                }
                 @media #{$xs}{
                    left: 0;
                 }
