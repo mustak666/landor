@@ -158,7 +158,6 @@
            }
         }
     }
-
     &:hover{
         padding: 8px 8px 8px 25px;
         font-weight: 700;
@@ -180,6 +179,25 @@
                     width: 10px;
                     height: 10px;
                 }
+            }
+        }
+    }
+    &-solid {
+        display: inline-block;
+        background-color: var(--tp-orange-color);
+        color: var(--tp-white-color);
+        line-height: 1;
+        font-weight: 500;
+        border-radius: 58px;
+        padding: 21px 29px;
+        &:hover{
+            background-color: var(--tp-secoundery-color);
+            color: var(--tp-theme-color);
+        }
+        &-icon{
+            padding: 17px 30px;
+            & svg{
+                margin-left: 4px;
             }
         }
     }

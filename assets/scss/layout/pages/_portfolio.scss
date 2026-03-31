@@ -289,6 +289,12 @@
             } 
         }
         &-btn{
+            @media #{$x3l}{
+                padding-top: 100px;
+            } 
+            @media #{$xxl}{
+                padding-top: 150px;
+            } 
             @media #{$xs,$sm}{
                 padding-top: 0;
             } 
@@ -313,11 +319,17 @@
 	color: var(--tp-theme-color);
 	font-weight: 600;
 	line-height: 1.2;
+    padding: 30px;
     @include flex-center();
     @media #{$md,$xs,$sm}{
         width: 90px;
         height: 90px;
         font-size: 15px;
+    }
+    &-white{
+        background-color: var(--tp-white-color);
+        width: 120px;
+        height: 120px;
     }
 }
 

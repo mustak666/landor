@@ -785,6 +785,12 @@
             }
         }
     }
+    &__thumb{
+        overflow: hidden;
+        & img{
+            @include transition(.4s);
+        }
+    }
     &::before{
         position: absolute;
         content: "";
@@ -803,6 +809,11 @@
         & .tppostbox2__link{
             & a{
                 background-color: var(--tp-secoundery-color);
+            }
+        }
+        & .tppostbox2__thumb{
+            & img{
+                transform: scale(1.1) rotate(-2deg);
             }
         }
     }

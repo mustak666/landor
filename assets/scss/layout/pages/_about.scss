@@ -474,4 +474,13 @@
         border-radius: 0;
         min-height: 350px;
     }
+    &-wrap{
+        padding: 0 30px;
+        & .tp-solid-bg{
+            margin-bottom: 0;
+            @media #{$x4l,$x3l,$xxl,$xl,$lg,$md,$sm,$xs}{
+               margin-bottom: 0;
+            }
+        }
+    }
 }

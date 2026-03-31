@@ -110,6 +110,9 @@ img{
 	&-orange{
 		color: var(--tp-orange-color);
 	}
+	&-secoundery{
+		color: var(--tp-secoundery-color);
+	}
 	&-body{
 		color: var(--tp-body-color);
 	}
@@ -299,8 +302,6 @@ img{
 	}
 }
 
-
-
 .tp-overlay,.tp-overlay-2,.tp-overlay-3,.tp-overlay-4,.tp-overlay-5{
 	position: relative;
 	z-index: 1;
@@ -316,6 +317,9 @@ img{
 	}
 }
 .tp-fs{
+	&-15{
+		font-size: 15px;
+	}
 	&-20{
 		font-size: 20px;
 	}
@@ -375,6 +379,9 @@ img{
 
 .gx-20{
   --bs-gutter-x: 20px;
+}
+.gx-50{
+  --bs-gutter-x: 50px;
 }
 
 .white-rgba{

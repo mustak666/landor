@@ -562,5 +562,37 @@
             }
         }
     }
+    &-land{
+        &-bg{
+            padding-top: 155px;
+        }
+        &-bottom{
+            &-text{
+                font-weight: 700;
+                font-size: 360px;
+                line-height: 276px;
+                letter-spacing: -0.02em;
+                color: #D9D813;
+            }
+        }
+        &-shape{
+            &-1{
+                top: 80px;
+                left: 80px;
+            }
+            &-2{
+                bottom: 35%;
+                left: 17%;
+            }
+            &-3{
+                top: 80px;
+                right: 80px;
+            }
+            &-4{
+                top: 44%;
+                right: 164px;
+            }
+        }
+    }
 }
 

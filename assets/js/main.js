@@ -37,6 +37,20 @@
         $('select').niceSelect();
     });
 
+    // odometer 
+    $(window).on('load', function () {
+        $('.odometer').each(function () {
+            var $this = $(this);
+            $this.waypoint(function (direction) {
+                if (direction === 'down' && !$this.hasClass('loaded')) {
+                    $this.html($this.data('count'));
+                    $this.addClass('loaded');
+                }
+            }, { offset: '80%' });
+        });
+    });
+
+
     // counterUp 
     $('.counterUp').counterUp({
         delay: 10,
@@ -51,6 +65,28 @@
         direction: 'left',
         duplicated: true,
         startVisible: true
+    });
+
+    // elements left
+    $('.elements-left').marquee({
+        duration: 35000,
+        gap: 15,
+        delayBeforeStart: 0,
+        direction: 'left',
+        duplicated: true,
+        startVisible: true,
+        pauseOnHover: true
+    });
+
+    // elements right
+    $('.elements-right').marquee({
+        duration: 35000,
+        gap: 15,
+        delayBeforeStart: 0,
+        direction: 'right',
+        duplicated: true,
+        startVisible: true,
+        pauseOnHover: true
     });
 
     // marquee right 
@@ -76,10 +112,10 @@
         slidesPerView: 6,
         spaceBetween: 0,
         centeredSlides: true,
+        allowTouchMove: false,
         freemode: true,
         loop: true,
         speed: 4000,
-        allowTouchMove: false,
         autoplay: {
             delay: 0,
             disableOnInteraction: true,
@@ -101,6 +137,36 @@
               slidesPerView: 6,
             },
           },
+    });
+
+    // brand slider 
+    var swiper = new Swiper(".tp-demo-left", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        centeredSlides: true,
+        freemode: true,
+        loop: true,
+        speed: 4000,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: true,
+        },
+    });
+
+    // brand slider 
+    var swiper = new Swiper(".tp-demo-right", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        centeredSlides: true,
+        freemode: true,
+        loop: true,
+        speed: 4000,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: true,
+        },
     });
 
     // team slider 
@@ -247,7 +313,7 @@
         rotate: true,
     });
     
-    // team slider 2 
+    // project gallery 
     var swiper = new Swiper(".tp-project-gallery-active", {
       slidesPerView: 3,
       spaceBetween: 20,
@@ -256,6 +322,30 @@
         delay:2000,
       },
       speed: 2000,
+      breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        568: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 3,
+        }
+      },
+    });
+
+    // project gallery 
+    var swiper = new Swiper(".tp-project-demo-active", {
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      loop: true,
       breakpoints: {
         0: {
             slidesPerView: 1,
@@ -305,7 +395,7 @@
 		}
     });
 
-    // contect active start
+    // contect active
     var swiper = new Swiper(".tp-contect-slider-active", {
         slidesPerView: 1,
         effect: 'slide',
@@ -323,8 +413,30 @@
         },
     });
 
-   // contect active end
-
+    // // protfolio pin 
+    if (document.querySelector(".tp-protfolio-pin-2")) {
+        const pr = ScrollTrigger.matchMedia();
+        pr.add("(min-width: 1199px)", () => {
+            const sections = document.querySelectorAll(".tp-protfolio-panel-2");
+            const wrap = document.querySelector(".tp-protfolio-pin-2");
+            if (!sections.length || !wrap) return;
+            sections.forEach((section) => {
+                ScrollTrigger.create({
+                    trigger: section,
+                    start: "top 10%",
+                    end: "bottom bottom",
+                    pin: true,
+                    scrub: true,
+                    pinSpacing: false,
+                    endTrigger: wrap,
+                    markers: false
+                });
+            });
+            return () => {
+                ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+            };
+        });
+    }
     // // protfolio pin 
     if (document.querySelector(".tp-protfolio-pin")) {
         const pr = ScrollTrigger.matchMedia();
@@ -429,6 +541,41 @@
         });
     });
 
+    /* ============================================================
+       HOVER EFFECT (WebGL displacement — .tp--hover-img)
+    ============================================================ */
+    if ($('.tp--hover-item').length) {
+        function initHoverEffect(wrapper, images) {
+            var effect = new hoverEffect({
+                parent: wrapper.get(0),
+                intensity: wrapper.data('intensity')    || undefined,
+                speedIn: wrapper.data('speedin')        || undefined,
+                speedOut: wrapper.data('speedout')      || undefined,
+                easing: wrapper.data('easing')          || undefined,
+                image1: images.eq(0).attr('src'),
+                image2: images.eq(0).attr('src'),
+                displacementImage: wrapper.data('displacement'),
+                imagesRatio: images[0].naturalWidth / images[0].naturalHeight,
+                hover: false
+            });
+
+            wrapper.closest('.tp--hover-item')
+                .on('mouseenter', function () { effect.next(); })
+                .on('mouseleave', function () { effect.previous(); });
+        }
+
+        $('.tp--hover-img').each(function () {
+            var wrapper  = $(this);
+            var images   = wrapper.find('img');
+            var firstImg = images.eq(0);
+
+            if (firstImg[0].complete) {
+                initHoverEffect(wrapper, images);
+            } else {
+                firstImg.on('load', function () { initHoverEffect(wrapper, images); });
+            }
+        });
+    }
 
 
 })(jQuery);
