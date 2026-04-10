@@ -24,6 +24,8 @@
 			& p{
 				font-size: 30px;
 				letter-spacing: -0.02em;
+				line-height: 1.2;
+				color: var(--tp-theme-color);
 				@media #{$lg}{
 				  font-size: 25px;
 				}

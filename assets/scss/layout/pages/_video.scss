@@ -12,6 +12,9 @@
 		background-color: var(--tp-gray-color);
 		border-radius: 50%;
 		color: var(--tp-theme-color);
+		&:hover{
+			background-color: var(--tp-secoundery-color);
+		}
 		@media #{$xs,$sm}{
 			width: 100px;
 			height: 100px;

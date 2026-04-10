@@ -3,53 +3,61 @@
 .tp-btn {
 	display: flex;
     align-items: center;
+    grid-gap: 15px;
 	background-color: var(--tp-secoundery-color);
 	font-weight: 600;
 	color: var(--tp-theme-color);
-	padding: 0 27px;
-    padding-right: 21px;
+    padding: 8px 8px 8px 25px;
 	line-height: 1;
 	border-radius: 52px;
     width: fit-content;
     height: 52px;
-	@media #{$md,$xs,$sm}{
-		height: 45px;
-        padding: 0 20px;
-        padding-right: 15px;
+    @media #{$md,$xs,$sm}{
+        padding: 6px 6px 6px 20px;
+        grid-gap: 5px;
+        height: 43px;
         font-size: 15px;
-	}
+    }
     &-icon{
-        width: 10px;
-        height: 10px;
+        width: 36px;
+        height: 36px;
         display: inline-block;
-        background-color: var(--tp-theme-color);
+        background-color: transparent;
         color: var(--tp-white-color);
         text-align: center;
         line-height: 34px;
         border-radius: 50px;
-        margin-left: 27px;
-        @include transition(.3s);
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            background-color: var(--tp-theme-color);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            @include transition(.3s);   
+        }
         & svg{
             opacity: 0;
             visibility: hidden;
+            transform: translateY(10px);
             @include transition(.3s);
-        }
-        @media #{$md,$xs,$sm}{
-            margin-left: 20px;
-            line-height: 23px;
+            transition-delay: .1s;
         }
     }
     &-border{
         background-color: transparent;
         border: 1px solid var(--tp-theme-color);
-        & .tp-btn-icon{
-            margin-left: 25px;
-        }
         &-white{
             border-color: var(--tp-white-color);
             color: var(--tp-white-color);
             & .tp-btn-icon{
-                background-color: var(--tp-white-color);
+                &::before{
+                    background-color: var(--tp-white-color);
+                }
                 & svg{
                     color: var(--tp-theme-color);
                 }
@@ -89,7 +97,9 @@
         background-color: var(--tp-theme-color);
         color: var(--tp-white-color);
         & .tp-btn-icon{
-            background-color: var(--tp-white-color);
+            &::before{
+                background-color: var(--tp-white-color);
+            }
             & svg{
                 color: var(--tp-theme-color);
             }
@@ -99,7 +109,9 @@
         background-color: var(--tp-orange-color);
         color: var(--tp-white-color);
         & .tp-btn-icon{
-            background-color: var(--tp-white-color);
+            &::before{
+                background-color: var(--tp-white-color);
+            }
             & svg{
                 color: var(--tp-theme-color);
             }
@@ -157,51 +169,38 @@
             width: 15px;
            }
         }
-    }
-    &:hover{
-        padding: 8px 8px 8px 25px;
-        font-weight: 700;
-        @media #{$md,$xs,$sm}{
-            padding-left: 20px;
-        }
-        & .tp-btn-icon{
-            width: 36px;
-            height: 36px;
-            margin-left: 15px;
-            @media #{$md,$xs,$sm}{
-               width: 25px;
-               height: 25px;
-            }
-            & svg{
-                opacity: 1;
-                visibility: visible;
-                @media #{$md,$xs,$sm}{
-                    width: 10px;
-                    height: 10px;
-                }
-            }
-        }
-    }
-    &-solid {
-        display: inline-block;
-        background-color: var(--tp-orange-color);
-        color: var(--tp-white-color);
-        line-height: 1;
-        font-weight: 500;
-        border-radius: 58px;
-        padding: 21px 29px;
         &:hover{
             background-color: var(--tp-secoundery-color);
             color: var(--tp-theme-color);
         }
-        &-icon{
-            padding: 17px 30px;
+    }
+    &:hover{
+        padding: 8px 8px 8px 25px;
+        @media #{$md,$xs,$sm}{
+            padding: 6px 6px 6px 20px;
+        }
+        & .tp-btn-icon{
+            &::before{
+                width: 36px;
+                height: 36px;
+                @media #{$md,$xs,$sm}{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
             & svg{
-                margin-left: 4px;
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                z-index: 1;
+                transform: translateY(0);
+                @media #{$md,$xs,$sm}{
+                    width: 8px;
+                    height: 8px;
+                }
             }
         }
     }
 }
-
 
 

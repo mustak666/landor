@@ -8,6 +8,8 @@
     }
     &-spacing{
         padding: 374px 0;
+        min-height: 930px;
+        padding-top: 150px;
         @media #{$xl}{
            padding: 340px 0;
         }
@@ -16,8 +18,7 @@
            padding-top: 120px;
         }
         @media #{$xs,$sm}{
-            padding: 275px 0;
-            padding-top: 70px;
+            padding: 70px 0;
         }
         &-2{
             @media #{$lg,$md}{
@@ -109,33 +110,31 @@
                 margin-bottom: 40px;
             }
         }
-    }
-    &-wrap,&-wrap-2 {
-        min-height: 930px;
-        max-width: 1600px;
-        height: 100%;
-        margin: 0 auto;
-        z-index: 1;
-        @media #{$lg}{
-          min-height: 700px;
-        }
-        @media #{$md,$sm}{
-          min-height: 600px;
-        }
-        @media #{$xs}{
-          min-height: 500px;
-        } 
-        &-2{
-            @media #{$lg}{
-              min-height: 800px;
-            }
+        &-spacing{
+            min-height: 930px;
+            max-width: 1600px;
+            margin: 0 auto;
+            height: 100%;
             @media #{$md}{
-              min-height: 740px;
+                min-height: 750px;
             }
-            @media #{$xs}{
-              min-height: 750px;
-            } 
+            @media #{$sm}{
+                min-height: auto;
+            }
         }
+    }
+    &-wrap{
+        @media #{$xs,$sm}{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 20px;
+            flex-wrap: wrap;
+        }  
+        @media #{$sm}{
+            flex-direction: row;
+            grid-gap: 10px;
+            justify-content: center;
+        }  
     }
     &-button{
         @media #{$xs}{
@@ -148,15 +147,23 @@
     padding: 40px;
     padding-bottom: 25px;
     border-radius: 20px;
+    max-width: 308px;
+    z-index: 1;
     @media #{$xl}{
        padding: 25px;
     }
-    @media #{$lg}{
+    @media #{$lg,$md}{
+       max-width: 250px;
        padding: 20px;
     }
-    @media #{$md,$xs}{
+    @media #{$xs,$sm}{
+       position: inherit;
+       max-width: 100%;
        padding: 20px;
        padding-bottom: 5px;
+    }
+    @media #{$sm}{
+       max-width: 49%;
     }
     &__icon{
         & svg{
@@ -166,6 +173,9 @@
             & svg{
                 color: var(--tp-white-color);
             }
+        }
+        @media #{$md}{
+           margin-bottom: 30px;
         }
         @media #{$lg,$xs,$sm}{
            margin-bottom: 40px;
@@ -180,13 +190,16 @@
     &__item{
         &-1{
             bottom: -200px;
-            left: -30px;
+            left: 13%;
+            @media #{$xxl}{
+                left: 7%;
+            }
             @media #{$xl,$lg}{
                 left: 0;
             }
         }
         &-2{
-            right: 40px;
+            right: 18%;
             bottom: -30px; 
             @media #{$xl}{
                right: 130px;
@@ -199,14 +212,9 @@
                 right: 0;
                 bottom: -50px;
             }
-            @media #{$xs}{
-                right: 50%;
-                transform: translateX(50%);
-                bottom: -17px;
-            }
         }   
         &-3{
-            left: 308px;
+            left: 31%;
             bottom: -60px;
             @media #{$lg}{
               bottom: -90px;
@@ -218,36 +226,56 @@
         }
         &-4{
             bottom: 140px;
-            right: -135px;
+            right: 8%;
+            @media #{$xxl}{
+               right: 2%;
+            }
             @media #{$xl}{
                right: 0;
             }
             @media #{$lg}{
-                bottom: 90px;
-                right: -62px;
+                bottom: 45px;
+                right: 0;
+            }
+            @media #{$md}{
+                bottom: 0;
+                right: 34%;
             }
         }
         &-5{
-            top: 230px;
-            left: -140px; 
+            top: 25%;
+            left: 10%;
             @media #{$xxl}{
                 left: 0;
             }
-            @media #{$xl}{
+            @media #{$xl,$lg}{
                 left: 0;
             }
             @media #{$lg}{
-                left: -90px;
+                top: 50%;
+            }
+            @media #{$md}{
+               left: 0;
+               top: -82px;
             }
         }
     }
     &__title{
+      & a{
+        &:hover{
+            text-decoration: underline;
+        }
+      }
       @media #{$xl}{
         font-size: 20px;
       }
       @media #{$lg}{
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 10px;
+      }
+      @media #{$md}{
+        font-size: 20px;
+        margin-bottom: 5px;
       }
       @media #{$xs}{
         font-size: 20px;
@@ -259,6 +287,9 @@
         @media #{$lg,$md}{
             max-width: 250px;
         }
+        @media #{$xs}{
+            max-width: 100%;
+        }
         &--item{
             &-1{
                 top: 26px;
@@ -267,8 +298,8 @@
             &-2{
                 bottom: 0;
                 left: 114px;
-                @media #{$sm}{
-                   display: none;
+                @media #{$md}{
+                  left: 0;
                 }
                 @media #{$xs}{
                    left: 0;
@@ -277,10 +308,17 @@
             &-3{
                 bottom: 145px;
                 left: 28%;
+                @media #{$md}{
+                    bottom: 38px;
+                    left: 30%;
+                }
             }
             &-4{
                 top: 275px;
                 right: 0;
+                @media #{$md}{
+                  top: 112px;
+                }
                 @media #{$sm}{
                    top: 340px;
                 }
@@ -288,6 +326,10 @@
             &-5{
                 right: 168px;
                 bottom: 180px;
+                @media #{$md}{
+                    right: 58px;
+                    bottom: 110px;
+                }
             }
         }
     }
@@ -311,5 +353,3 @@
         } 
     }
 }
-
-

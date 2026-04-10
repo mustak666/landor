@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/odometer-min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     
     <!-- header,start  -->
      <header>
-        <div class="tp-header-area tp-header-spacing-3 container-wide z-index-1">
-            <div class="tp-header-top">
+        <div class="tp-header-area tp-header-spacing-3 container-wide">
+            <div class="tp-header-top d-none d-xl-block">
                 <div class="row tp-align-center tp-justify-center">
                     <div class="col-lg-6 col-md-8">
                         <div class="tp-header-top-cta tp-flex-center">
@@ -57,12 +58,12 @@
                     </div>
                 </div>
             </div>
-            <div class="tp-header-spacing-2">
+            <div class="tp-header-spacing-2 z-index-10" id="header-sticky">
                 <div class="tp-header-wrap">
                     <div class="row gx-0 tp-align-center">
                         <div class="col-xl-3 col-lg-4 col-md-5 col-5">
                             <div class="tp-header-logo">
-                                <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo-black"></a>
+                                <a href="index.html"><img data-width="163" src="assets/img/logo/logo-black.png" alt="logo-black"></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-2 col-md-1 col-2">
@@ -122,7 +123,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-6 col-md-6 col-5">
                             <div class="tp-header-cta tp-flex-center tp-justify-end">
-                                <div class="tp-cta-phone tp-header-cta-phone mr-30 d-none d-md-inline-block">
+                                <div class="tp-cta-phone tp-header-cta-phone mr-30 d-none d-xl-inline-block">
                                     <a class="tp-flex-center" href="tel:+99926542563">
                                         <span class="tp-cta-phone-icon mr-10">
                                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +136,7 @@
                                     </a>
                                 </div>
                                 <div class="tp-header-cta-button d-none d-md-inline-block">
-                                    <a href="#" class="tp-btn tp-btn-border">
+                                    <a href="contect.html" class="tp-btn tp-btn-border">
                                     <span class="tp-btn-text">Get in touch</span>
                                         <span class="tp-btn-icon">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,24 +161,59 @@
      </header>
     <!-- header,end  -->
 
+     <!-- preloader,start  -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_four"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_one"></div>
+                </div>
+            </div>
+        
+        </div>
+     <!-- preloader,end  -->
+
+    <!-- mouse-cursor -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- mouse-cursor -->
+     
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+
     <!-- offcanvas-start -->
     <section class="tp-offcanvas">
         <div class="tp-offcanvas-wrapper">
             <div class="tp-offcanvas-header d-flex align-items-center justify-content-between mb-40">
                 <div class="tp-offcanvas-logo">
-                    <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
+                    <a href="index.html"><img data-width="163" src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
                 </div>
                 <div class="tp-offcanvas-button">
                     <button class="tp-offcanvas-button-close tp-offcanvas-close-toggle"><i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
-            <div class="tp-offcanvas-menu">
+            <div class="tp-offcanvas-menu mb-30">
                 <nav></nav>
             </div>
             <div class="tp-offcanvas-content mb-30">
-                <h3 class="tp-offcanvas-title mb-7">Let’s shape something remarkable !</h3>
+                <h3 class="tp-offcanvas-title mb-7">Let’s make Real</h3>
                 <p class="m-0">We are a privately owned real estate company dedicated to delivering innovative property solutions across the globe.</p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-30">
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-2.jpg"><img src="assets/img/project/project-gullary-2.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-3.jpg"><img src="assets/img/project/project-gullary-3.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
             </div>
             <div class="tp-offcanvas-cta mb-30">
             <h3 class="tp-offcanvas-title mb-7">Information</h3>
@@ -200,7 +236,6 @@
     <div class="tp-offcanvas-overlay"></div>
     <!-- offcanvas-start -->
 
-
     <!-- main,start  -->
      <main>
 
@@ -208,8 +243,8 @@
      <section class="tp-hero-area">
         <div class="container-wide">
             <div class="tp-hero-spacing-3 tp-hero-bg p-relative br-20 fix" data-background="assets/img/hero/hero-bg-3.jpg">
-                <div class="tp-badge-circle tp-hero-badge">
-                    <a href="#">Get <br>
+                <div class="tp-badge-circle tp-hero-badge tp_fade_anim" data-delay=".5" data-ease="bounce" data-duration=".9">
+                    <a href="contect.html">Get <br>
                     Your Free <br>
                     Quote</a>
                 </div>
@@ -217,11 +252,13 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-8 col-md-10">
                             <div class="tp-hero-heading">
-                                <h1 class="tp-section-title-larg tp-hero-title-mid mb-30">Innovation
+                                <h1 class="tp-section-title-larg tp-hero-title-mid mb-30 tp_fade_anim" data-delay=".1" data-duration=".9">Innovation
                                 Excellence
                                 Growth.</h1>
-                                <p class="tp-hero-deg fw-500 tp-text-black">The largest privately held real estate investors
-                                and managers in the world.</p>
+                                <div class="tp_fade_anim" data-delay=".3" data-duration=".9"> 
+                                    <p class="tp-hero-deg fw-500 tp-text-black">The largest privately held real estate investors
+                                    and managers in the world.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -235,14 +272,14 @@
      <section class="tp-services-area tp-services-spacing fix">
         <div class="container">
             <div class="row tpservices__main">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="tpservices br-20 tp-bg-orange p-relative fix">
+                <div class="col-lg-4 col-md-6 tp_fade_anim" data-delay=".2" data-duration=".9">
+                    <div class="tpservices br-20 tp-bg-orange p-relative fix ">
                         <div class="tpservices__content z-index-1">
                             <h2 class="tpservices__title mb-10 tp-text-white">What we do</h2>
                             <p class="mb-20 tp-text-white">We maintain this by ensuring
                             transparency and professional conduct
                             in every aspect.</p>
-                            <a class="tpservices__btn" href="#">
+                            <a class="tpservices__btn" href="services-details.html">
                                 <span class="mr-5">Our Solutions</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.75 6.75H12.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -256,14 +293,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="tpservices br-20 tp-bg-secoundery p-relative fix">
+                <div class="col-lg-4 col-md-6 tp_fade_anim" data-delay=".3" data-duration=".9">
+                    <div class="tpservices br-20 tp-bg-secoundery p-relative fix ">
                         <div class="tpservices__content z-index-1">
                             <h3 class="tpservices__title mb-10">What we do</h3>
                             <p class="mb-20">We maintain this by ensuring
                             transparency and professional conduct
                             in every aspect.</p>
-                            <a class="tpservices__btn" href="#">
+                            <a class="tpservices__btn" href="services-details.html">
                                 <span class="mr-5">Our Solutions</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.75 6.75H12.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -277,14 +314,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="tpservices br-20 tp-bg-gray p-relative fix">
+                <div class="col-lg-4 col-md-6 tp_fade_anim" data-delay=".4" data-duration=".9">
+                    <div class="tpservices br-20 tp-bg-gray p-relative fix ">
                         <div class="tpservices__content z-index-1">
                             <h3 class="tpservices__title mb-10">What we do</h3>
                             <p class="mb-20">We maintain this by ensuring
                             transparency and professional conduct
                             in every aspect.</p>
-                            <a class="tpservices__btn" href="#">
+                            <a class="tpservices__btn" href="services-details.html">
                                 <span class="mr-5">Our Solutions</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.75 6.75H12.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -311,25 +348,39 @@
                     <div class="tp-fact-wrap tp-flex-center tp-justify-center">
                         <div class="tpfact">
                             <div class="tpfact__content">
-                                <h3 class="tpfact__title">40 <span>+</span></h3>
+                                <h3 class="tpfact__title">
+                                    <span class="odometer" data-count="40"></span>
+                                    <span class="tpfact__title-div">+</span>
+                                </h3>
                                 <p class="margin-0">Projects completed</p>
                             </div>
                         </div>
                         <div class="tpfact">
                             <div class="tpfact__content">
-                                <h3 class="tpfact__title">60 <span>+</span></h3>
+                                <h3 class="tpfact__title">
+                                    <span class="odometer" data-count="60"></span>
+                                    <span class="tpfact__title-div">+</span>
+                                </h3>
                                 <p class="margin-0">Projects development</p>
                             </div>
                         </div>
                         <div class="tpfact">
                             <div class="tpfact__content">
-                                <h3 class="tpfact__title">3.1B <span>+</span></h3>
+                                <h3 class="tpfact__title">
+                                    <span class="odometer" data-count="1.2"></span>
+                                    <span class="tpfact__title-text">B</span>
+                                    <span class="tpfact__title-div">+</span>
+                                </h3>
                                 <p class="margin-0">Total projects cost</p>
                             </div>
                         </div>
                         <div class="tpfact">
                             <div class="tpfact__content">
-                                <h3 class="tpfact__title">20M <span>+</span></h3>
+                                <h3 class="tpfact__title">
+                                    <span class="odometer" data-count="20"></span>
+                                    <span class="tpfact__title-text">M</span>
+                                    <span class="tpfact__title-div">+</span>
+                                </h3>
                                 <p class="margin-0">Square feet of property</p>
                             </div>
                         </div>
@@ -347,14 +398,14 @@
                 <div class="row">
                     <div class="col-xl-8 col-md-7">
                         <div class="tp-section-title-wrap">
-                            <span class="tp-section-sub-title mb-12">About us</span>
-                            <h2 class="tp-section-title">Delivering remarkable quality <br>
+                            <span class="tp-section-sub-title mb-12 tp_fade_anim" data-delay=".1" data-duration=".9">About us</span>
+                            <h2 class="tp-section-title tp_fade_anim" data-duration=".9" data-delay=".3">Delivering remarkable quality <br>
                                 in every inspiring space
                                 we<span>have build.</span></h2>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-5">
-                        <div class="tp-about-exprience-wrap tp-flex tp-justify-end mr-85">
+                        <div class="tp-about-exprience-wrap tp-flex tp-justify-end mr-85 tp_fade_anim" data-duration=".9" data-delay=".6" data-fade-from="right">
                             <div class="tp-about-exprience p-relative">
                                 <div class="tp-about-exprience-content z-index-1">
                                     <span>Years of <br>
@@ -372,13 +423,15 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="tp-about-image br-20 p-relative">
-                       <img src="assets/img/about/about-thumb-2.jpg" alt="">
-                       <img class="tp-about-shape-parson p-absolute" src="assets/img/about/about-parson.png" alt="">
+                        <div class="anim-zoomin-wrap br-20">
+                           <img class="anim-zoomin" src="assets/img/about/about-thumb-2.jpg" alt="">
+                        </div>
+                       <img class="tp-about-shape-parson p-absolute tp_fade_anim" data-delay=".2" data-duration=".9" src="assets/img/about/about-parson.png" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="tp-about-content tp-about-content-2 pl-50 ml-35">
-                       <div class="tp-about-deg tp-about-deg-2 tp-about-deg-border pb-65 mb-35">
+                       <div class="tp-about-deg tp-about-deg-2 tp-about-deg-border pb-65 mb-35 tp_fade_anim" data-duration=".9" data-delay=".3">
                           <p class="mb-30">We are a privately owned real estate company dedicated to delivering
                             innovative property solutions across the globe. Our team specializes
                             in real estate investment, property management, and development,
@@ -386,7 +439,7 @@
                             expertise with a client-first approach</p>
                             <h3 class="tp-about-border-text p-relative">Let’s shape something remarkable !</h3>
                        </div>
-                       <div class="row tp-align-center">
+                       <div class="row tp-align-center tp_fade_anim" data-duration=".9" data-delay=".4">
                             <div class="col-md-6">
                                 <p class="tp-about-cta-deg">If you have any question? Feel free
                                     can contact with team.</p>
@@ -407,8 +460,8 @@
                                 </div>
                             </div>
                        </div>
-                        <div class="tp-about-btn tp-about-btn-2 pt-40">
-                            <a href="#" class="tp-btn">
+                        <div class="tp-about-btn tp-about-btn-2 pt-40 tp_fade_anim" data-duration=".9" data-delay=".4" data-ease="bounce">
+                            <a href="about.html" class="tp-btn">
                                 <span class="tp-btn-text">Learn More</span>
                                 <span class="tp-btn-icon">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -429,23 +482,25 @@
       <section class="tp-project-area">
         <div class="container-wide tp-project-spacing-2 p-relative">
             <div class="tp-project-back-text p-absolute">Selected work</div>
-                <div class="project-slider-wrap">
+                <div class="project-slider-wrap tp-project-slider-wrap">
                     <div class="tp-project project-slider-panel tp-bg" data-background="assets/img/project/project-bg.jpg">
                         <div class="container">
                             <div class="tp-project-main p-relative">
                                 <div class="tp-project-content">
-                                    <h3 class="tp-project-title mb-30">Mixed use <br>
+                                    <h3 class="tp-project-title mb-30 tp_fade_anim" data-duration=".9">Mixed use <br>
                                     development</h3>
-                                    <p>A flowing, organic design inspired by the <br>
-                                        movement and rhythm of the sea.</p>
+                                    <div class="tp_fade_anim" data-duration=".9" data-delay=".2">
+                                        <p>A flowing, organic design inspired by the <br>
+                                            movement and rhythm of the sea.</p>
+                                    </div>
                                 </div>
                                 <div class="tp-project-meta">
-                                    <a href="#">Hospitality</a>
-                                    <a href="#">Real estate</a>
-                                    <a href="#">Marketing</a>
+                                    <a href="project-details.html">Hospitality</a>
+                                    <a href="project-details.html">Real estate</a>
+                                    <a href="project-details.html">Marketing</a>
                                 </div>
                                 <div class="tp-project-btn">
-                                    <a class="tp-btn-circle" href="#">
+                                    <a class="tp-btn-circle" href="project-details.html">
                                         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.5 37.5L37.5 1.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M1.5 1.5H37.5V37.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -459,18 +514,20 @@
                         <div class="container">
                             <div class="tp-project-main p-relative">
                                 <div class="tp-project-content">
-                                    <h3 class="tp-project-title mb-30">Urban rights <br>
+                                    <h3 class="tp-project-title mb-30 tp_fade_anim" data-duration=".9">Urban rights <br>
                                     residents</h3>
-                                    <p>A flowing, organic design inspired by the <br>
-                                        movement and rhythm of the sea.</p>
+                                    <div class="tp_fade_anim" data-duration=".9" data-delay=".2">
+                                        <p>A flowing, organic design inspired by the <br>
+                                            movement and rhythm of the sea.</p>
+                                    </div>
                                 </div>
                                 <div class="tp-project-meta">
-                                    <a href="#">Hospitality</a>
-                                    <a href="#">Real estate</a>
-                                    <a href="#">Marketing</a>
+                                    <a href="project-details.html">Hospitality</a>
+                                    <a href="project-details.html">Real estate</a>
+                                    <a href="project-details.html">Marketing</a>
                                 </div>
                                 <div class="tp-project-btn">
-                                    <a class="tp-btn-circle" href="#">
+                                    <a class="tp-btn-circle" href="project-details.html">
                                         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.5 37.5L37.5 1.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M1.5 1.5H37.5V37.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -484,18 +541,20 @@
                         <div class="container">
                             <div class="tp-project-main p-relative">
                                 <div class="tp-project-content">
-                                    <h3 class="tp-project-title mb-30">Commercial <br>
+                                    <h3 class="tp-project-title mb-30 tp_fade_anim" data-duration=".9">Commercial <br>
                                     and residential</h3>
-                                    <p>A flowing, organic design inspired by the <br>
-                                        movement and rhythm of the sea.</p>
+                                    <div class="tp_fade_anim" data-duration=".9" data-delay=".2">
+                                        <p>A flowing, organic design inspired by the <br>
+                                            movement and rhythm of the sea.</p>
+                                    </div>
                                 </div>
                                 <div class="tp-project-meta">
-                                    <a href="#">Hospitality</a>
-                                    <a href="#">Real estate</a>
-                                    <a href="#">Marketing</a>
+                                    <a href="project-details.html">Hospitality</a>
+                                    <a href="project-details.html">Real estate</a>
+                                    <a href="project-details.html">Marketing</a>
                                 </div>
                                 <div class="tp-project-btn">
-                                    <a class="tp-btn-circle" href="#">
+                                    <a class="tp-btn-circle" href="project-details.html">
                                         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.5 37.5L37.5 1.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M1.5 1.5H37.5V37.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -509,18 +568,20 @@
                         <div class="container">
                             <div class="tp-project-main p-relative">
                                 <div class="tp-project-content">
-                                    <h3 class="tp-project-title mb-30">Mixed use <br>
+                                    <h3 class="tp-project-title mb-30 tp_fade_anim" data-duration=".9">Mixed use <br>
                                     development</h3>
-                                    <p>A flowing, organic design inspired by the <br>
-                                        movement and rhythm of the sea.</p>
+                                    <div class="tp_fade_anim" data-duration=".9" data-delay=".2">
+                                        <p>A flowing, organic design inspired by the <br>
+                                            movement and rhythm of the sea.</p>
+                                    </div>
                                 </div>
                                 <div class="tp-project-meta">
-                                    <a href="#">Hospitality</a>
-                                    <a href="#">Real estate</a>
-                                    <a href="#">Marketing</a>
+                                    <a href="project-details.html">Hospitality</a>
+                                    <a href="project-details.html">Real estate</a>
+                                    <a href="project-details.html">Marketing</a>
                                 </div>
                                 <div class="tp-project-btn">
-                                    <a class="tp-btn-circle" href="#">
+                                    <a class="tp-btn-circle" href="project-details.html">
                                         <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1.5 37.5L37.5 1.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M1.5 1.5H37.5V37.5" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -543,25 +604,25 @@
                     <div class="row tp-justify-center">
                         <div class="col-md-8">
                             <div class="tp-section-title-wrap tp-text-center">
-                                <span class="tp-section-sub-title mb-12">Our team members</span>
-                                <h2 class="tp-section-title margin-0">Discover the talent and vision of
+                                <span class="tp-section-sub-title mb-12 tp_fade_anim" data-duration=".9" data-delay=".1">Our team members</span>
+                                <h2 class="tp-section-title margin-0 tp_fade_anim" data-duration=".9" data-delay=".2">Discover the talent and vision of
                                 our creative<span>team members.</span></h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row tp-justify-center">
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="tpexperts hover br-20 p-relative fix">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tpexperts hover br-20 p-relative fix tp_fade_anim" data-duration=".9" data-delay=".3">
                             <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
-                                <a href="#" class="tpexperts__btn z-index-1"></a>
+                                <a href="team-details.html" class="tpexperts__btn z-index-1"></a>
                                 <div class="tpexperts__thumb br-20">
-                                    <a href="#"><img src="assets/img/team/team-member-5.jpg" alt=""></a>
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-5.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h3 class="tpexperts__title tp-fs-24"><a href="#">Crsitopher Miller</a></h3>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -596,17 +657,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="tpexperts hover br-20 p-relative fix">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tpexperts hover br-20 p-relative fix tp_fade_anim" data-duration=".9" data-delay=".4">
                             <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
-                                <a href="#" class="tpexperts__btn z-index-1"></a>
+                                <a href="team-details.html" class="tpexperts__btn z-index-1"></a>
                                 <div class="tpexperts__thumb br-20">
-                                    <a href="#"><img src="assets/img/team/team-member-4.jpg" alt=""></a>
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-4.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h3 class="tpexperts__title tp-fs-24"><a href="#">Crsitopher Miller</a></h3>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -641,17 +702,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="tpexperts hover br-20 p-relative fix">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tpexperts hover br-20 p-relative fix tp_fade_anim" data-duration=".9" data-delay=".5">
                             <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
-                                <a href="#" class="tpexperts__btn z-index-1"></a>
+                                <a href="team-details.html" class="tpexperts__btn z-index-1"></a>
                                 <div class="tpexperts__thumb br-20">
-                                    <a href="#"><img src="assets/img/team/team-member-6.jpg" alt=""></a>
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-6.jpg" alt=""></a>
                                 </div>
                             </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h3 class="tpexperts__title tp-fs-24"><a href="#">Crsitopher Miller</a></h3>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -798,101 +859,91 @@
             </div>
         </section>
     <!-- brand-area,end  -->
-
-     <!-- choose-area,start  -->
-      <section class="tp-choose-area tp-bg-overlay default-margin br-20 fix" data-background="assets/img/choose/choose-bg.jpg">
-        <div class="container p-relative">
-            <div class="tp-choose-wrap tp-choose-spacing">
-                <div class="row tp-justify-center">
-                    <div class="col-xl-6 col-lg-8">
-                        <div class="tp-section-title-wrap tp-text-center">
-                            <span class="tp-section-sub-title tp-section-sub-title-trd mb-12">Why choose Landor</span>
-                            <h2 class="tp-section-title tp-section-title-mid-2 tp-text-white">An exceptional quality
-                            that can’t<span>be beaten</span></h2>
+     
+    <!-- choose-area,start  -->
+        <section class="tp-choose-area tp-choose-slide-wrap tp-choose-wrap-main tp-choose-spacing tp-bg-overlay default-margin br-20 fix" data-background="assets/img/choose/choose-bg.jpg">
+            <div class="container ">
+                <div class="tp-choose-heading tp-choose-slide">
+                    <div class="row tp-justify-center">
+                        <div class="col-xl-6 col-lg-8">
+                            <div class="tp-section-title-wrap tp-text-center">
+                                <span class="tp-section-sub-title tp-section-sub-title-trd mb-12">Why choose Landor</span>
+                                <h2 class="tp-section-title tp-section-title-mid-2 tp-text-white">An exceptional quality
+                                that can’t<span>be beaten</span></h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 d-none d-lg-inline-block tpchoose__item-1 p-absolute">
-                    <div class="tpchoose tp-bg-white">
-                        <div class="tpchoose__icon tp-text-end mb-75">
-                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
-                            </svg>
-                        </div>
-                        <div class="tpchoose__content">
-                            <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="#">Lifetime support</a></h3>
-                            <p>Our goal is zero incidents and
-                            our lost time frequency rate is
-                            industry leading.</p>
-                        </div>
+            <div class="tp-choose-wrap">
+                <div class="tpchoose tp-bg-white tpchoose__item-1 p-absolute">
+                    <div class="tpchoose__icon tp-text-end mb-75">
+                        <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
+                        </svg>
+                    </div>
+                    <div class="tpchoose__content">
+                        <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="services-grid-icon.html">Lifetime support</a></h3>
+                        <p>Our goal is zero incidents and
+                        our lost time frequency rate is
+                        industry leading.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5 col-10 tpchoose__item-2 p-absolute">
-                    <div class="tpchoose tp-bg-white">
-                        <div class="tpchoose__icon tp-text-end mb-75">
-                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
-                            </svg>
-                        </div>
-                        <div class="tpchoose__content">
-                            <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="#">Architecture design</a></h3>
-                            <p>Our goal is zero incidents and
-                            our lost time frequency rate is
-                            industry leading.</p>
-                        </div>
+                <div class="tpchoose tp-bg-white tpchoose__item-2 p-absolute">
+                    <div class="tpchoose__icon tp-text-end mb-75">
+                        <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
+                        </svg>
+                    </div>
+                    <div class="tpchoose__content">
+                        <h4 class="tpchoose__title mb-15"><a href="services-grid-icon.html">Architecture design</a></h4>
+                        <p>Our goal is zero incidents and
+                        our lost time frequency rate is
+                        industry leading.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5 d-none d-md-inline-block tpchoose__item-3 p-absolute">
-                    <div class="tpchoose tp-bg-secoundery">
-                        <div class="tpchoose__icon tp-text-end mb-75">
-                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
-                            </svg>
-                        </div>
-                        <div class="tpchoose__content">
-                            <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="#">Community living</a></h3>
-                            <p>Our goal is zero incidents and
-                            our lost time frequency rate is
-                            industry leading.</p>
-                        </div>
+                <div class="tpchoose tp-bg-secoundery tpchoose__item-3 p-absolute">
+                    <div class="tpchoose__icon tp-text-end mb-75">
+                        <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
+                        </svg>
+                    </div>
+                    <div class="tpchoose__content">
+                        <h4 class="tpchoose__title mb-15"><a href="services-grid-icon.html">Community living</a></h4>
+                        <p>Our goal is zero incidents and
+                        our lost time frequency rate is
+                        industry leading.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 d-none d-lg-inline-block tpchoose__item-4 p-absolute">
-                    <div class="tpchoose tp-bg-orange">
-                        <div class="tpchoose__icon tpchoose__icon-white tp-text-end mb-75">
-                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
-                            </svg>
-                        </div>
-                        <div class="tpchoose__content">
-                            <h4 class="tpchoose__title tp-text-white mb-15"><a href="#">Client approach</a></h4>
-                            <p class="tp-text-white">Our goal is zero incidents and
-                            our lost time frequency rate is
-                            industry leading.</p>
-                        </div>
+                <div class="tpchoose tp-bg-orange tpchoose__item-4 p-absolute">
+                    <div class="tpchoose__icon tpchoose__icon-white tp-text-end mb-75">
+                        <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
+                        </svg>
+                    </div>
+                    <div class="tpchoose__content">
+                        <h4 class="tpchoose__title tp-text-white mb-15"><a href="services-grid-icon.html">Client approach</a></h4>
+                        <p class="tp-text-white">Our goal is zero incidents and
+                        our lost time frequency rate is
+                        industry leading.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 d-none d-lg-inline-block tpchoose__item-5 p-absolute">
-                    <div class="tpchoose tpchoose__bluer-bg">
-                        <div class="tpchoose__icon tpchoose__icon-white tp-text-end mb-75">
-                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
-                            </svg>
-                        </div>
-                        <div class="tpchoose__content">
-                            <h4 class="tpchoose__title tp-text-white mb-15"><a href="#">Client approach</a></h4>
-                            <p class="tp-text-white">Our goal is zero incidents and
-                            our lost time frequency rate is
-                            industry leading.</p>
-                        </div>
+                <div class="tpchoose tpchoose__bluer-bg tpchoose__item-5 p-absolute">
+                    <div class="tpchoose__icon tpchoose__icon-white tp-text-end mb-75">
+                        <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
+                        </svg>
+                    </div>
+                    <div class="tpchoose__content">
+                        <h4 class="tpchoose__title tp-text-white mb-15"><a href="services-grid-icon.html">Client approach</a></h4>
+                        <p class="tp-text-white">Our goal is zero incidents and
+                        our lost time frequency rate is
+                        industry leading.</p>
                     </div>
                 </div>
             </div>
-        </div>
-      </section>
-     <!-- choose-area,end  -->
+        </section>
+    <!-- choose-area,end  -->     
 
 
       <!-- faq-area,start  -->
@@ -902,11 +953,11 @@
                 <div class="col-xl-6 col-lg-4">
                     <div class="tp-faq-heading">
                         <div class="tp-section-title-wrap">
-                            <span class="tp-section-sub-title mb-12">Our faq’s</span>
-                            <h2 class="tp-section-title margin-0">Frequently asked<span>questions!</span></h2>
+                            <span class="tp-section-sub-title mb-12 tp_fade_anim" data-duration=".9">Our faq’s</span>
+                            <h2 class="tp-section-title margin-0 tp_fade_anim" data-duration=".9" data-delay=".2">Frequently asked<span>questions!</span></h2>
                         </div>
-                        <div class="tp-faq-btn pt-45">
-                            <a href="#" class="tp-btn">
+                        <div class="tp-faq-btn pt-45 tp_fade_anim" data-duration=".9" data-delay=".3" data-ease="bounce">
+                            <a href="faq.html" class="tp-btn">
                             <span class="tp-btn-text">Learn More</span>
                                 <span class="tp-btn-icon">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -919,7 +970,7 @@
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-8">
-                    <div class="tp-faq">
+                    <div class="tp-faq tp_fade_anim" data-fade-from="right" data-delay=".5" data-duration=".9">
                         <div class="accordion" id="accordionExample">
                             <div class="tp-faq-item">
                                 <h3 class="tp-faq-header margin-0">
@@ -1025,132 +1076,134 @@
             <div class="container">
                 <div class="tp-blog-heading mb-70">
                     <div class="tp-section-title-wrap tp-text-center">
-                        <span class="tp-section-sub-title mb-12">Our blog post</span>
-                        <h2 class="tp-section-title margin-0">Discover inspiration<span>and trends</span></h2>
+                        <span class="tp-section-sub-title mb-12 tp_fade_anim" data-duration=".9">Our blog post</span>
+                        <h2 class="tp-section-title margin-0 tp_fade_anim" data-duration=".9" data-delay=".1">Discover inspiration<span>and trends</span></h2>
                     </div>   
                 </div>
-                <div class="tpblogpost br-20 fix mb-30">
-                    <div class="row tp-align-center">
-                        <div class="col-md-4">
-                            <div class="tpblogpost__thumb">
-                                <a href="#"><img src="assets/img/blog/blog-thumb-1.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xxl-6 col-md-5 col-sm-7">
-                            <div class="tpblogpost__wrap ml-10">
-                                <div class="tpblogpost__meta">
-                                    <span class="mr-10">Real estate</span>
-                                    <span>15 March, 2025</span>
+                <div class="tp_fade_anim" data-duration=".9" data-delay=".2">
+                    <div class="tpblogpost br-20 fix mb-30">
+                        <div class="row tp-align-center">
+                            <div class="col-md-4">
+                                <div class="tpblogpost__thumb">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-thumb-1.jpg" alt=""></a>
                                 </div>
-                                <div class="tpblogpost__content tpblogpost__content-down pt-25">
-                                    <h3 class="tpblogpost__title mb-45"><a href="#">Transforming urban spaces <br> with sustainable...</a></h3>
-                                    <div class="tpblogpost__author tp-flex-center">
-                                        <div class="tpblogpost__author-thumb br-30 mr-20">
-                                            <img src="assets/img/blog/blog-author.jpg" alt="">
-                                        </div>
-                                        <div class="tpblogpost__author-content">
-                                            <h4 class="tpblogpost__author-title margin-0"><a href="#">Crsitopher Miller</a></h4>
-                                            <p class="margin-0">Engineer</p>
+                            </div>
+                            <div class="col-xxl-6 col-md-5 col-sm-7">
+                                <div class="tpblogpost__wrap ml-10">
+                                    <div class="tpblogpost__meta">
+                                        <span class="mr-10">Real estate</span>
+                                        <span>15 March, 2025</span>
+                                    </div>
+                                    <div class="tpblogpost__content tpblogpost__content-down pt-25">
+                                        <h3 class="tpblogpost__title mb-45"><a href="blog-details.html">Transforming urban spaces <br> with sustainable...</a></h3>
+                                        <div class="tpblogpost__author tp-flex-center">
+                                            <div class="tpblogpost__author-thumb br-30 mr-20">
+                                                <img src="assets/img/blog/blog-author.jpg" alt="">
+                                            </div>
+                                            <div class="tpblogpost__author-content">
+                                                <h4 class="tpblogpost__author-title margin-0"><a href="blog-details.html">Crsitopher Miller</a></h4>
+                                                <p class="margin-0">Engineer</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xxl-2 col-md-3 col-sm-5">
-                            <div class="tpblogpost__button tp-flex tp-justify-end">
-                                <a href="#" class="tp-btn tp-btn-border">
-                                <span class="tp-btn-text">Read More</span>
-                                    <span class="tp-btn-icon">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.75 10.75L10.75 0.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M0.75 0.75H10.75V10.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-                                </a>
+                            <div class="col-xxl-2 col-md-3 col-sm-5">
+                                <div class="tpblogpost__button tp-flex tp-justify-end">
+                                    <a href="blog-details.html" class="tp-btn tp-btn-border">
+                                    <span class="tp-btn-text">Read More</span>
+                                        <span class="tp-btn-icon">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.75 10.75L10.75 0.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.75 0.75H10.75V10.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tpblogpost br-20 active fix mb-30">
-                    <div class="row tp-align-center">
-                        <div class="col-md-4">
-                            <div class="tpblogpost__thumb">
-                                <a href="#"><img src="assets/img/blog/blog-thumb-2.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xxl-6 col-md-5 col-sm-7">
-                            <div class="tpblogpost__wrap ml-10">
-                                <div class="tpblogpost__meta">
-                                    <span class="mr-10">Real estate</span>
-                                    <span>15 March, 2025</span>
+                    <div class="tpblogpost br-20 active fix mb-30">
+                        <div class="row tp-align-center">
+                            <div class="col-md-4">
+                                <div class="tpblogpost__thumb">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-thumb-2.jpg" alt=""></a>
                                 </div>
-                                <div class="tpblogpost__content tpblogpost__content-down pt-25">
-                                    <h3 class="tpblogpost__title mb-45"><a href="#">Transforming urban spaces <br> with sustainable...</a></h3>
-                                    <div class="tpblogpost__author tp-flex-center">
-                                        <div class="tpblogpost__author-thumb br-30 mr-20">
-                                            <img src="assets/img/blog/blog-author.jpg" alt="">
-                                        </div>
-                                        <div class="tpblogpost__author-content">
-                                            <h4 class="tpblogpost__author-title margin-0"><a href="#">Crsitopher Miller</a></h4>
-                                            <p class="margin-0">Engineer</p>
+                            </div>
+                            <div class="col-xxl-6 col-md-5 col-sm-7">
+                                <div class="tpblogpost__wrap ml-10">
+                                    <div class="tpblogpost__meta">
+                                        <span class="mr-10">Real estate</span>
+                                        <span>15 March, 2025</span>
+                                    </div>
+                                    <div class="tpblogpost__content tpblogpost__content-down pt-25">
+                                        <h3 class="tpblogpost__title mb-45"><a href="blog-details.html">Transforming urban spaces <br> with sustainable...</a></h3>
+                                        <div class="tpblogpost__author tp-flex-center">
+                                            <div class="tpblogpost__author-thumb br-30 mr-20">
+                                                <img src="assets/img/blog/blog-author.jpg" alt="">
+                                            </div>
+                                            <div class="tpblogpost__author-content">
+                                                <h4 class="tpblogpost__author-title margin-0"><a href="blog-details.html">Crsitopher Miller</a></h4>
+                                                <p class="margin-0">Engineer</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xxl-2 col-md-3 col-sm-5">
-                            <div class="tpblogpost__button tp-flex tp-justify-end">
-                                <a href="#" class="tp-btn tp-btn-border">
-                                <span class="tp-btn-text">Read More</span>
-                                    <span class="tp-btn-icon">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.75 10.75L10.75 0.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M0.75 0.75H10.75V10.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-                                </a>
+                            <div class="col-xxl-2 col-md-3 col-sm-5">
+                                <div class="tpblogpost__button tp-flex tp-justify-end">
+                                    <a href="blog-details.html" class="tp-btn tp-btn-border">
+                                    <span class="tp-btn-text">Read More</span>
+                                        <span class="tp-btn-icon">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.75 10.75L10.75 0.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.75 0.75H10.75V10.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tpblogpost br-20 fix">
-                    <div class="row tp-align-center">
-                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
-                            <div class="tpblogpost__thumb">
-                                <a href="#"><img src="assets/img/blog/blog-thumb-3.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xxl-6 col-md-5 col-sm-7">
-                            <div class="tpblogpost__wrap ml-10">
-                                <div class="tpblogpost__meta">
-                                    <span class="mr-10">Real estate</span>
-                                    <span>15 March, 2025</span>
+                    <div class="tpblogpost br-20 fix">
+                        <div class="row tp-align-center">
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                                <div class="tpblogpost__thumb">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-thumb-3.jpg" alt=""></a>
                                 </div>
-                                <div class="tpblogpost__content tpblogpost__content-down pt-25">
-                                    <h3 class="tpblogpost__title mb-45"><a href="#">Transforming urban spaces <br> with sustainable...</a></h3>
-                                    <div class="tpblogpost__author tp-flex-center">
-                                        <div class="tpblogpost__author-thumb br-30 mr-20">
-                                            <img src="assets/img/blog/blog-author.jpg" alt="">
-                                        </div>
-                                        <div class="tpblogpost__author-content">
-                                            <h4 class="tpblogpost__author-title margin-0"><a href="#">Crsitopher Miller</a></h4>
-                                            <p class="margin-0">Engineer</p>
+                            </div>
+                            <div class="col-xxl-6 col-md-5 col-sm-7">
+                                <div class="tpblogpost__wrap ml-10">
+                                    <div class="tpblogpost__meta">
+                                        <span class="mr-10">Real estate</span>
+                                        <span>15 March, 2025</span>
+                                    </div>
+                                    <div class="tpblogpost__content tpblogpost__content-down pt-25">
+                                        <h3 class="tpblogpost__title mb-45"><a href="blog-details.html">Transforming urban spaces <br> with sustainable...</a></h3>
+                                        <div class="tpblogpost__author tp-flex-center">
+                                            <div class="tpblogpost__author-thumb br-30 mr-20">
+                                                <img src="assets/img/blog/blog-author.jpg" alt="">
+                                            </div>
+                                            <div class="tpblogpost__author-content">
+                                                <h4 class="tpblogpost__author-title margin-0"><a href="blog-details.html">Crsitopher Miller</a></h4>
+                                                <p class="margin-0">Engineer</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xxl-2 col-md-3 col-sm-5">
-                            <div class="tpblogpost__button tp-flex tp-justify-end">
-                                <a href="#" class="tp-btn tp-btn-border">
-                                <span class="tp-btn-text">Read More</span>
-                                    <span class="tp-btn-icon">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.75 10.75L10.75 0.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M0.75 0.75H10.75V10.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-                                </a>
+                            <div class="col-xxl-2 col-md-3 col-sm-5">
+                                <div class="tpblogpost__button tp-flex tp-justify-end">
+                                    <a href="blog-details.html" class="tp-btn tp-btn-border">
+                                    <span class="tp-btn-text">Read More</span>
+                                        <span class="tp-btn-icon">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.75 10.75L10.75 0.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M0.75 0.75H10.75V10.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1168,12 +1221,12 @@
                 <div class="tp-footer-wrap pb-65">
                     <div class="row">
                         <div class="col-lg-5 col-md-7 col-sm-8">
-                            <div class="tp-footer-widgets mb-30">
+                            <div class="tp-footer-widgets mb-30 tp_fade_anim" data-delay=".1">
                                 <div class="tp-footer-info">
                                     <div class="tp-footer-content mb-45">
                                         <h3 class="tp-footer-info-title mb-20 tp-text-white">Ha ve questions?</h3>
-                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="#">on demo.landor@gmail.com</a> <br>
-                                            or submit <a href="#">an contact</a> form.</p>
+                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="mailto:demo.landor@gmail.com">on demo.landor@gmail.com</a> <br>
+                                            or submit <a href="contect.html">an contact</a> form.</p>
                                     </div>
                                     <div class="tp-footer-social tp-footer-social-white">
                                         <ul>
@@ -1203,7 +1256,7 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-5 col-sm-4">
-                            <div class="tp-footer-widgets tp-footer-widgets-white mb-30">
+                            <div class="tp-footer-widgets tp-footer-widgets-white mb-30 tp_fade_anim" data-delay=".2">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">Company</h4>
                                 <ul>
                                     <li><a href="#">About us</a></li>
@@ -1216,7 +1269,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-7 col-sm-8">
-                            <div class="tp-footer-widgets tp-footer-widgets-white">
+                            <div class="tp-footer-widgets tp-footer-widgets-white tp_fade_anim" data-delay=".3">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">SERVICES</h4>
                                 <ul>
                                     <li><a href="#">Real estate development</a></li>
@@ -1229,7 +1282,7 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-5 col-sm-4">
-                            <div class="tp-footer-widgets tp-footer-widgets-white">
+                            <div class="tp-footer-widgets tp-footer-widgets-white tp_fade_anim" data-delay=".4">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">PAGES</h4>
                                 <ul>
                                     <li><a href="#">Testimonials</a></li>
@@ -1246,7 +1299,7 @@
                     <div class="row tp-justify-center">
                         <div class="col-xl-5 col-lg-4 col-md-4">
                             <div class="tp-footer-logo">
-                                <a href="#"><img src="assets/img/logo/logo-white-larg.png" alt=""></a>
+                                <a href="index.html"><img data-width="365" src="assets/img/logo/logo-white-larg.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -1260,13 +1313,11 @@
     <!-- script,start -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/vandor/waypoints.js"></script>
-    <script src="assets/js/counterUp.js"></script>
     <script src="assets/js/ajex-form.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/mobile-menu-scripts.js"></script>
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/scrol-smooth.js"></script>
@@ -1274,6 +1325,7 @@
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/splitText.min.js"></script>
     <script src="assets/js/Vanilla-marquee.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- script,end -->
 </body>

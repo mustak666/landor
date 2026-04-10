@@ -10,8 +10,16 @@
             }
         }
         & p{
+            @media #{$md}{
+              & br{
+                display: none;
+              }
+            } 
             @media #{$xs,$sm}{
-            margin-bottom: 10px;
+              margin-bottom: 10px;
+              & br{
+                display: none;
+              }
             } 
         }
         @media #{$xs,$sm}{
@@ -54,6 +62,11 @@
     &-shape{
         left: 0;
         bottom: 0;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         &-inner{
             left: 0;
             top: 0; 
@@ -69,6 +82,12 @@
     }
     &-main{
         padding: 60px 10px;
+        @media #{$xs}{
+           padding: 40px 15px;
+        }
+        @media #{$sm}{
+           padding: 50px 30px;
+        }
     }
     &-box{
         background-color: var(--tp-white-color);
@@ -246,6 +265,10 @@
                 line-height: 1;
                 border-radius: 30px;
                 padding: 8px 20px;
+                &:hover{
+                    background-color: var(--tp-secoundery-color);
+                    color: var(--tp-theme-color);
+                }
             }
         }
     }
@@ -272,6 +295,11 @@
         }
         &-title {
             font-size: 16px;
+            & a{
+                &:hover{
+                    color: var(--tp-orange-color);
+                }
+            }
         }
         &-item {
             grid-gap: 15px;
@@ -350,6 +378,22 @@
                font-size: 25px;
             } 
         }
+        &-active{
+            border-radius: 20px;
+            overflow: hidden;
+            & .swiper-slide-active{
+                .tp-contect-slider-info {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-delay: .3s;
+                }
+                .tp-contect-slider-mail {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-delay: 0.5s;
+                }
+            }
+        }
     }
     &-button{
         & button{
@@ -407,18 +451,4 @@
     }
 }
 
-.tp-contect-slider-active{
-    & .swiper-slide-active{
-        .tp-contect-slider-info {
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: .3s;
-        }
 
-        .tp-contect-slider-mail {
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: 0.5s;
-        }
-    }
-}

@@ -5,12 +5,9 @@
 }
 
 .tp-offcanvas-menu {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     @media #{$xs}{
       width: 100%;
-    }
-    @media #{$sm}{
-     
     }
     & ul{
         & li{
@@ -58,6 +55,9 @@
                         transform: rotate(90deg);
                     }
                 }
+                & button{
+                    background-color: var(--tp-secoundery-color);
+                }
               }
               & a{
                 display: block;
@@ -74,7 +74,7 @@
   }
   .tp-menu-close {
 	position: absolute;
-	right: 10px;
+	right: 0;
 	top: 3px;
 	border: 1px solid var(--tp-secoundery-color);
 	height: 30px;

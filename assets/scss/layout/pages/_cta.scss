@@ -5,6 +5,11 @@
         & a{
             color: var(--tp-theme-color);
             font-weight: 600;
+            &:hover{
+                & samp{
+                    text-decoration: underline;
+                }
+            }
         }
         &-icon{
             width: 52px;
@@ -25,6 +30,13 @@
             &-white{
                 background-color: var(--tp-white-color);
                 color: var(--tp-theme-color);
+            }
+        }
+        &-mid{
+            & a{
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }

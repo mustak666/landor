@@ -74,6 +74,7 @@
             }
             @media #{$lg,$md}{
                 right: 0;
+                top: 65px;
             }
         }
         &-4{
@@ -116,7 +117,7 @@
           font-size: 75px;
         }
         @media #{$lg,$md}{
-          font-size: 60px;
+          font-size: 55px;
         }
         @media #{$xs}{
           font-size: 35px;

@@ -293,12 +293,12 @@ textarea{
 }
 
 *::-moz-placeholder {
-	color: var(--tp-body-black);
+	color: var(--tp-body-color);
 	opacity: 1;
 	font-weight: 500;
 }
 *::placeholder {
-	color: var(--tp-body-black);
+	color: var(--tp-body-color);
 	opacity: 1;
 	font-weight: 500;
 }

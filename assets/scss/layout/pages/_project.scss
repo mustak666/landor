@@ -1,7 +1,5 @@
 @use '../../utils' as *;
 
-
-
 .tp-project{
 	border-radius: 60px;
 	max-height: 930px !important;
@@ -12,6 +10,13 @@
 	@media #{$xs,$sm}{
 		margin-bottom: 20px;
 		border-radius: 0;
+	}
+	&-slider{
+		&-wrap{
+			@media #{$xs,$sm}{
+				padding: 0 10px;
+			}
+		}
 	}
 	&-title {
 		font-size: 80px;
@@ -35,6 +40,11 @@
 		}
 		&-short{
 			font-size: 60px;
+			& a{
+				&:hover{
+					color: var(--tp-secoundery-color);
+				}
+			}
 			@media #{$lg}{
 				font-size: 50px;
 			}
@@ -73,6 +83,8 @@
 			}
 			@media #{$md,$xs,$sm}{
 				font-size: 18px;
+			}
+			@media #{$xs}{
 				& br{
 					display: none;
 				}
@@ -95,7 +107,7 @@
 				margin-bottom: 5px;
 			}
 			&:hover{
-				background-color: var(--tp-white-color);
+				background-color: var(--tp-secoundery-color);
 				border-color: transparent;
 			}
 		}
@@ -104,9 +116,6 @@
 			justify-content: end;
 			align-items: center;
 			flex-wrap: wrap;
-			@media #{$xs,$sm}{
-				
-			}
 			& a{
 				background-color: var(--tp-white-color);
 				border-color: transparent;
@@ -219,7 +228,7 @@
 			grid-gap: 15px;
 		}
 		@media #{$xs,$sm}{
-			display: inline-block;
+			flex-wrap: wrap;
 		}
 	}
 	&-short{
@@ -304,9 +313,11 @@
 				align-items: center;
 				justify-content: center;
 				color: var(--tp-theme-color);
-			@media #{$xs,$sm}{
-				margin-right: 10px;
-			}
+				border: 1px solid transparent;
+				@include transition(.3s);
+				@media #{$xs,$sm}{
+					margin-right: 10px;
+				}
 			}
 			&-content{
 				& span{
@@ -336,6 +347,12 @@
 			&-item{
 				@media #{$xs,$sm}{
 					padding-bottom: 10px;
+				}
+				&:hover{
+					& .tp-project-details-info-icon{
+						border-color: var(--tp-secoundery-color);
+						background-color: transparent;
+					}
 				}
 			}
 		}	
@@ -534,79 +551,7 @@
 			}
 		}
 	}
-	&-demo{
-		&-heading{
-			& p{
-				letter-spacing: -0.02em;
-			}
-		}
-		&-slider{
-			border-radius: 0 20px 20px 0;
-			&-title{
-				font-size: 28px;
-			}
-			&-heading{
-				& span{
-					font-size: 17px;	
-				}
-			}
-			&-box{
-				background: var(--tp-white-color);
-				width: fit-content;
-				border: 3px solid #FFFFFF;
-				box-shadow: 0px 2px 4px rgba(14, 15, 17, 0.1);
-				border-radius: 24px;
-				padding: 10px;
-				&-content{
-					& span{
-						font-size: 14px;
-						text-transform: uppercase;
-						color: #333333;
-					}
-				}
-				&-title {
-					font-size: 20px;
-					letter-spacing: 0;
-					font-weight: 500;
-				}
-				&-thumb{
-					& img {
-						border-radius: 12px;
-					}
-				}
-				&-content {
-					padding: 12px;
-					padding-bottom: 18px;
-				}
-			}
-			&-thumb{
-				border: 3px solid #FFFFFF;
-				box-shadow: 0px 2px 4px rgba(14, 15, 17, 0.1);
-				border-radius: 24px;
-				overflow: hidden;
-			}
-			&-bottom{
-				border-radius: 20px 0 0 20px;
-			}
-		}
-		&-area{
-			& .container-wide{
-				max-width: 1800px;
-			}
-		}
-		&-content{
-			&-bottom{
-				padding-left: 100px;
-			}
-		}
-		&-item{
-			&-bottom{
-				margin-top: 150px;
-			}
-		}
-	}
 }
-
 
 .tpproject{
 	@media #{$sm,$xs}{
@@ -614,11 +559,28 @@
 	}
 	&__title {
 		font-size: 20px;
+		& a{
+			@include hover-border();
+		}
 	}
 	&__content {
 		background: var(--tp-white-color);
 		border-radius: 20px;
 		padding: 16px 28px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		&::before{
+			position: absolute;
+			content: "";
+			background-color: var(--tp-secoundery-color);
+			height: 0%;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			@include transition(.3s);
+		}
 	}
 	&__meta {
 		background: linear-gradient(239.18deg, rgba(0, 0, 0, 0.06) 17.93%, rgba(0, 0, 0, 0.015) 81.51%);
@@ -662,6 +624,11 @@
 			opacity: 1;
 			visibility: visible;
 		}
+		& .tpproject__content{
+			&::before{
+				height: 100%;
+			}
+		}
 	}
 }
 
@@ -677,7 +644,7 @@
 	transition: all .3s;
 	@media #{$lg,$md}{
 		min-height: 400px;
-		padding: 15px;
+		width: 100%;
 	}
 	@media #{$xs,$sm}{
 		min-height: 350px;
@@ -703,11 +670,17 @@
 			transition: .3;
 			transition-duration: .3s;
 			transition-delay: .2s;
+			& a{
+				&:hover{
+					color: var(--tp-secoundery-color);
+				}
+			}
 			@media #{$xl}{
 				font-size: 35px;
 			}
 			@media #{$lg,$md}{
-				font-size: 28px;
+				font-size: 25px;
+				left: 20px;
 			}
 			@media #{$xs,$sm}{
 				font-size: 20px;
@@ -753,6 +726,9 @@
 	}
 	&.active{
 		width: 645px;
+		@media #{$md}{
+			width: 100%;
+		}
 		@media #{$xs,$sm}{
 			width: 100%;
 		}
@@ -775,9 +751,5 @@
 			visibility: visible;
 		}
 	}
-}
-
-.tp-project-demo-active .swiper-slide{
-	width: auto !important;
 }
 

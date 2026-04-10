@@ -16,14 +16,14 @@
     
     <!-- header,start  -->
      <header>
-        <div class="tp-header-area tp-header-transparent">
+        <div class="tp-header-area tp-header-transparent sticky-black" id="header-sticky">
             <div class="container-wide">
                 <div class="tp-header-spacing">
                     <div class="tp-header-wrap">
                         <div class="row gx-0 tp-align-center">
                             <div class="col-xl-3 col-lg-4 col-md-5 col-5">
                                 <div class="tp-header-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="logo-black"></a>
+                                    <a href="index.html"><img data-width="163" src="assets/img/logo/logo-white.png" alt="logo-black"></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-2 col-md-1 col-2">
@@ -83,7 +83,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-5">
                                 <div class="tp-header-cta tp-flex-center tp-justify-end">
-                                    <div class="tp-cta-phone tp-header-cta-phone mr-30 d-none d-md-inline-block">
+                                    <div class="tp-cta-phone tp-header-cta-phone mr-30 d-none d-xl-inline-block">
                                         <a class="tp-flex-center" href="tel:+99926542563">
                                             <span class="tp-cta-phone-icon tp-cta-phone-icon-white mr-10">
                                                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@
                                     </div>
                                     <div class="tp-header-cta-button d-none d-md-inline-block">
                                         <a href="#" class="tp-btn">
-                                        <span class="tp-btn-text">Get in touch</span>
+                                            <span class="tp-btn-text">Get in touch</span>
                                             <span class="tp-btn-icon">
                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.75 10.75L10.75 0.75" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -122,24 +122,45 @@
      </header>
     <!-- header,end  -->
 
+    <!-- mouse-cursor -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- mouse-cursor -->
+
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+
     <!-- offcanvas-start -->
     <section class="tp-offcanvas">
         <div class="tp-offcanvas-wrapper">
             <div class="tp-offcanvas-header d-flex align-items-center justify-content-between mb-40">
                 <div class="tp-offcanvas-logo">
-                    <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
+                    <a href="index.html"><img data-width="163" src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
                 </div>
                 <div class="tp-offcanvas-button">
                     <button class="tp-offcanvas-button-close tp-offcanvas-close-toggle"><i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
-            <div class="tp-offcanvas-menu">
+            <div class="tp-offcanvas-menu mb-30">
                 <nav></nav>
             </div>
             <div class="tp-offcanvas-content mb-30">
-                <h3 class="tp-offcanvas-title mb-7">Let’s shape something remarkable !</h3>
+                <h3 class="tp-offcanvas-title mb-7">Let’s make Real</h3>
                 <p class="m-0">We are a privately owned real estate company dedicated to delivering innovative property solutions across the globe.</p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-30">
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-2.jpg"><img src="assets/img/project/project-gullary-2.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-3.jpg"><img src="assets/img/project/project-gullary-3.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
             </div>
             <div class="tp-offcanvas-cta mb-30">
             <h3 class="tp-offcanvas-title mb-7">Information</h3>
@@ -184,7 +205,7 @@
     <!-- breadcrumb-area,end  -->
 
     <!-- services-area,start  -->
-     <section class="tp-services-area tp-services-spacing fix">
+     <section class="tp-services-area tp-services-spacing-4 fix">
         <div class="container">
             <div class="tp-services-heading">
                 <div class="row">
@@ -195,7 +216,7 @@
                             of the services <span>we offer</span></h2>
                         </div>
                         <div class="tp-services-btn-2 pt-40">
-                            <a href="#" class="tp-btn">
+                            <a href="services-grid-icon.html" class="tp-btn">
                                 <span class="tp-btn-text">Explore Services</span>
                                 <span class="tp-btn-icon">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,9 +229,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row tpservices2__up tp-justify-center">
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="tpservices2 p-relative">
+            <div class="row tpservices2__up tp-justify-center tp-align-center">
+                <div class="col-lg-4 col-md-10 col-sm-10">
+                    <div class="tpservices2 p-relative mb-30">
                         <div class="tpservices2__thumb br-15 mb-40">
                             <img src="assets/img/services/services-2-img-1.jpg" alt="">
                         </div>
@@ -224,13 +245,13 @@
                                 </svg>
                             </div>
                             <div class="tpservices2__content">
-                                <h3 class="tpservices2__title tp-fs-24 mb-10">Construction management</h3>
+                                <h3 class="tpservices2__title tp-fs-24 mb-10"><a href="services-details.html">Construction management</a></h3>
                                 <p class="tp-text-black">Interactive design focuses on crafting
                                 engaging and intuitive interactions</p>
                             </div>
                         </div>
                         <div class="tpservices2__link">
-                            <a href="#" class="tpservices2__btn">
+                            <a href="services-details.html" class="tpservices2__btn">
                                 <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.000408173 7.39795H16.7596" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
                                 <path d="M10.1596 0C10.1596 4.08932 13.6667 7.39831 18.0008 7.39831" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
@@ -240,8 +261,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="tpservices2 p-relative">
+                <div class="col-lg-4 col-md-10 col-sm-10">
+                    <div class="tpservices2 p-relative mb-30">
                         <div class="tpservices2__thumb br-15 mb-40">
                             <img src="assets/img/services/services-2-img-2.jpg" alt="">
                         </div>
@@ -252,13 +273,13 @@
                                 </svg>
                             </div>
                             <div class="tpservices2__content">
-                                <h3 class="tpservices2__title tp-fs-24 mb-10">Sales and marketing</h3>
+                                <h3 class="tpservices2__title tp-fs-24 mb-10"><a href="services-details.html">Sales and marketing</a></h3>
                                 <p class="tp-text-black">Interactive design focuses on crafting
                                 engaging and intuitive interactions</p>
                             </div>
                         </div>
                         <div class="tpservices2__link">
-                            <a href="#" class="tpservices2__btn">
+                            <a href="services-details.html" class="tpservices2__btn">
                                 <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.000408173 7.39795H16.7596" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
                                 <path d="M10.1596 0C10.1596 4.08932 13.6667 7.39831 18.0008 7.39831" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
@@ -267,9 +288,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="tpservices2 p-relative">
+                    <div class="tpservices2 p-relative mb-30">
                         <div class="tpservices2__thumb br-15 mb-40">
                             <img src="assets/img/services/services-2-img-3.jpg" alt="">
                         </div>
@@ -287,13 +306,13 @@
                                 </svg>
                             </div>
                             <div class="tpservices2__content">
-                                <h3 class="tpservices2__title tp-fs-24 mb-10">Investment and capital</h3>
+                                <h3 class="tpservices2__title tp-fs-24 mb-10"><a href="services-details.html">Investment and capital</a></h3>
                                 <p class="tp-text-black">Interactive design focuses on crafting
                                 engaging and intuitive interactions</p>
                             </div>
                         </div>
                         <div class="tpservices2__link">
-                            <a href="#" class="tpservices2__btn">
+                            <a href="services-details.html" class="tpservices2__btn">
                                 <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.000408173 7.39795H16.7596" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
                                 <path d="M10.1596 0C10.1596 4.08932 13.6667 7.39831 18.0008 7.39831" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
@@ -303,63 +322,61 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 d-none d-lg-flex">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="tpservices2 p-relative">
-                        <div class="tpservices2__thumb br-15 mb-40">
-                            <img src="assets/img/services/services-2-img-4.jpg" alt="">
-                        </div>
-                        <div class="tpservices2__main">
-                            <div class="tpservices2__icon mb-25">
-                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M55.6096 14.3669C58.33 11.6133 58.3209 7.15979 55.5806 4.41839C52.8398 1.67851 48.3863 1.66936 45.6325 4.38956C34.327 -2.52718 18.9933 -1.42115 8.78616 8.78602C-1.42113 18.9933 -2.52728 34.3266 4.38969 45.6324C1.66962 48.3857 1.67852 52.8393 4.41876 55.5809C7.14973 58.3106 11.6021 58.3408 14.3672 55.6095C19.0661 58.4847 24.4485 60 29.9997 60C38.0131 60 45.5468 56.8795 51.2132 51.2132C61.3975 41.0288 62.5454 25.7023 55.6096 14.3669ZM53.9233 6.07556C55.7598 7.91297 55.7598 10.9026 53.9231 12.7402C52.0975 14.5685 49.1123 14.5915 47.2593 12.7399C45.4561 10.9353 45.4053 7.92914 47.2591 6.07603C49.0966 4.23967 52.0864 4.23944 53.9233 6.07556ZM29.9997 2.34297C35.0575 2.34297 39.9627 3.70717 44.2577 6.29704C43.1388 8.5786 43.3122 11.345 44.8438 13.4981L13.4984 44.8437C11.3735 43.3307 8.5928 43.1363 6.29859 44.2599C3.70789 39.9642 2.34322 35.0582 2.34322 29.9996C2.3431 14.7497 14.7498 2.34297 29.9997 2.34297ZM6.07604 53.9236C4.23957 52.0862 4.23957 49.0965 6.07569 47.2596C7.90736 45.4292 10.8972 45.4177 12.7401 47.2593C14.5322 49.0528 14.6059 52.0583 12.7404 53.9232C10.9027 55.7598 7.91298 55.7598 6.07604 53.9236ZM29.9997 57.6562C24.9417 57.6562 20.0361 56.2926 15.7418 53.7028C16.869 51.4047 16.6758 48.6354 15.1566 46.5002L46.4989 15.1576C48.6827 16.7181 51.4846 16.8369 53.7039 15.7433C56.2933 20.0375 57.6563 24.9421 57.6563 29.9996C57.6563 45.2495 45.2497 57.6562 29.9997 57.6562Z" fill="currentcolor"/>
-                                </svg>
+                <div class="col-lg-4 col-md-10 col-sm-10">
+                    <div class="tpservices2__right-wrap">
+                        <div class="tpservices2 p-relative mb-30">
+                            <div class="tpservices2__thumb br-15 mb-40">
+                                <img src="assets/img/services/services-2-img-4.jpg" alt="">
                             </div>
-                            <div class="tpservices2__content">
-                                <h3 class="tpservices2__title tp-fs-24 mb-10">Architecture design</h3>
-                                <p class="tp-text-black">Interactive design focuses on crafting
-                                engaging and intuitive interactions</p>
+                            <div class="tpservices2__main">
+                                <div class="tpservices2__icon mb-25">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M55.6096 14.3669C58.33 11.6133 58.3209 7.15979 55.5806 4.41839C52.8398 1.67851 48.3863 1.66936 45.6325 4.38956C34.327 -2.52718 18.9933 -1.42115 8.78616 8.78602C-1.42113 18.9933 -2.52728 34.3266 4.38969 45.6324C1.66962 48.3857 1.67852 52.8393 4.41876 55.5809C7.14973 58.3106 11.6021 58.3408 14.3672 55.6095C19.0661 58.4847 24.4485 60 29.9997 60C38.0131 60 45.5468 56.8795 51.2132 51.2132C61.3975 41.0288 62.5454 25.7023 55.6096 14.3669ZM53.9233 6.07556C55.7598 7.91297 55.7598 10.9026 53.9231 12.7402C52.0975 14.5685 49.1123 14.5915 47.2593 12.7399C45.4561 10.9353 45.4053 7.92914 47.2591 6.07603C49.0966 4.23967 52.0864 4.23944 53.9233 6.07556ZM29.9997 2.34297C35.0575 2.34297 39.9627 3.70717 44.2577 6.29704C43.1388 8.5786 43.3122 11.345 44.8438 13.4981L13.4984 44.8437C11.3735 43.3307 8.5928 43.1363 6.29859 44.2599C3.70789 39.9642 2.34322 35.0582 2.34322 29.9996C2.3431 14.7497 14.7498 2.34297 29.9997 2.34297ZM6.07604 53.9236C4.23957 52.0862 4.23957 49.0965 6.07569 47.2596C7.90736 45.4292 10.8972 45.4177 12.7401 47.2593C14.5322 49.0528 14.6059 52.0583 12.7404 53.9232C10.9027 55.7598 7.91298 55.7598 6.07604 53.9236ZM29.9997 57.6562C24.9417 57.6562 20.0361 56.2926 15.7418 53.7028C16.869 51.4047 16.6758 48.6354 15.1566 46.5002L46.4989 15.1576C48.6827 16.7181 51.4846 16.8369 53.7039 15.7433C56.2933 20.0375 57.6563 24.9421 57.6563 29.9996C57.6563 45.2495 45.2497 57.6562 29.9997 57.6562Z" fill="currentcolor"/>
+                                    </svg>
+                                </div>
+                                <div class="tpservices2__content">
+                                    <h3 class="tpservices2__title tp-fs-24 mb-10"><a href="#">Architecture design</a></h3>
+                                    <p class="tp-text-black">Interactive design focuses on crafting
+                                    engaging and intuitive interactions</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tpservices2__link">
-                            <a href="#" class="tpservices2__btn">
-                                <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.000408173 7.39795H16.7596" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
-                                <path d="M10.1596 0C10.1596 4.08932 13.6667 7.39831 18.0008 7.39831" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
-                                <path d="M18.0008 7.39807C13.6667 7.39807 10.1596 10.7071 10.1596 14.7964" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="tpservices2 p-relative">
-                        <div class="tpservices2__thumb br-15 mb-40">
-                            <img src="assets/img/services/services-2-img-5.jpg" alt="">
-                        </div>
-                        <div class="tpservices2__main">
-                            <div class="tpservices2__icon mb-25">
-                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M42.0154 24.8457C45.8438 24.8457 48.9585 21.7311 48.9585 17.9026C48.9585 14.0741 45.8439 10.9595 42.0154 10.9595C38.1869 10.9595 35.0723 14.0741 35.0723 17.9026C35.0723 21.7311 38.1869 24.8457 42.0154 24.8457ZM42.0154 13.3079C44.5489 13.3079 46.6101 15.3691 46.6101 17.9026C46.6101 20.4361 44.5489 22.4973 42.0154 22.4973C39.4819 22.4973 37.4207 20.4361 37.4207 17.9026C37.4207 15.3691 39.4818 13.3079 42.0154 13.3079Z" fill="currentcolor"/>
-                                <path d="M51.2133 8.78672C45.5469 3.12059 38.0133 0 30 0C21.9867 0 14.4531 3.12059 8.78672 8.78672C3.12059 14.4531 0 21.9867 0 30C0 35.9168 1.72078 41.6407 4.97625 46.553C5.33437 47.0936 6.06305 47.2413 6.60363 46.8831C7.14422 46.5248 7.29199 45.7963 6.93375 45.2557C3.93387 40.7292 2.34832 35.4539 2.34832 30C2.34832 22.614 5.22457 15.6701 10.4474 10.4474C15.4799 5.41488 22.1106 2.56219 29.1949 2.36098C18.4752 4.70895 10.4262 14.2767 10.4262 25.6908C10.4262 38.86 21.14 49.5738 34.3092 49.5738C45.7233 49.5738 55.2911 41.5248 57.639 30.8051C57.4378 37.8894 54.5851 44.5201 49.5526 49.5526C44.3299 54.7754 37.386 57.6517 30 57.6517C24.1945 57.6517 18.6389 55.8731 13.9338 52.5084C13.4064 52.1313 12.673 52.253 12.2958 52.7805C11.9186 53.308 12.0404 54.0414 12.5679 54.4186C17.6737 58.07 23.7016 60 30 60C38.0133 60 45.5469 56.8794 51.2133 51.2133C56.8794 45.5469 60 38.0133 60 30C60 21.9867 56.8794 14.4531 51.2133 8.78672ZM38.5822 5.94773C47.1124 5.94773 54.0523 12.8876 54.0523 21.4178C54.0523 29.948 47.1124 36.8878 38.5822 36.8878C30.052 36.8878 23.1122 29.948 23.1122 21.4178C23.1122 12.8876 30.052 5.94773 38.5822 5.94773ZM34.3092 47.2255C22.435 47.2255 12.7745 37.5652 12.7745 25.6908C12.7745 13.8708 22.3473 4.24582 34.1471 4.15816C26.4607 6.13441 20.7638 13.1232 20.7638 21.4178C20.7638 31.2429 28.757 39.2361 38.5821 39.2361C46.8766 39.2361 53.8655 33.5393 55.8417 25.8527C55.7542 37.6527 46.1293 47.2255 34.3092 47.2255Z" fill="currentcolor"/>
-                                <path d="M9.26562 51.2029C9.91283 51.2029 10.4375 50.6782 10.4375 50.031C10.4375 49.3838 9.91283 48.8591 9.26562 48.8591C8.61842 48.8591 8.09375 49.3838 8.09375 50.031C8.09375 50.6782 8.61842 51.2029 9.26562 51.2029Z" fill="currentcolor"/>
-                                </svg>
-                            </div>
-                            <div class="tpservices2__content">
-                                <h3 class="tpservices2__title tp-fs-24 mb-10">Real estate development</h3>
-                                <p class="tp-text-black">Interactive design focuses on crafting
-                                engaging and intuitive interactions</p>
+                            <div class="tpservices2__link">
+                                <a href="#" class="tpservices2__btn">
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.000408173 7.39795H16.7596" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
+                                    <path d="M10.1596 0C10.1596 4.08932 13.6667 7.39831 18.0008 7.39831" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
+                                    <path d="M18.0008 7.39807C13.6667 7.39807 10.1596 10.7071 10.1596 14.7964" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                        <div class="tpservices2__link">
-                            <a href="#" class="tpservices2__btn">
-                                <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.000408173 7.39795H16.7596" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
-                                <path d="M10.1596 0C10.1596 4.08932 13.6667 7.39831 18.0008 7.39831" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
-                                <path d="M18.0008 7.39807C13.6667 7.39807 10.1596 10.7071 10.1596 14.7964" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
-                                </svg>
-                            </a>
+                        <div class="tpservices2 p-relative mb-30">
+                            <div class="tpservices2__thumb br-15 mb-40">
+                                <img src="assets/img/services/services-2-img-5.jpg" alt="">
+                            </div>
+                            <div class="tpservices2__main">
+                                <div class="tpservices2__icon mb-25">
+                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M42.0154 24.8457C45.8438 24.8457 48.9585 21.7311 48.9585 17.9026C48.9585 14.0741 45.8439 10.9595 42.0154 10.9595C38.1869 10.9595 35.0723 14.0741 35.0723 17.9026C35.0723 21.7311 38.1869 24.8457 42.0154 24.8457ZM42.0154 13.3079C44.5489 13.3079 46.6101 15.3691 46.6101 17.9026C46.6101 20.4361 44.5489 22.4973 42.0154 22.4973C39.4819 22.4973 37.4207 20.4361 37.4207 17.9026C37.4207 15.3691 39.4818 13.3079 42.0154 13.3079Z" fill="currentcolor"/>
+                                    <path d="M51.2133 8.78672C45.5469 3.12059 38.0133 0 30 0C21.9867 0 14.4531 3.12059 8.78672 8.78672C3.12059 14.4531 0 21.9867 0 30C0 35.9168 1.72078 41.6407 4.97625 46.553C5.33437 47.0936 6.06305 47.2413 6.60363 46.8831C7.14422 46.5248 7.29199 45.7963 6.93375 45.2557C3.93387 40.7292 2.34832 35.4539 2.34832 30C2.34832 22.614 5.22457 15.6701 10.4474 10.4474C15.4799 5.41488 22.1106 2.56219 29.1949 2.36098C18.4752 4.70895 10.4262 14.2767 10.4262 25.6908C10.4262 38.86 21.14 49.5738 34.3092 49.5738C45.7233 49.5738 55.2911 41.5248 57.639 30.8051C57.4378 37.8894 54.5851 44.5201 49.5526 49.5526C44.3299 54.7754 37.386 57.6517 30 57.6517C24.1945 57.6517 18.6389 55.8731 13.9338 52.5084C13.4064 52.1313 12.673 52.253 12.2958 52.7805C11.9186 53.308 12.0404 54.0414 12.5679 54.4186C17.6737 58.07 23.7016 60 30 60C38.0133 60 45.5469 56.8794 51.2133 51.2133C56.8794 45.5469 60 38.0133 60 30C60 21.9867 56.8794 14.4531 51.2133 8.78672ZM38.5822 5.94773C47.1124 5.94773 54.0523 12.8876 54.0523 21.4178C54.0523 29.948 47.1124 36.8878 38.5822 36.8878C30.052 36.8878 23.1122 29.948 23.1122 21.4178C23.1122 12.8876 30.052 5.94773 38.5822 5.94773ZM34.3092 47.2255C22.435 47.2255 12.7745 37.5652 12.7745 25.6908C12.7745 13.8708 22.3473 4.24582 34.1471 4.15816C26.4607 6.13441 20.7638 13.1232 20.7638 21.4178C20.7638 31.2429 28.757 39.2361 38.5821 39.2361C46.8766 39.2361 53.8655 33.5393 55.8417 25.8527C55.7542 37.6527 46.1293 47.2255 34.3092 47.2255Z" fill="currentcolor"/>
+                                    <path d="M9.26562 51.2029C9.91283 51.2029 10.4375 50.6782 10.4375 50.031C10.4375 49.3838 9.91283 48.8591 9.26562 48.8591C8.61842 48.8591 8.09375 49.3838 8.09375 50.031C8.09375 50.6782 8.61842 51.2029 9.26562 51.2029Z" fill="currentcolor"/>
+                                    </svg>
+                                </div>
+                                <div class="tpservices2__content">
+                                    <h3 class="tpservices2__title tp-fs-24 mb-10"><a href="services-details.html">Real estate development</a></h3>
+                                    <p class="tp-text-black">Interactive design focuses on crafting
+                                    engaging and intuitive interactions</p>
+                                </div>
+                            </div>
+                            <div class="tpservices2__link">
+                                <a href="services-details.html" class="tpservices2__btn">
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.000408173 7.39795H16.7596" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
+                                    <path d="M10.1596 0C10.1596 4.08932 13.6667 7.39831 18.0008 7.39831" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
+                                    <path d="M18.0008 7.39807C13.6667 7.39807 10.1596 10.7071 10.1596 14.7964" stroke="currentcolor" stroke-width="1.5" stroke-miterlimit="10"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -382,8 +399,8 @@
                                 <div class="tp-footer-info">
                                     <div class="tp-footer-content mb-45">
                                         <h3 class="tp-footer-info-title mb-20 tp-text-white">Ha ve questions?</h3>
-                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="#">on demo.landor@gmail.com</a> <br>
-                                            or submit <a href="#">an contact</a> form.</p>
+                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="mailto:demo.landor@gmail.com">on demo.landor@gmail.com</a> <br>
+                                            or submit <a href="contect.html">an contact</a> form.</p>
                                     </div>
                                     <div class="tp-footer-social tp-footer-social-white">
                                         <ul>
@@ -456,7 +473,7 @@
                     <div class="row tp-justify-center">
                         <div class="col-xl-5 col-lg-4 col-md-4">
                             <div class="tp-footer-logo">
-                                <a href="#"><img src="assets/img/logo/logo-white-larg.png" alt=""></a>
+                                <a href="index.html"><img data-width="365" src="assets/img/logo/logo-white-larg.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -470,13 +487,11 @@
     <!-- script,start -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/vandor/waypoints.js"></script>
-    <script src="assets/js/counterUp.js"></script>
     <script src="assets/js/ajex-form.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/mobile-menu-scripts.js"></script>
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/scrol-smooth.js"></script>

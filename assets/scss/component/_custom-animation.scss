@@ -1,7 +1,7 @@
 
 @use '../utils' as *;
 
-
+// borderExpand
 .pulse-animation,.pulse-animation-white {
 	position: relative;
 	width: 100%;
@@ -21,7 +21,6 @@
 	border-color: rgba(255, 255, 255, 0.5);;
 }
 
-
 @keyframes borderExpand {
 	0% {
 		transform: scale(1);
@@ -33,6 +32,7 @@
 	}
 }
 
+// borderExpand2
 .pulse-animation-3{
 	position: relative;
 	&::before{
@@ -58,3 +58,28 @@
 	}
 }
 
+// tpshake
+@keyframes tpshake{
+    10% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: skew(15deg);
+    }
+    80% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+// headerSlideDown
+@keyframes headerSlideDown {
+    0% {
+     margin-top:-150px
+    }
+    100% {
+     margin-top:0
+    }
+}

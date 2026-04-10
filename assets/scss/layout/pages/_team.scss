@@ -24,6 +24,12 @@
         }
         &-4{
             padding-bottom: 120px;
+            @media #{$lg,$md}{
+                padding-bottom: 100px;
+            }
+            @media #{$xs,$sm}{
+                padding-bottom: 70px;
+            }
         }
     }
     &-button{
@@ -74,6 +80,9 @@
             display: flex;
             align-items: center;
             grid-gap: 20px;
+            &:hover{
+                text-decoration: underline;
+            }
         }
         &-icon {
             width: 52px;
@@ -172,6 +181,11 @@
                 display: inline-block;
                 font-weight: 500;
                 color: var(--tp-theme-color);
+                & a{
+                    &:hover{
+                        color: var(--tp-orange-color);
+                    }
+                }
             }
         }
        }
@@ -302,6 +316,11 @@
             font-size: 20px;
             margin-bottom: 0;
         }
+        & a{
+            &:hover{
+                color: var(--tp-secoundery-color);
+            }
+        }
     }
     &__content{
         & span{
@@ -331,6 +350,9 @@
           & svg{
             width: 17px;
           }
+        }
+        &:hover{
+            background-color: var(--tp-white-color);
         }
     }
     &__info {
@@ -370,9 +392,17 @@
         }
     }
     &__circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &-title{
             font-size: 26px;
             margin-bottom: 5px;
+            & a{
+                &:hover{
+                    color: var(--tp-secoundery-color);
+                }
+            }
             @media #{$md}{
                 font-size: 20px;
             }
@@ -419,7 +449,12 @@
             background-color: var(--tp-white-color);
             text-align: center;
             border-radius: 30px;
+            &:hover{
+                background-color: var(--tp-secoundery-color);
+                color: var(--tp-theme-color);
+            }
             &-wrap{
+                grid-gap: 5px;
                	@media #{$sm,$xs}{
                     flex-wrap: wrap;
                     justify-content: center;
@@ -504,6 +539,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
             @include transition(.3s);
         }
         &-2{
@@ -584,6 +620,15 @@
     &__2{
         min-height: 480px;
         padding: 55px 50px;
+        @media #{$lg,$md,$sm,$xs}{
+            padding: 30px;
+            min-height: 350px;
+        }
+    }
+    &__title{
+        & a{
+            @include hover-border();
+        }
     }
     &.active{
         & .tpexperts__shape{
@@ -659,7 +704,7 @@
     &:hover{
         &::after{
             background: linear-gradient(239.18deg, rgba(255, 255, 255, 0.04) 17.93%, rgba(255, 255, 255, 0.01) 81.51%);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
         }
         & .tpteamcard__link{
             & a{

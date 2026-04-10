@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/odometer-min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     
     <!-- header,start  -->
      <header>
-        <div class="tp-header-area tp-header-transparent">
+        <div class="tp-header-area tp-header-transparent sticky-black" id="header-sticky">
             <div class="container-wide">
                 <div class="tp-header-spacing">
                     <div class="tp-header-wrap">
                         <div class="row gx-0 tp-align-center">
                             <div class="col-xl-3 col-lg-4 col-md-5 col-5">
                                 <div class="tp-header-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="logo-black"></a>
+                                    <a href="index.html"><img data-width="163" src="assets/img/logo/logo-white.png" alt="logo-black"></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-2 col-md-1 col-2">
@@ -95,8 +96,8 @@
                                             <samp class="d-none d-xxl-flex tp-text-white">+999 2654 2563</samp>
                                         </a>
                                     </div>
-                                    <div class="tp-header-cta-button d-none d-md-inline-block">
-                                        <a href="#" class="tp-btn">
+                                    <div class="tp-header-cta-button d-none d-xl-inline-block">
+                                        <a href="contect.html" class="tp-btn">
                                         <span class="tp-btn-text">Get in touch</span>
                                             <span class="tp-btn-icon">
                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,24 +123,45 @@
      </header>
     <!-- header,end  -->
 
+    <!-- mouse-cursor -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- mouse-cursor -->
+
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->  
+     
     <!-- offcanvas-start -->
     <section class="tp-offcanvas">
         <div class="tp-offcanvas-wrapper">
             <div class="tp-offcanvas-header d-flex align-items-center justify-content-between mb-40">
                 <div class="tp-offcanvas-logo">
-                    <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
+                    <a href="index.html"><img data-width="163" src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
                 </div>
                 <div class="tp-offcanvas-button">
                     <button class="tp-offcanvas-button-close tp-offcanvas-close-toggle"><i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
-            <div class="tp-offcanvas-menu">
+            <div class="tp-offcanvas-menu mb-30">
                 <nav></nav>
             </div>
             <div class="tp-offcanvas-content mb-30">
-                <h3 class="tp-offcanvas-title mb-7">Let’s shape something remarkable !</h3>
+                <h3 class="tp-offcanvas-title mb-7">Let’s make Real</h3>
                 <p class="m-0">We are a privately owned real estate company dedicated to delivering innovative property solutions across the globe.</p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-30">
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-2.jpg"><img src="assets/img/project/project-gullary-2.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-3.jpg"><img src="assets/img/project/project-gullary-3.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
             </div>
             <div class="tp-offcanvas-cta mb-30">
             <h3 class="tp-offcanvas-title mb-7">Information</h3>
@@ -275,7 +297,7 @@
                         <h3 class="tp-testi-card-title">Keep communication <br>
                             transparent</h3>
                         <div class="tp-testi-fact">
-                            <h4 class="tp-testi-fact-num">99%</h4>
+                            <h4 class="tp-testi-fact-num"><span class="odometer" data-count="99"></span>%</h4>
                             <p class="fs-20 tp-text-black margin-0">Satisfaction level</p>
                         </div>
                     </div>
@@ -341,9 +363,9 @@
                                 <img src="assets/img/team/team-2-member-1.jpg" alt="">
                                 <div class="tpteam__circle--content p-absolute">
                                     <div class="tpteam__circle--content-wrap">
-                                        <h3 class="tpteam__circle-title tp-text-white"><a href="#">Cristopher</a></h3>
+                                        <h3 class="tpteam__circle-title tp-text-white"><a href="team-details.html">Cristopher</a></h3>
                                         <span class="fw-500 d-inline-block mb-30 tp-text-white">Engineer</span>
-                                        <a href="#" class="tpteam__circle-btn">
+                                        <a href="team-details.html" class="tpteam__circle-btn">
                                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.00002 14C6.47458 14 6.04883 13.5742 6.04883 13.0488V0.95119C6.04883 0.425753 6.47458 0 7.00002 0C7.52546 0 7.95121 0.425753 7.95121 0.95119V13.0488C7.95121 13.5742 7.52546 14 7.00002 14Z" fill="currentcolor"/>
                                             <path d="M13.0488 7.95121H0.95119C0.425753 7.95121 0 7.52546 0 7.00002C0 6.47458 0.425753 6.04883 0.95119 6.04883H13.0488C13.5742 6.04883 14 6.47458 14 7.00002C14 7.52546 13.5742 7.95121 13.0488 7.95121Z" fill="currentcolor"/>
@@ -360,9 +382,9 @@
                                 <img src="assets/img/team/team-2-member-2.jpg" alt="">
                                 <div class="tpteam__circle--content p-absolute">
                                     <div class="tpteam__circle--content-wrap">
-                                        <h3 class="tpteam__circle-title tp-text-white"><a href="#">Cristopher</a></h3>
+                                        <h3 class="tpteam__circle-title tp-text-white"><a href="team-details.html">Cristopher</a></h3>
                                         <span class="fw-500 d-inline-block mb-30 tp-text-white">Engineer</span>
-                                        <a href="#" class="tpteam__circle-btn">
+                                        <a href="team-details.html" class="tpteam__circle-btn">
                                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.00002 14C6.47458 14 6.04883 13.5742 6.04883 13.0488V0.95119C6.04883 0.425753 6.47458 0 7.00002 0C7.52546 0 7.95121 0.425753 7.95121 0.95119V13.0488C7.95121 13.5742 7.52546 14 7.00002 14Z" fill="currentcolor"/>
                                             <path d="M13.0488 7.95121H0.95119C0.425753 7.95121 0 7.52546 0 7.00002C0 6.47458 0.425753 6.04883 0.95119 6.04883H13.0488C13.5742 6.04883 14 6.47458 14 7.00002C14 7.52546 13.5742 7.95121 13.0488 7.95121Z" fill="currentcolor"/>
@@ -379,9 +401,9 @@
                                 <img src="assets/img/team/team-2-member-3.jpg" alt="">
                                 <div class="tpteam__circle--content p-absolute">
                                     <div class="tpteam__circle--content-wrap">
-                                        <h3 class="tpteam__circle-title tp-text-white"><a href="#">Cristopher</a></h3>
+                                        <h3 class="tpteam__circle-title tp-text-white"><a href="team-details.html">Cristopher</a></h3>
                                         <span class="fw-500 d-inline-block mb-30 tp-text-white">Engineer</span>
-                                        <a href="#" class="tpteam__circle-btn">
+                                        <a href="team-details.html" class="tpteam__circle-btn">
                                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.00002 14C6.47458 14 6.04883 13.5742 6.04883 13.0488V0.95119C6.04883 0.425753 6.47458 0 7.00002 0C7.52546 0 7.95121 0.425753 7.95121 0.95119V13.0488C7.95121 13.5742 7.52546 14 7.00002 14Z" fill="currentcolor"/>
                                             <path d="M13.0488 7.95121H0.95119C0.425753 7.95121 0 7.52546 0 7.00002C0 6.47458 0.425753 6.04883 0.95119 6.04883H13.0488C13.5742 6.04883 14 6.47458 14 7.00002C14 7.52546 13.5742 7.95121 13.0488 7.95121Z" fill="currentcolor"/>
@@ -398,9 +420,9 @@
                                 <img src="assets/img/team/team-2-member-4.jpg" alt="">
                                 <div class="tpteam__circle--content p-absolute">
                                     <div class="tpteam__circle--content-wrap">
-                                        <h3 class="tpteam__circle-title tp-text-white"><a href="#">Cristopher</a></h3>
+                                        <h3 class="tpteam__circle-title tp-text-white"><a href="team-details.html">Cristopher</a></h3>
                                         <span class="fw-500 d-inline-block mb-30 tp-text-white">Engineer</span>
-                                        <a href="#" class="tpteam__circle-btn">
+                                        <a href="team-details.html" class="tpteam__circle-btn">
                                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.00002 14C6.47458 14 6.04883 13.5742 6.04883 13.0488V0.95119C6.04883 0.425753 6.47458 0 7.00002 0C7.52546 0 7.95121 0.425753 7.95121 0.95119V13.0488C7.95121 13.5742 7.52546 14 7.00002 14Z" fill="currentcolor"/>
                                             <path d="M13.0488 7.95121H0.95119C0.425753 7.95121 0 7.52546 0 7.00002C0 6.47458 0.425753 6.04883 0.95119 6.04883H13.0488C13.5742 6.04883 14 6.47458 14 7.00002C14 7.52546 13.5742 7.95121 13.0488 7.95121Z" fill="currentcolor"/>
@@ -417,9 +439,9 @@
                                 <img src="assets/img/team/team-2-member-1.jpg" alt="">
                                 <div class="tpteam__circle--content p-absolute">
                                     <div class="tpteam__circle--content-wrap">
-                                        <h3 class="tpteam__circle-title tp-text-white"><a href="#">Cristopher</a></h3>
+                                        <h3 class="tpteam__circle-title tp-text-white"><a href="team-details.html">Cristopher</a></h3>
                                         <span class="fw-500 d-inline-block mb-30 tp-text-white">Engineer</span>
-                                        <a href="#" class="tpteam__circle-btn">
+                                        <a href="team-details.html" class="tpteam__circle-btn">
                                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.00002 14C6.47458 14 6.04883 13.5742 6.04883 13.0488V0.95119C6.04883 0.425753 6.47458 0 7.00002 0C7.52546 0 7.95121 0.425753 7.95121 0.95119V13.0488C7.95121 13.5742 7.52546 14 7.00002 14Z" fill="currentcolor"/>
                                             <path d="M13.0488 7.95121H0.95119C0.425753 7.95121 0 7.52546 0 7.00002C0 6.47458 0.425753 6.04883 0.95119 6.04883H13.0488C13.5742 6.04883 14 6.47458 14 7.00002C14 7.52546 13.5742 7.95121 13.0488 7.95121Z" fill="currentcolor"/>
@@ -436,9 +458,9 @@
                                 <img src="assets/img/team/team-2-member-2.jpg" alt="">
                                 <div class="tpteam__circle--content p-absolute">
                                     <div class="tpteam__circle--content-wrap">
-                                        <h3 class="tpteam__circle-title tp-text-white"><a href="#">Cristopher</a></h3>
+                                        <h3 class="tpteam__circle-title tp-text-white"><a href="team-details.html">Cristopher</a></h3>
                                         <span class="fw-500 d-inline-block mb-30 tp-text-white">Engineer</span>
-                                        <a href="#" class="tpteam__circle-btn">
+                                        <a href="team-details.html" class="tpteam__circle-btn">
                                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.00002 14C6.47458 14 6.04883 13.5742 6.04883 13.0488V0.95119C6.04883 0.425753 6.47458 0 7.00002 0C7.52546 0 7.95121 0.425753 7.95121 0.95119V13.0488C7.95121 13.5742 7.52546 14 7.00002 14Z" fill="currentcolor"/>
                                             <path d="M13.0488 7.95121H0.95119C0.425753 7.95121 0 7.52546 0 7.00002C0 6.47458 0.425753 6.04883 0.95119 6.04883H13.0488C13.5742 6.04883 14 6.47458 14 7.00002C14 7.52546 13.5742 7.95121 13.0488 7.95121Z" fill="currentcolor"/>
@@ -454,7 +476,7 @@
             <div class="row tp-justify-center">
                 <div class="col-xl-6 col-lg-8">
                     <div class="tpteam__circle-btn-wrap tp-flex-center tp-justify-between">
-                        <a href="#" class="tp-btn tp-btn-border">
+                        <a href="team.html" class="tp-btn tp-btn-border">
                             <span class="tp-btn-text">See all Member</span>
                             <span class="tp-btn-icon">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -464,7 +486,7 @@
                             </span>
                         </a>
                         <div class="tpteam__circle-pagination tp-flex-center"></div>
-                        <a href="#" class="tp-btn">
+                        <a href="team-details.html" class="tp-btn">
                             <span class="tp-btn-text">Join With Team</span>
                             <span class="tp-btn-icon">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -491,7 +513,7 @@
                             <h2 class="tp-section-title margin-0">Frequently asked<span>questions!</span></h2>
                         </div>
                         <div class="tp-faq-btn pt-45">
-                            <a href="#" class="tp-btn">
+                            <a href="faq.html" class="tp-btn">
                             <span class="tp-btn-text">Learn More</span>
                                 <span class="tp-btn-icon">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -620,8 +642,8 @@
                                 <div class="tp-footer-info">
                                     <div class="tp-footer-content mb-45">
                                         <h3 class="tp-footer-info-title mb-20 tp-text-white">Ha ve questions?</h3>
-                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="#">on demo.landor@gmail.com</a> <br>
-                                            or submit <a href="#">an contact</a> form.</p>
+                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="mailto:demo.landor@gmail.com">on demo.landor@gmail.com</a> <br>
+                                            or submit <a href="contect.html">an contact</a> form.</p>
                                     </div>
                                     <div class="tp-footer-social tp-footer-social-white">
                                         <ul>
@@ -694,7 +716,7 @@
                     <div class="row tp-justify-center">
                         <div class="col-xl-5 col-lg-4 col-md-4">
                             <div class="tp-footer-logo">
-                                <a href="#"><img src="assets/img/logo/logo-white-larg.png" alt=""></a>
+                                <a href="index.html"><img data-width="365" src="assets/img/logo/logo-white-larg.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -708,13 +730,11 @@
     <!-- script,start -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/vandor/waypoints.js"></script>
-    <script src="assets/js/counterUp.js"></script>
     <script src="assets/js/ajex-form.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/mobile-menu-scripts.js"></script>
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/scrol-smooth.js"></script>
@@ -722,6 +742,7 @@
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/splitText.min.js"></script>
     <script src="assets/js/Vanilla-marquee.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- script,end -->
 </body>

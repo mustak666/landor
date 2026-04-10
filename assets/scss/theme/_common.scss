@@ -60,8 +60,10 @@ img{
 	position: relative;
 }
 .p-absolute{
-	position: absolute;
+	position: absolute ;
 }
+
+
 
 .br{
 	&-5{
@@ -399,6 +401,7 @@ img{
         font-weight: 600;
         letter-spacing: -0.02em;
         text-align: center;	
+		transition: .5s;
 		@include flex-center();
         line-height: 1.2;
         @media #{$xl,$lg}{
@@ -416,5 +419,12 @@ img{
             width: 120px;
             height: 120px;
         }
+		&:hover{
+			filter: brightness(1.5);
+			color: var(--tp-theme-color);
+		}
     }
+}
+.fixed_attachment{
+	background-attachment: fixed;
 }

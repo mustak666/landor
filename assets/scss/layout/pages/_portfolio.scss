@@ -27,6 +27,7 @@
            margin-bottom: 20px;
         }
         & img{
+            @include transition(.5s);
             @media #{$md}{
                 width: 100%;
             }
@@ -58,6 +59,11 @@
             font-size: 20px;
             margin-bottom: 2px;
         }
+        & a{
+            &:hover{
+                color: var(--tp-secoundery-color);
+            }
+        }
     }
     &__year {
         font-weight: 500;
@@ -66,6 +72,8 @@
         border-radius: 42px;
         line-height: 1;
         padding: 13px 25px;
+        @include transition(.3s);
+        transition-delay: .1s;
         @media #{$xs}{
             padding: 8px 15px;
             font-size: 15px;
@@ -104,12 +112,20 @@
     }
     &:hover{
         & .tpportfolio__thumb{
+            & img{
+                transform: scale(1.1);
+            }
             & .tpportfolio__button{
                 opacity: 1;
                 visibility: visible;
                 bottom: 50%;
             }
         }
+        & .tpportfolio__year{
+            background-color: var(--tp-secoundery-color);
+            color: var(--tp-theme-color);
+        }
+
     }
     &__transform{
         transform: translateY(280px);
@@ -153,9 +169,9 @@
             font-size: 180px;
             font-weight: 800;
             letter-spacing: -0.04em;
-            color: rgba(0, 0, 0, 0.15);
+            color: #000;
             position: absolute;
-            top: 41%;
+            top: 20%;
             z-index: -1;
             left: 7%;
             @media #{$xl}{
@@ -218,9 +234,17 @@
     }
     &-link {
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%,-50%);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.4s);
+        & a{
+            &:hover{
+                background-color: var(--tp-white-color);
+            }
+        }
     }
     &-long{
         padding: 0 100px;
@@ -249,6 +273,7 @@
             background-color: #FFFFFF;
             @media #{$lg,$md,$sm,$xs}{
               padding: 20px 0;
+              margin-bottom: 20px;
             }
         }
         &-deg{
@@ -261,6 +286,9 @@
             }
         }
         &-title{
+            & a{
+                @include hover-border();
+            }
             @media #{$lg,$md}{
              font-size: 25px;
             } 
@@ -278,6 +306,13 @@
             @media #{$xs}{
                display: inline-block;
             }   
+        }
+        &:hover{
+            & .tp-portfolio-link{
+                top: 50%;
+                opacity: 1;
+                visibility: visible; 
+            }
         }
     }
     &-post{
@@ -407,6 +442,11 @@
         @media #{$md}{
            font-size: 25px;
         }
+        & a{
+           &:hover{
+             color: var(--tp-orange-color);
+           }
+        }
     }
     &__title{
         @media #{$xs,$sm}{
@@ -431,5 +471,7 @@
     }
 }
 
-
+.portfolio-text {
+    will-change: transform, opacity;
+}
 

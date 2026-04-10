@@ -36,6 +36,22 @@
                 padding-bottom: 70px;
             }
         }
+        &-4{
+            padding-top: 145px;
+            padding-bottom: 115px;
+            @media #{$lg}{
+               padding-top: 120px;
+               padding-bottom: 90px;
+            }
+            @media #{$md}{
+                padding-top: 100px;
+                padding-bottom:70px;
+            }
+            @media #{$xs,$sm}{
+                padding-top: 70px;
+                padding-bottom: 50px;
+            }
+        }
     }
     &-area{
         @media #{$xs,$sm}{
@@ -75,6 +91,7 @@
         &-larg{
             font-size: 50px;
             margin-bottom: 18px;
+            @include hover-border();
             @media #{$lg}{
                 font-size: 35px;
                 margin-bottom: 10px;
@@ -87,6 +104,7 @@
         &-wrap{
             & svg{
                 margin-top: 20px;
+                flex: 0 0 auto;
             }
         }
     }
@@ -113,10 +131,16 @@
             font-weight: 500;
             padding: 5px 14px;
             margin-right: 6px;
+            cursor: pointer;
+            @include transition(.3s);
             @media #{$xs}{
                font-size: 15px;
                padding: 4px 9px;
                margin-bottom: 5px;
+            }
+            &:hover{
+                background-color: var(--tp-white-color);
+                border-color: transparent;
             }
         }
     }
@@ -191,7 +215,7 @@
     &-btn{
         @media #{$xs,$sm}{
             justify-content: start;
-            padding-top: 10px;
+            padding-top: 20px;
         }
         &-2{
             @media #{$md}{
@@ -410,6 +434,7 @@
             line-height: 1;
             top: 174px;
             right: -151px;
+             @include transition(.3s);
         }
     }
     &__img {
@@ -428,6 +453,7 @@
             & .tpservices__img{
                 right: auto;
                 left: 0;
+                width: 100%;
             }
         }
     }
@@ -454,6 +480,9 @@
         & .tpservices__img{
            transform: scale(1.1);
         }
+        & .tpservices__back-text{
+          right: -135px;
+        }
         
     }
 }
@@ -468,18 +497,15 @@
     }
     &__icon {
         color: var(--tp-orange-color);
-        @media #{$md,$sm,$xs}{
+        @media #{$lg,$md,$sm,$xs}{
            margin-bottom: 15px;
         }
     }
     &__main {
         padding: 0 30px;
         padding-bottom: 10px;
-        @media #{$md,$xs}{
+        @media #{$lg,$sm,$xs}{
           padding: 0 20px;
-        }
-        @media #{$md,$sm,$xs}{
-          padding: 0 30px;
         }
     }
     &__btn {
@@ -523,59 +549,47 @@
         }
     }
     &__up{
-        & .col-lg-4:nth-child(1) .tpservices2{
-           margin-top: 190px;
+        margin-top: -10px;
+    }
+    &__right{
+        &-wrap{
+            transform: translateY(-100px);
             @media #{$md,$sm,$xs}{
-              margin-top: 0;
+                transform: translateY(0);
             }
         }
-        & .col-lg-4:nth-child(2) .tpservices2{
-            margin-top: -40px;
-            @media #{$md,$sm,$xs}{
-              margin-top: 0;
-            }
-        }
-        & .col-lg-4:nth-child(3) .tpservices2{
-            margin-top: -140px;
-            @media #{$md,$sm,$xs}{
-              margin-top: 0;
-            }
-        }
-        & .col-lg-4:nth-child(5) .tpservices2{
-            margin-top: -200px;
-            @media #{$md,$sm,$xs}{
-              margin-top: 0;
-            }
-        }
-        & .col-lg-4:nth-child(6) .tpservices2{
-            margin-top: -300px;
-            @media #{$md,$sm,$xs}{
-              margin-top: 0;
-            }
-        }
-
     }
     &__title{
-        @media #{$md,$sm,$xs}{
+        & a{
+            @include hover-border();
+        }
+        @media #{$lg,$md,$sm,$xs}{
             font-size: 20px;
         }
     }
     &__thumb{
+        overflow: hidden;
+        border-radius: 15px;
+        @media #{$lg}{
+            margin-bottom: 25px;
+        } 
         @media #{$md,$sm,$xs}{
             margin-bottom: 20px;
         } 
         & img{
-            @media #{$sm,$xs}{
+            @include transition(.4s);
+            @media #{$md,$sm,$xs}{
                width: 100%;
+               object-fit: cover;
             } 
         }
     }
     &__content{
         & p{
-            @media #{$md,$sm,$xs}{
-              word-break: break-word;
-              padding-right: 25px;
-            }
+            padding-right: 25px;
+            @media #{$xs}{
+                padding-right: 40px;
+            } 
         }
     }
     &:hover{
@@ -583,6 +597,11 @@
         & .tpservices2__btn{
              background-color: var(--tp-orange-color);
              color: var(--tp-white-color);
+        }
+        & .tpservices2__thumb{
+            & img{
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -642,7 +661,6 @@
             background: var(--tp-white-color);
             color: var(--tp-theme-color);
             padding: 8px 16px;
-            padding-bottom: 11px;
             &:hover{
                 background-color: var(--tp-secoundery-color);
             }
@@ -707,7 +725,12 @@
             padding: 30px 20px;
             min-height: 350px;
         }
-        &__title{
+        &-title{
+            & a{
+                &:hover{
+                    color: var(--tp-secoundery-color);
+                }
+            }
             @media #{$xs,$sm}{
                font-size: 20px;
             } 
@@ -728,11 +751,19 @@
                 }
             }
         }
+        &-icon{
+            & svg{
+                transition: .3s;
+            }
+        }
         &:hover{
             box-shadow: 0px 15px 35px -10px rgba(0, 0, 0, 0.15);
             & .tpserv__card-link a{
                 background-color: var(--tp-secoundery-color);
                 border-color: transparent;
+            }
+            & .tpserv__card-icon svg{
+                @include tpshake();
             }
         }
     }
@@ -744,12 +775,12 @@
 	overflow: hidden;
     flex: 0 0 auto;
     @media #{$xl}{
-      max-width: 465px;
+      max-width: 50%;
     }
-    @media #{$lg,$xs,$sm}{
-     flex: auto;
+    @media #{$lg}{
+      max-width: 48%;
     }
-    @media #{$xs,$sm}{
+    @media #{$md,$xs,$sm}{
      max-width: 100%;
     }
     &__num {
@@ -760,6 +791,7 @@
         position: absolute;
         bottom: -45px;
         left: 40px;
+        @include transition(.3s);
         @media #{$lg}{
           font-size: 75px;
           bottom: -30px;
@@ -769,6 +801,11 @@
           bottom: -24px;
           left: 15px;
         }
+    }
+    &__thumb{
+       & img{
+         @include transition(.4s);
+       }
     }
     &__list{
         & span {
@@ -803,6 +840,11 @@
         }
     }
     &__title{
+        & a{
+           &:hover{
+             text-decoration: underline;
+           }
+        }
         @media #{$md,$sm,$xs}{
            font-size: 20px;
         }   
@@ -810,7 +852,7 @@
     &:nth-child(2){
         margin-left: -140px;
         transform: translateY(112px);
-        @media #{$md,$sm,$xs}{
+        @media #{$xl,$lg,$md,$sm,$xs}{
            margin-left: 0;
            transform: translateY(0);
         }
@@ -832,12 +874,22 @@
     &:nth-child(3){
         margin-left: -140px;
         transform: translateY(300px);
-        @media #{$md,$sm,$xs}{
+        @media #{$xl,$lg,$md,$sm,$xs}{
            margin-left: 0;
            transform: translateY(0);
         }
         & .tpwork__content{
             background-color: var(--tp-secoundery-color);
+        }
+    }
+    &:hover{
+        & .tpwork__thumb{
+            & img{
+             transform: scale(1.1);
+            }
+        }
+        & .tpwork__num{
+            bottom: -28px;
         }
     }
 }
@@ -858,6 +910,10 @@
     }
     &-wrap {
         display:flex;
+        @media #{$xl,$lg}{
+            flex-wrap: wrap;
+            grid-gap: 30px;
+        }
         @media #{$md,$xs,$sm}{
             flex-direction: column;
             grid-gap: 20px;
@@ -884,6 +940,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media #{$xl}{
+     min-height: 350px;
+     padding: 20px;
+    }
     @media #{$xl,$lg,$md}{
      padding: 20px;
     }
@@ -916,6 +976,9 @@
             display: none;
         }
         & img{
+            @media #{$xl}{
+               max-width: 90%;
+            }
             @media #{$lg}{
                max-width: 60%;
             }
@@ -938,6 +1001,11 @@
         font-size: 20px;
         @media #{$lg,$md}{
            font-size: 18px;
+        }
+        & a{
+           &:hover{
+             color: var(--tp-orange-color);
+           }
         }
     }
     &__link {
@@ -1008,9 +1076,10 @@
                 padding: 6px;
                 padding-left: 20px;
                 @media #{$xs,$sm}{
-                   flex-wrap: wrap;
-                   justify-content: center;
-                   grid-gap: 0;
+                    display: inline-block;
+                    & span{
+                        margin-left: 5px;
+                    }
                 }
                 & span{
                     display: inline-block;
@@ -1024,5 +1093,3 @@
         }  
     } 
 }
-
-

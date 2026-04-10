@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
     <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/odometer-min.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     
     <!-- header,start  -->
      <header>
-        <div class="tp-header-area tp-header-transparent">
+        <div class="tp-header-area tp-header-transparent" id="header-sticky">
             <div class="container-wide">
                 <div class="tp-header-border-gray tp-header-spacing-4">
                     <div class="tp-header-wrap">
                         <div class="row gx-0 tp-align-center">
                             <div class="col-xl-2 col-lg-4 col-md-5 col-5">
                                 <div class="tp-header-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo-black"></a>
+                                    <a href="index.html"><img data-width="163" src="assets/img/logo/logo-black.png" alt="logo-black"></a>
                                 </div>
                             </div>
                             <div class="col-xl-7 col-lg-2 col-md-1 col-2">
@@ -83,7 +84,7 @@
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-5">
                                 <div class="tp-header-cta tp-flex-center tp-justify-end">
-                                    <div class="tp-cta-phone tp-header-cta-phone mr-30 d-none d-md-inline-block">
+                                    <div class="tp-cta-phone tp-header-cta-phone mr-30 d-none d-xl-inline-block">
                                         <a class="tp-flex-center" href="tel:+99926542563">
                                             <span class="tp-cta-phone-icon mr-10">
                                                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +97,7 @@
                                         </a>
                                     </div>
                                     <div class="tp-header-cta-button d-none d-md-inline-block">
-                                        <a href="#" class="tp-btn tp-btn-border">
+                                        <a href="contect.html" class="tp-btn tp-btn-border">
                                         <span class="tp-btn-text">Get in touch</span>
                                             <span class="tp-btn-icon">
                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,24 +123,58 @@
      </header>
     <!-- header,end  -->
 
+     <!-- preloader,start  -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_four"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_one"></div>
+                </div>
+            </div>
+        </div>
+     <!-- preloader,end  -->
+
+    <!-- mouse-cursor -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- mouse-cursor -->
+
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+
     <!-- offcanvas-start -->
     <section class="tp-offcanvas">
         <div class="tp-offcanvas-wrapper">
             <div class="tp-offcanvas-header d-flex align-items-center justify-content-between mb-40">
                 <div class="tp-offcanvas-logo">
-                    <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
+                    <a href="index.html"><img data-width="163" src="assets/img/logo/logo-black.png" alt="logo-ing"></a>
                 </div>
                 <div class="tp-offcanvas-button">
                     <button class="tp-offcanvas-button-close tp-offcanvas-close-toggle"><i class="fas fa-times"></i>
                     </button>
                 </div>
             </div>
-            <div class="tp-offcanvas-menu">
+            <div class="tp-offcanvas-menu mb-30">
                 <nav></nav>
             </div>
             <div class="tp-offcanvas-content mb-30">
-                <h3 class="tp-offcanvas-title mb-7">Let’s shape something remarkable !</h3>
+                <h3 class="tp-offcanvas-title mb-7">Let’s make Real</h3>
                 <p class="m-0">We are a privately owned real estate company dedicated to delivering innovative property solutions across the globe.</p>
+            </div>
+            <div class="tp-offcanvas-gallery mb-30">
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-2.jpg"><img src="assets/img/project/project-gullary-2.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-3.jpg"><img src="assets/img/project/project-gullary-3.jpg" alt=""></a>
+                <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
             </div>
             <div class="tp-offcanvas-cta mb-30">
             <h3 class="tp-offcanvas-title mb-7">Information</h3>
@@ -167,8 +202,8 @@
 
     <!-- hero-area,start  -->
      <section class="tp-hero-area fix p-relative" data-background="assets/img/hero/hero-transparent-bg.png">
-        <div class="tp-hero-shape-transparent">
-            <img src="assets/img/hero/hero-transparent-bg-shape.png" alt="" class="tp-hero-shape-transparent-1 p-absolute">
+        <div class="tp-hero-shape-transparent anim-zoomin-wrap">
+            <img src="assets/img/hero/hero-transparent-bg-shape.png" alt="" class="tp-hero-shape-transparent-1 anim-zoomin p-absolute">
             <img src="assets/img/hero/hero-transparent-shape-bottom.png" alt="" class="tp-hero-shape-transparent-2 p-absolute">
         </div>
         <div class="container">
@@ -176,10 +211,10 @@
                 <div class="row tp-justify-center">
                     <div class="col-xl-8 col-lg-10 col-md-10">
                         <div class="tp-hero-content tp-text-center">
-                            <h1 class="tp-hero-slider-title tp-section-title tp-section-title-larg">Smart and <br>
+                            <h1 class="tp-hero-slider-title tp-section-title tp-section-title-larg tp_fade_anim" data-delay=".1">Smart and <br>
                             sustainable <span>living</span></h1>
-                            <div class="tp-hero-buttons pt-30">
-                                <a href="#" class="tp-btn">
+                            <div class="tp-hero-buttons pt-30 tp_fade_anim" data-delay=".3" data-ease="bounce">
+                                <a href="contect.html" class="tp-btn">
                                 <span class="tp-btn-text">Get a free quote</span>
                                     <span class="tp-btn-icon">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +223,7 @@
                                         </svg>
                                     </span>
                                 </a>
-                                <a href="#" class="tp-btn tp-btn-orange">
+                                <a href="project-standard.html" class="tp-btn tp-btn-orange">
                                 <span class="tp-btn-text">View all projects</span>
                                     <span class="tp-btn-icon">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -202,7 +237,7 @@
                     </div>
                 </div>
                 <div class="tp-feature">
-                    <div class="row tp-feature-end">
+                    <div class="row tp-feature-end tp_fade_anim" data-delay=".4">
                         <div class="col-xl-4 col-lg-4">
                             <div class="tpfeature tpfeature__white tp-bluer-bg mb-30">
                                 <div class="tpfeature__wrap">
@@ -259,12 +294,12 @@
                 </div>
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-5 col-sm-7">
-                        <div class="tp-about-subtitle pb-70">
+                        <div class="tp-about-subtitle tp_fade_anim pb-70">
                             <span class="tp-section-sub-title tp-section-sub-title-sec mb-12">About us</span>
                         </div>
                         <div class="tp-about-growth-wrap p-relative tp-text-center br-10">
-                            <img src="assets/img/about/about-thumb-5.jpg" alt="">
-                            <div class="tp-about-growth-main">
+                            <img class="tp_fade_anim" data-duration=".9" data-delay=".7" src="assets/img/about/about-thumb-5.jpg" alt="">
+                            <div class="tp-about-growth-main tp_fade_anim" data-duration=".9" data-delay=".9" data-fade-from="left">
                                 <span class="tp-about-growth">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.66072 15.2728C3.66414 15.845 2.5408 16.0503 1.87561 16.1239C1.94925 15.4587 2.15449 14.3354 2.72612 13.3382C2.87581 13.078 2.78587 12.746 2.52571 12.5963C2.26314 12.446 1.93296 12.5372 1.78386 12.7974C0.760119 14.5829 0.748047 16.6219 0.748047 16.7082C0.748047 17.0082 0.991306 17.2515 1.29131 17.2515C1.37762 17.2515 3.41666 17.2394 5.20217 16.2157C5.46233 16.066 5.55227 15.7346 5.40257 15.4738C5.25408 15.2136 4.92269 15.1231 4.66072 15.2728Z" fill="#E6641C"/>
@@ -278,14 +313,16 @@
                     </div>
                     <div class="col-xl-7 offset-xl-2 col-lg-7 offset-lg-1">
                         <div class="tp-about-content-2">
-                            <h2 class="tp-section-title tp-about-title mb-25 tp-text-white">Global leader in construction
+                            <h2 class="tp-section-title tp-about-title mb-25 tp-text-white tp_fade_anim" data-duration=".9" data-delay=".2">Global leader in construction
                             & real estate investment
                             and <span>development</span></h2>
-                            <p class="tp-text-white">We are a privately owned real estate company dedicated to delivering innovative property solutions
-                            across the globe. Our team specializes in real estate investment, property management, and
-                            development, with a clear focus on quality and sustainability.</p>
-                            <div class="tp-about-btn pt-35">
-                                <a href="#" class="tp-btn tp-btn-border tp-btn-border-white">
+                            <div class="tp_fade_anim" data-duration=".9" data-delay=".4">
+                                <p class="tp-text-white">We are a privately owned real estate company dedicated to delivering innovative property solutions
+                                across the globe. Our team specializes in real estate investment, property management, and
+                                development, with a clear focus on quality and sustainability.</p>
+                            </div>
+                            <div class="tp-about-btn pt-35 tp_fade_anim" data-duration=".9" data-delay=".5">
+                                <a href="about.html" class="tp-btn tp-btn-border tp-btn-border-white">
                                     <span class="tp-btn-text">Learn More</span>
                                     <span class="tp-btn-icon">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -302,25 +339,39 @@
             <div class="row tp-about-fect-2">
                 <div class="col-xl-3 col-lg-3 col-sm-6">
                     <div class="tp-about-fect tp-about-fect-short tp-text-center">
-                        <h3 class="tpfunfect2__num tp-text-white">40<span>+</span></h3>
+                        <h3 class="tpfunfect2__num tp-text-white">
+                            <span class="odometer" data-count="40"></span>
+                            <span class="tpfunfect2__num-div">+</span>
+                        </h3>
                         <span class="tp-about-fect-deg tp-about-fect-short-deg">Total employees</span>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-sm-6">
                     <div class="tp-about-fect tp-about-fect-short tp-text-center">
-                        <h3 class="tpfunfect2__num tp-text-white">60<span>+</span></h3>
+                        <h3 class="tpfunfect2__num tp-text-white">
+                            <span class="odometer" data-count="60"></span>
+                            <span class="tpfunfect2__num-div">+</span>
+                        </h3>
                         <span class="tp-about-fect-deg tp-about-fect-short-deg">Projects development</span>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-sm-6">
                     <div class="tp-about-fect tp-about-fect-short tp-text-center">
-                        <h3 class="tpfunfect2__num tp-text-white">3.1B<span>+</span></h3>
+                        <h3 class="tpfunfect2__num tp-text-white">
+                            <span class="odometer" data-count="3.2"></span>
+                            <span>B</span>
+                            <span class="tpfunfect2__num-div">+</span>
+                        </h3>
                         <span class="tp-about-fect-deg tp-about-fect-short-deg">Total projects cost</span>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-sm-6">
                     <div class="tp-about-fect tp-about-fect-short tp-text-center">
-                        <h3 class="tpfunfect2__num tp-text-white">20M<span>+</span></h3>
+                        <h3 class="tpfunfect2__num tp-text-white">
+                            <span class="odometer" data-count="20"></span>
+                            <span>M</span>
+                            <span class="tpfunfect2__num-div">+</span>
+                        </h3>
                         <span class="tp-about-fect-deg tp-about-fect-short-deg">Square feet of property</span>
                     </div>
                 </div>
@@ -334,110 +385,106 @@
         <div class="container">
             <div class="tp-services-heading mb-60">
                 <div class="tp-section-title-wrap tp-text-center">
-                    <span class="tp-section-sub-title mb-15">Our construction service</span>
-                    <h2 class="tp-section-title">Take a brief look at the some <br>
+                    <span class="tp-section-sub-title mb-15 tp_fade_anim" data-delay=".1">Our construction service</span>
+                    <h2 class="tp-section-title tp_fade_anim" data-delay=".2">Take a brief look at the some <br>
                     of services<span>we offer</span></h2>
                 </div>
             </div>
-            <div class="tp-services-showcase pb-35">
+            <div class="tp-services-showcase pb-35 tp_fade_anim" data-delay=".3">
                 <div class="tpservshow hover active mb-30">
-                        <div class="tpservshow__info-wrap">
-                            <div class="tpservshow__icon mb-25">
-                                <svg width="43" height="50" viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.1607 13.0233C10.6956 13.0233 0.230469 10.6977 0.230469 6.51163C0.230469 2.32558 10.6956 0 21.1607 0C31.6258 0 42.0909 2.32558 42.0909 6.51163C41.8584 10.6977 31.3933 13.0233 21.1607 13.0233ZM21.1607 2.09302C8.83512 2.09302 2.32349 5.11628 2.32349 6.51163C2.32349 7.90698 8.83512 10.9302 21.1607 10.9302C33.4863 10.9302 39.9979 8.13954 39.9979 6.51163C39.9979 4.88372 33.4863 2.09302 21.1607 2.09302Z" fill="black"/>
-                                <path d="M21.1607 50.0001C10.6956 50.0001 0.230469 47.6745 0.230469 43.4884C0.230469 39.3024 10.6956 36.9768 21.1607 36.9768C31.6258 36.9768 42.0909 39.3024 42.0909 43.4884C41.8584 47.907 31.3933 50.0001 21.1607 50.0001ZM21.1607 39.0698C8.83512 39.0698 2.32349 42.0931 2.32349 43.4884C2.32349 44.8838 8.83512 47.907 21.1607 47.907C33.4863 47.907 39.9979 45.1163 39.9979 43.4884C39.9979 41.8605 33.4863 39.0698 21.1607 39.0698Z" fill="black"/>
-                                <path d="M1.16279 44.6512C0.465116 44.6512 0 44.1861 0 43.4884V6.97679C0 6.27911 0.465116 6.04655 1.16279 6.04655C1.86047 6.04655 2.32558 6.51167 2.32558 6.97679V43.4884C2.32558 43.9535 1.86047 44.6512 1.16279 44.6512Z" fill="black"/>
-                                <path d="M40.9302 44.6512C40.4651 44.6512 40 44.1861 40 43.4884V6.9768C40 6.27912 40.4651 6.04656 40.9302 6.04656C41.6279 6.04656 42.093 6.51168 42.093 6.9768V43.4884C41.8605 43.9536 41.3953 44.6512 40.9302 44.6512Z" fill="black"/>
-                                </svg>
-
-                            </div>
-                            <div class="tpservshow__content">
-                                <h3 class="tpservshow__title tp-fs-24"><a href="#">Landscape planning</a></h3>
-                                <p>We are a privately owned real <br>
-                                estate company dedicated to <br>
-                                delivering innovative</p>
-                            </div>
+                    <div class="tpservshow__info-wrap">
+                        <div class="tpservshow__icon mb-25">
+                            <svg width="43" height="50" viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.1607 13.0233C10.6956 13.0233 0.230469 10.6977 0.230469 6.51163C0.230469 2.32558 10.6956 0 21.1607 0C31.6258 0 42.0909 2.32558 42.0909 6.51163C41.8584 10.6977 31.3933 13.0233 21.1607 13.0233ZM21.1607 2.09302C8.83512 2.09302 2.32349 5.11628 2.32349 6.51163C2.32349 7.90698 8.83512 10.9302 21.1607 10.9302C33.4863 10.9302 39.9979 8.13954 39.9979 6.51163C39.9979 4.88372 33.4863 2.09302 21.1607 2.09302Z" fill="black"/>
+                            <path d="M21.1607 50.0001C10.6956 50.0001 0.230469 47.6745 0.230469 43.4884C0.230469 39.3024 10.6956 36.9768 21.1607 36.9768C31.6258 36.9768 42.0909 39.3024 42.0909 43.4884C41.8584 47.907 31.3933 50.0001 21.1607 50.0001ZM21.1607 39.0698C8.83512 39.0698 2.32349 42.0931 2.32349 43.4884C2.32349 44.8838 8.83512 47.907 21.1607 47.907C33.4863 47.907 39.9979 45.1163 39.9979 43.4884C39.9979 41.8605 33.4863 39.0698 21.1607 39.0698Z" fill="black"/>
+                            <path d="M1.16279 44.6512C0.465116 44.6512 0 44.1861 0 43.4884V6.97679C0 6.27911 0.465116 6.04655 1.16279 6.04655C1.86047 6.04655 2.32558 6.51167 2.32558 6.97679V43.4884C2.32558 43.9535 1.86047 44.6512 1.16279 44.6512Z" fill="black"/>
+                            <path d="M40.9302 44.6512C40.4651 44.6512 40 44.1861 40 43.4884V6.9768C40 6.27912 40.4651 6.04656 40.9302 6.04656C41.6279 6.04656 42.093 6.51168 42.093 6.9768V43.4884C41.8605 43.9536 41.3953 44.6512 40.9302 44.6512Z" fill="black"/>
+                            </svg>
                         </div>
-                        <div class="tpservshow__link">
-                            <a href="#">Learn More</a>
+                        <div class="tpservshow__content">
+                            <h3 class="tpservshow__title tp-fs-24"><a href="services-details.html">Landscape planning</a></h3>
+                            <p>We are a privately owned real <br>
+                            estate company dedicated to <br>
+                            delivering innovative</p>
                         </div>
+                    </div>
+                    <div class="tpservshow__link">
+                        <a href="services-details.html">Learn More</a>
+                    </div>
                     <div class="tpservshow__thumb br-20">
                         <img src="assets/img/services/services-showcase-1.jpg" alt="">
                     </div>
                 </div>
                 <div class="tpservshow hover mb-30">
-                        <div class="tpservshow__info-wrap">
-                            <div class="tpservshow__icon mb-25">
-                                <svg width="43" height="50" viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.1607 13.0233C10.6956 13.0233 0.230469 10.6977 0.230469 6.51163C0.230469 2.32558 10.6956 0 21.1607 0C31.6258 0 42.0909 2.32558 42.0909 6.51163C41.8584 10.6977 31.3933 13.0233 21.1607 13.0233ZM21.1607 2.09302C8.83512 2.09302 2.32349 5.11628 2.32349 6.51163C2.32349 7.90698 8.83512 10.9302 21.1607 10.9302C33.4863 10.9302 39.9979 8.13954 39.9979 6.51163C39.9979 4.88372 33.4863 2.09302 21.1607 2.09302Z" fill="black"/>
-                                <path d="M21.1607 50.0001C10.6956 50.0001 0.230469 47.6745 0.230469 43.4884C0.230469 39.3024 10.6956 36.9768 21.1607 36.9768C31.6258 36.9768 42.0909 39.3024 42.0909 43.4884C41.8584 47.907 31.3933 50.0001 21.1607 50.0001ZM21.1607 39.0698C8.83512 39.0698 2.32349 42.0931 2.32349 43.4884C2.32349 44.8838 8.83512 47.907 21.1607 47.907C33.4863 47.907 39.9979 45.1163 39.9979 43.4884C39.9979 41.8605 33.4863 39.0698 21.1607 39.0698Z" fill="black"/>
-                                <path d="M1.16279 44.6512C0.465116 44.6512 0 44.1861 0 43.4884V6.97679C0 6.27911 0.465116 6.04655 1.16279 6.04655C1.86047 6.04655 2.32558 6.51167 2.32558 6.97679V43.4884C2.32558 43.9535 1.86047 44.6512 1.16279 44.6512Z" fill="black"/>
-                                <path d="M40.9302 44.6512C40.4651 44.6512 40 44.1861 40 43.4884V6.9768C40 6.27912 40.4651 6.04656 40.9302 6.04656C41.6279 6.04656 42.093 6.51168 42.093 6.9768V43.4884C41.8605 43.9536 41.3953 44.6512 40.9302 44.6512Z" fill="black"/>
-                                </svg>
-
-                            </div>
-                            <div class="tpservshow__content">
-                                <h3 class="tpservshow__title tp-fs-24"><a href="#">Landscape planning</a></h3>
-                                <p>We are a privately owned real <br>
-                                estate company dedicated to <br>
-                                delivering innovative</p>
-                            </div>
+                    <div class="tpservshow__info-wrap">
+                        <div class="tpservshow__icon mb-25">
+                            <svg width="43" height="50" viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.1607 13.0233C10.6956 13.0233 0.230469 10.6977 0.230469 6.51163C0.230469 2.32558 10.6956 0 21.1607 0C31.6258 0 42.0909 2.32558 42.0909 6.51163C41.8584 10.6977 31.3933 13.0233 21.1607 13.0233ZM21.1607 2.09302C8.83512 2.09302 2.32349 5.11628 2.32349 6.51163C2.32349 7.90698 8.83512 10.9302 21.1607 10.9302C33.4863 10.9302 39.9979 8.13954 39.9979 6.51163C39.9979 4.88372 33.4863 2.09302 21.1607 2.09302Z" fill="black"/>
+                            <path d="M21.1607 50.0001C10.6956 50.0001 0.230469 47.6745 0.230469 43.4884C0.230469 39.3024 10.6956 36.9768 21.1607 36.9768C31.6258 36.9768 42.0909 39.3024 42.0909 43.4884C41.8584 47.907 31.3933 50.0001 21.1607 50.0001ZM21.1607 39.0698C8.83512 39.0698 2.32349 42.0931 2.32349 43.4884C2.32349 44.8838 8.83512 47.907 21.1607 47.907C33.4863 47.907 39.9979 45.1163 39.9979 43.4884C39.9979 41.8605 33.4863 39.0698 21.1607 39.0698Z" fill="black"/>
+                            <path d="M1.16279 44.6512C0.465116 44.6512 0 44.1861 0 43.4884V6.97679C0 6.27911 0.465116 6.04655 1.16279 6.04655C1.86047 6.04655 2.32558 6.51167 2.32558 6.97679V43.4884C2.32558 43.9535 1.86047 44.6512 1.16279 44.6512Z" fill="black"/>
+                            <path d="M40.9302 44.6512C40.4651 44.6512 40 44.1861 40 43.4884V6.9768C40 6.27912 40.4651 6.04656 40.9302 6.04656C41.6279 6.04656 42.093 6.51168 42.093 6.9768V43.4884C41.8605 43.9536 41.3953 44.6512 40.9302 44.6512Z" fill="black"/>
+                            </svg>
                         </div>
-                        <div class="tpservshow__link">
-                            <a href="#">Learn More</a>
+                        <div class="tpservshow__content">
+                            <h3 class="tpservshow__title tp-fs-24"><a href="services-details.html">Landscape planning</a></h3>
+                            <p>We are a privately owned real <br>
+                            estate company dedicated to <br>
+                            delivering innovative</p>
                         </div>
+                    </div>
+                    <div class="tpservshow__link">
+                        <a href="services-details.html">Learn More</a>
+                    </div>
                     <div class="tpservshow__thumb br-20">
                         <img src="assets/img/services/services-showcase-2.jpg" alt="">
                     </div>
                 </div>
                 <div class="tpservshow hover mb-30">
-                        <div class="tpservshow__info-wrap">
-                            <div class="tpservshow__icon mb-25">
-                                <svg width="43" height="50" viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.1607 13.0233C10.6956 13.0233 0.230469 10.6977 0.230469 6.51163C0.230469 2.32558 10.6956 0 21.1607 0C31.6258 0 42.0909 2.32558 42.0909 6.51163C41.8584 10.6977 31.3933 13.0233 21.1607 13.0233ZM21.1607 2.09302C8.83512 2.09302 2.32349 5.11628 2.32349 6.51163C2.32349 7.90698 8.83512 10.9302 21.1607 10.9302C33.4863 10.9302 39.9979 8.13954 39.9979 6.51163C39.9979 4.88372 33.4863 2.09302 21.1607 2.09302Z" fill="black"/>
-                                <path d="M21.1607 50.0001C10.6956 50.0001 0.230469 47.6745 0.230469 43.4884C0.230469 39.3024 10.6956 36.9768 21.1607 36.9768C31.6258 36.9768 42.0909 39.3024 42.0909 43.4884C41.8584 47.907 31.3933 50.0001 21.1607 50.0001ZM21.1607 39.0698C8.83512 39.0698 2.32349 42.0931 2.32349 43.4884C2.32349 44.8838 8.83512 47.907 21.1607 47.907C33.4863 47.907 39.9979 45.1163 39.9979 43.4884C39.9979 41.8605 33.4863 39.0698 21.1607 39.0698Z" fill="black"/>
-                                <path d="M1.16279 44.6512C0.465116 44.6512 0 44.1861 0 43.4884V6.97679C0 6.27911 0.465116 6.04655 1.16279 6.04655C1.86047 6.04655 2.32558 6.51167 2.32558 6.97679V43.4884C2.32558 43.9535 1.86047 44.6512 1.16279 44.6512Z" fill="black"/>
-                                <path d="M40.9302 44.6512C40.4651 44.6512 40 44.1861 40 43.4884V6.9768C40 6.27912 40.4651 6.04656 40.9302 6.04656C41.6279 6.04656 42.093 6.51168 42.093 6.9768V43.4884C41.8605 43.9536 41.3953 44.6512 40.9302 44.6512Z" fill="black"/>
-                                </svg>
-
-                            </div>
-                            <div class="tpservshow__content">
-                                <h3 class="tpservshow__title tp-fs-24"><a href="#">Landscape planning</a></h3>
-                                <p>We are a privately owned real <br>
-                                estate company dedicated to <br>
-                                delivering innovative</p>
-                            </div>
+                    <div class="tpservshow__info-wrap">
+                        <div class="tpservshow__icon mb-25">
+                            <svg width="43" height="50" viewBox="0 0 43 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.1607 13.0233C10.6956 13.0233 0.230469 10.6977 0.230469 6.51163C0.230469 2.32558 10.6956 0 21.1607 0C31.6258 0 42.0909 2.32558 42.0909 6.51163C41.8584 10.6977 31.3933 13.0233 21.1607 13.0233ZM21.1607 2.09302C8.83512 2.09302 2.32349 5.11628 2.32349 6.51163C2.32349 7.90698 8.83512 10.9302 21.1607 10.9302C33.4863 10.9302 39.9979 8.13954 39.9979 6.51163C39.9979 4.88372 33.4863 2.09302 21.1607 2.09302Z" fill="black"/>
+                            <path d="M21.1607 50.0001C10.6956 50.0001 0.230469 47.6745 0.230469 43.4884C0.230469 39.3024 10.6956 36.9768 21.1607 36.9768C31.6258 36.9768 42.0909 39.3024 42.0909 43.4884C41.8584 47.907 31.3933 50.0001 21.1607 50.0001ZM21.1607 39.0698C8.83512 39.0698 2.32349 42.0931 2.32349 43.4884C2.32349 44.8838 8.83512 47.907 21.1607 47.907C33.4863 47.907 39.9979 45.1163 39.9979 43.4884C39.9979 41.8605 33.4863 39.0698 21.1607 39.0698Z" fill="black"/>
+                            <path d="M1.16279 44.6512C0.465116 44.6512 0 44.1861 0 43.4884V6.97679C0 6.27911 0.465116 6.04655 1.16279 6.04655C1.86047 6.04655 2.32558 6.51167 2.32558 6.97679V43.4884C2.32558 43.9535 1.86047 44.6512 1.16279 44.6512Z" fill="black"/>
+                            <path d="M40.9302 44.6512C40.4651 44.6512 40 44.1861 40 43.4884V6.9768C40 6.27912 40.4651 6.04656 40.9302 6.04656C41.6279 6.04656 42.093 6.51168 42.093 6.9768V43.4884C41.8605 43.9536 41.3953 44.6512 40.9302 44.6512Z" fill="black"/>
+                            </svg>
                         </div>
-                        <div class="tpservshow__link">
-                            <a href="#">Learn More</a>
+                        <div class="tpservshow__content">
+                            <h3 class="tpservshow__title tp-fs-24"><a href="services-details.html">Landscape planning</a></h3>
+                            <p>We are a privately owned real <br>
+                            estate company dedicated to <br>
+                            delivering innovative</p>
                         </div>
+                    </div>
+                    <div class="tpservshow__link">
+                        <a href="services-details.html">Learn More</a>
+                    </div>
                     <div class="tpservshow__thumb br-20">
                         <img src="assets/img/services/services-showcase-3.jpg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="tp-services-showcase-bottom tp-flex tp-justify-center">
+            <div class="tp-services-showcase-bottom tp-flex tp-justify-center tp_fade_anim" data-delay=".4">
                 <p class="margin-0">Join 850+ companies growing with our trusted construction services<span>Trusted</span></p>
             </div>
         </div>
      </section>
     <!-- services-area,end  -->
 
-
      <!-- portfolio-area,start  -->
       <section class="tp-portfolio-area tp-portfolio-spacing-4 default-margin br-20 tp-bg-gray pt-150 pb-150 fix">
             <div class="container">
                 <div class="tp-portfolio-heading mb-70">
                     <div class="tp-section-title-wrap tp-text-center">
-                        <span class="tp-section-sub-title mb-15">Our portfolio</span>
-                        <h2 class="tp-section-title">The proof in our<span> portfolior.</span></h2>
+                        <span class="tp-section-sub-title mb-15 tp_fade_anim" data-delay=".1">Our portfolio</span>
+                        <h2 class="tp-section-title tp_fade_anim" data-delay=".3">The proof in our<span> portfolior.</span></h2>
                     </div>
                 </div>
                 <div class="tp-portfolio-post-wrap tp-protfolio-pin-2">
                     <div class="tpportpost mb-25 tp-protfolio-panel-2">
                         <div class="tpportpost__info">
                             <div class="tpportpost__content">
-                                <h3 class="tpportpost__title"><a href="#">Skyline corporate office</a></h3>
+                                <h3 class="tpportpost__title"><a href="project-details.html">Skyline corporate office</a></h3>
                                 <span class="fw-500 d-inline-block">Commercial -  Office</span>
                             </div>
                             <div class="tpportpost__meta">
@@ -465,14 +512,14 @@
                         <div class="tpportpost__thumb p-relative">
                             <img src="assets/img/portfolio/portfolio-3-thumb-1.jpg" alt="">
                             <div class="tpportpost__link">
-                                <a href="#">Learn More</a>
+                                <a href="project-details.html">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="tpportpost mb-25 tp-protfolio-panel-2">
                         <div class="tpportpost__info">
                             <div class="tpportpost__content">
-                                <h3 class="tpportpost__title"><a href="#">Clestial towers condulsin</a></h3>
+                                <h3 class="tpportpost__title"><a href="project-details.html">Clestial towers condulsin</a></h3>
                                 <span class="fw-500 d-inline-block">Business -  Office</span>
                             </div>
                             <div class="tpportpost__meta">
@@ -500,14 +547,14 @@
                         <div class="tpportpost__thumb p-relative">
                             <img src="assets/img/portfolio/portfolio-3-thumb-2.jpg" alt="">
                             <div class="tpportpost__link">
-                                <a href="#">Learn More</a>
+                                <a href="project-details.html">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="tpportpost mb-25 tp-protfolio-panel-2">
                         <div class="tpportpost__info">
                             <div class="tpportpost__content">
-                                <h3 class="tpportpost__title"><a href="#">Urban rights residents</a></h3>
+                                <h3 class="tpportpost__title"><a href="project-details.html">Urban rights residents</a></h3>
                                 <span class="fw-500 d-inline-block">Commercial -  Office</span>
                             </div>
                             <div class="tpportpost__meta">
@@ -535,13 +582,13 @@
                         <div class="tpportpost__thumb p-relative">
                             <img src="assets/img/portfolio/portfolio-3-thumb-3.jpg" alt="">
                             <div class="tpportpost__link">
-                                <a href="#">Learn More</a>
+                                <a href="project-details.html">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tp-portfolio-post-btn tp-flex tp-justify-center pt-35">
-                    <a href="#" class="tp-btn">
+                <div class="tp-portfolio-post-btn tp-flex tp-justify-center pt-35 tp_fade_anim" data-delay=".2" data-ease="bounce">
+                    <a href="project-standard.html" class="tp-btn">
                     <span class="tp-btn-text">View all projects</span>
                         <span class="tp-btn-icon">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -562,14 +609,14 @@
                 <div class="row tp-align-center">
                     <div class="col-xl-8 col-lg-8 col-md-8">
                         <div class="tp-section-title-wrap">
-                            <span class="tp-section-sub-title mb-12">Why choose Landor</span>
-                            <h2 class="tp-section-title">An exceptional quality <br>
+                            <span class="tp-section-sub-title mb-12 tp_fade_anim" data-delay=".1">Why choose Landor</span>
+                            <h2 class="tp-section-title tp_fade_anim" data-delay=".2">An exceptional quality <br>
                             that can’t<span>be beaten</span></h2>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4">
-                        <div class="tp-choose-button tp-flex tp-justify-end">
-                            <a href="#" class="tp-btn tp-btn-border">
+                        <div class="tp-choose-button tp-flex tp-justify-end tp_fade_anim" data-delay=".4" data-fade-from="right" data-ease="bounce">
+                            <a href="team.html" class="tp-btn tp-btn-border">
                             <span class="tp-btn-text">See all Member</span>
                                 <span class="tp-btn-icon">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -583,16 +630,17 @@
                 </div>
             </div>
         </div>
-        <div class="tp-choose-2 tp-bg br-20 fix" data-background="assets/img/choose/choose-bg-2.png">
-            <div class="tp-choose-wrap-2 z-index-1 p-relative">
-                <div class="tpchoose tpchoose__2 tpchoose__2--item-5 d-none d-xl-inline-block p-absolute tp-bg-gray">
+        <div class="tp-choose-2 tp-choose-2-spacing p-relative tp-bg br-20 fix tp-choose-slide-wrap" >
+            <img class="tp-choose-slide abc" src="assets/img/choose/choose-bg-2.png" alt="">
+            <div class="tp-choose-wrap">
+                <div class="tpchoose tpchoose__2 tpchoose__2--item-5 p-absolute tp-bg-gray">
                     <div class="tpchoose__icon tp-text-end mb-75">
                         <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
                         </svg>
                     </div>
                     <div class="tpchoose__content">
-                        <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="#">Lifetime support</a></h3>
+                        <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="about.html">Lifetime support</a></h3>
                         <p>Our goal is zero incidents and
                         our lost time frequency rate is
                         industry leading.</p>
@@ -605,20 +653,20 @@
                         </svg>
                     </div>
                     <div class="tpchoose__content">
-                        <h3 class="tpchoose__title tp-fs-24 mb-15 tp-text-white"><a href="#">Community living</a></h3>
+                        <h3 class="tpchoose__title tp-fs-24 mb-15 tp-text-white"><a href="about.html">Community living</a></h3>
                         <p class="tp-text-white">Our goal is zero incidents and
                         our lost time frequency rate is
                         industry leading.</p>
                     </div>
                 </div>  
-                <div class="tpchoose tpchoose__2 tpchoose__2--item-3 d-none d-lg-inline-block p-absolute tp-bg-secoundery">
+                <div class="tpchoose tpchoose__2 tpchoose__2--item-3 p-absolute tp-bg-secoundery">
                     <div class="tpchoose__icon tp-text-end mb-75">
                         <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.4403 6.04683L14.7701 5.63653C16.6542 3.28115 18.2359 1.22545 19.0635 0.137381C19.1808 -0.0159263 19.4001 -0.0453685 19.5537 0.0715648C22.9705 2.73222 26.0821 7.60262 25.4302 12.8147C25.2397 14.3776 24.8337 15.9066 24.2238 17.3581C22.9984 17.8463 21.8443 18.4975 20.793 19.2941C19.2274 20.4547 17.9316 21.9404 16.9945 23.6492C16.9843 23.6685 16.9752 23.6883 16.9672 23.7087C16.7603 24.1193 16.5839 24.5445 16.4393 24.9809C16.2993 24.7708 16.1522 24.5678 15.9982 24.3689C15.5228 21.0781 15.0088 13.0682 19.6972 6.2982C19.9062 5.98052 19.8234 5.55409 19.5108 5.33766C19.1981 5.12123 18.7698 5.19392 18.5461 5.5014C14.3066 11.6223 14.0762 18.6548 14.4088 22.7396C13.4788 21.9901 12.4505 21.3715 11.3525 20.901C7.79356 14.297 11.7852 9.33904 14.4403 6.04683ZM2.98408 28.7296C2.13215 26.2544 1.14649 23.8273 0.0314494 21.459C-0.0135426 21.3602 -0.0101032 21.246 0.0407596 21.1501C0.0916224 21.0541 0.184147 20.9872 0.291213 20.9689C5.49489 20.1588 13.2199 21.5101 15.695 26.4653C16.258 27.6692 16.6766 28.9355 16.942 30.2378C14.8534 27.3076 11.2496 24.3003 3.86769 22.7186C3.48951 22.6374 3.11709 22.8782 3.03589 23.2564C2.95468 23.6346 3.19543 24.007 3.57362 24.0882C13.4117 26.1964 15.9842 31.0241 17.0806 33.1435L17.0855 33.1533V33.1582C17.0922 33.1747 17.0996 33.1908 17.108 33.2065C17.2849 33.5437 17.4427 33.8906 17.5806 34.2456C17.6303 34.7196 17.6639 35.1208 17.6863 35.4177C7.28453 37.9432 3.94401 31.6101 2.98408 28.7296ZM35.2725 26.6025C33.4353 31.5037 26.4503 37.0792 19.0915 35.391C19.0418 34.6755 18.9207 33.3108 18.6595 31.7277C19.2309 29.5516 21.0751 23.4657 35.3979 19.8815C35.6457 19.8258 35.8438 19.6402 35.9157 19.3965C35.9876 19.1529 35.9218 18.8894 35.744 18.7081C35.5661 18.5268 35.3039 18.456 35.059 18.5232C26.0562 20.7736 20.4898 24.2716 18.1302 29.1707C17.9416 28.4131 17.7078 27.6675 17.43 26.9379C17.5363 26.0158 17.8121 25.1214 18.2436 24.2996C18.2534 24.2815 18.262 24.2628 18.2695 24.2436C19.1143 22.7363 20.2697 21.4256 21.6591 20.3983C22.6853 19.6221 23.8169 18.9964 25.0199 18.54H25.0255C29.7272 16.6944 35.5526 16.7896 38.0809 16.9408C38.1872 16.9466 38.285 17.0011 38.3457 17.0885C38.4065 17.176 38.4235 17.2866 38.3918 17.3882C37.8422 19.1863 36.7205 22.7431 35.2725 26.6025Z" fill="currentcolor"/>
                         </svg>
                     </div>
                     <div class="tpchoose__content">
-                        <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="#">Community living</a></h3>
+                        <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="about.html">Community living</a></h3>
                         <p>Our goal is zero incidents and
                         our lost time frequency rate is
                         industry leading.</p>
@@ -631,7 +679,7 @@
                         </svg>
                     </div>
                     <div class="tpchoose__content">
-                        <h3 class="tpchoose__title tp-fs-24 tp-text-white mb-15"><a href="#">Client approach</a></h3>
+                        <h3 class="tpchoose__title tp-fs-24 tp-text-white mb-15"><a href="about.html">Client approach</a></h3>
                         <p class="tp-text-white">Our goal is zero incidents and
                         our lost time frequency rate is
                         industry leading.</p>
@@ -644,7 +692,7 @@
                         </svg>
                     </div>
                     <div class="tpchoose__content">
-                        <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="#">Client approach</a></h3>
+                        <h3 class="tpchoose__title tp-fs-24 mb-15"><a href="about.html">Client approach</a></h3>
                         <p>Our goal is zero incidents and
                         our lost time frequency rate is
                         industry leading.</p>
@@ -680,7 +728,7 @@
                         <h3 class="tp-testi-card-title">Keep communication <br>
                             transparent</h3>
                         <div class="tp-testi-fact">
-                            <h4 class="tp-testi-fact-num">99%</h4>
+                            <h4 class="tp-testi-fact-num"><span class="odometer" data-count="99"></span>%</h4>
                             <p class="fs-20 tp-text-black margin-0">Satisfaction level</p>
                         </div>
                     </div>
@@ -695,30 +743,30 @@
         <div class="container">
             <div class="tp-floting-card-main p-relative">
                 <div class="tp-floting-card-content">
-                    <h2 class="tp-floting-card-title mb-45">Heritage</h2>
-                    <p class="tp-text-black fw-500 margin-0">Each Ardène residence is more than a <br>
+                    <h2 class="tp-floting-card-title mb-45 reval-line">Heritage</h2>
+                    <p class="tp-text-black fw-500 margin-0 reval-line">Each Ardène residence is more than a <br>
                     home. It is a dialogue between landscape, <br>
                     architecture, and light — designed to <br>
                     belong, to endure, to inspire</p>
                 </div>
                 <div class="tp-floting-card-img">
-                    <div class="tp-floting-card-img-item-1 br-10 d-none d-lg-block p-absolute">
+                    <div class="tp-floting-card-img-item-1 br-10 d-none d-lg-block p-absolute tp_fade_anim" data-delay=".4">
                         <img src="assets/img/floting/floting-img-1.jpg" alt="">
                         <h3 class="tp-floting-card-img-placeholder pt-10">Modern</h3>
                     </div>
-                    <div class="tp-floting-card-img-item-2 br-10 p-absolute">
+                    <div class="tp-floting-card-img-item-2 br-10 p-absolute tp_fade_anim" data-delay=".2">
                         <img src="assets/img/floting/floting-img-2.jpg" alt="">
                         <h3 class="tp-floting-card-img-placeholder pt-10">Culture</h3>
                     </div>
-                    <div class="tp-floting-card-img-item-3 d-none d-xl-block br-10 p-absolute">
+                    <div class="tp-floting-card-img-item-3 d-none d-xl-block br-10 p-absolute tp_fade_anim" data-delay=".2">
                         <img src="assets/img/floting/floting-img-3.jpg" alt="">
                         <h3 class="tp-floting-card-img-placeholder pt-10">Moment</h3>
                     </div>
-                    <div class="tp-floting-card-img-item-4 br-10 p-absolute">
+                    <div class="tp-floting-card-img-item-4 br-10 p-absolute tp_fade_anim" data-delay=".4">
                         <img src="assets/img/floting/floting-img-4.jpg" alt="">
                         <h3 class="tp-floting-card-img-placeholder pt-10">Herritage</h3>
                     </div>
-                    <div class="tp-floting-card-img-item-5 br-10 d-none d-lg-block p-absolute">
+                    <div class="tp-floting-card-img-item-5 br-10 d-none d-lg-block p-absolute tp_fade_anim" data-delay=".4">
                         <img src="assets/img/floting/floting-img-5.jpg" alt="">
                         <h3 class="tp-floting-card-img-placeholder pt-10">Passionate</h3>
                     </div>
@@ -736,9 +784,9 @@
                     <div class="tp-contect-wrap p-relative fix">
                         <div class="row tp-justify-center z-index-1">
                             <div class="col-xl-5 col-lg-6 col-md-10">
-                                <div class="tp-contect-box">
+                                <div class="tp-contect-box tp_fade_anim" data-delay=".1">
                                     <div class="tp-contect-box-content mb-25">
-                                        <a class="d-inline-block" href="#">Landor@</a>
+                                        <a class="d-inline-block" href="about.html">Landor@</a>
                                         <h3 class="tp-contect-box-title">Leave a reply</h3>
                                     </div>
                                     <form action="#">
@@ -767,12 +815,12 @@
                             </div>
                             <div class="col-xl-6 offset-xl-1 col-lg-6 col-md-10">
                                 <div class="tp-contect-right">
-                                    <div class="tp-contect-step-heading">
+                                    <div class="tp-contect-step-heading tp_fade_anim" data-delay=".3">
                                         <h2 class="tp-section-title tp-contect-title tp-text-white">Let’s <span>talk</span></h2>
                                         <p class="tp-contect-deg margin-0">Tell us about your project <b>— whether
                                         it’s a website, SEO, or marketing.</b></p>
                                     </div>
-                                    <div class="tp-contect-step-wrap mb-40">
+                                    <div class="tp-contect-step-wrap mb-40 tp_fade_anim" data-delay=".4">
                                         <div class="tp-contect-step">
                                             <h3 class="tp-contect-step-title tp-fs-24 tp-text-white fw-500 mb-20">Quick response</h3>
                                             <p class="tp-text-white">If you’re ready create & collaborate <br>
@@ -784,15 +832,15 @@
                                             we’d love to hear from you.</p>
                                         </div>
                                     </div>
-                                    <div class="tp-contect-author">
+                                    <div class="tp-contect-author tp_fade_anim" data-delay=".5">
                                         <div class="tp-contect-author-thumb">
-                                            <a class="br-10" href="#"><img src="assets/img/contect/contect-author.jpg" alt=""></a>
+                                            <a class="br-10" href="team-details.html"><img src="assets/img/contect/contect-author.jpg" alt=""></a>
                                         </div>
                                         <div class="tp-contect-author-content">
-                                            <h4 class="tp-contect-author-subtitle mb-25">Team lead <span>at <a href="#">Landor@</a></span></h4>
-                                            <h4 class="tp-contect-author-title mb-15"><a href="#">Belal Mahmud</a></h4>
+                                            <h4 class="tp-contect-author-subtitle mb-25">Team lead <span>at <a href="about.html">Landor@</a></span></h4>
+                                            <h4 class="tp-contect-author-title mb-15"><a href="team-details.html">Belal Mahmud</a></h4>
                                             <div class="tp-contect-author-link">
-                                                <a href="#">Let’s Talk</a>
+                                                <a href="team-details.html">Let’s Talk</a>
                                             </div>
                                         </div>
                                     </div>
@@ -807,84 +855,84 @@
     <!-- contect-area,end  -->
 
     <!-- blog-area,start  -->
-    <section class="tp-postbox-area tp-postbox-spacing fix">
-        <div class="container">
-            <div class="tp-blog-heading mb-70">
-                <div class="tp-section-title-wrap tp-text-center">
-                    <span class="tp-section-sub-title mb-12">Our blog post</span>
-                    <h2 class="tp-section-title margin-0">Discover inspiration<span>and trends</span></h2>
-                </div>   
+        <section class="tp-postbox-area tp-postbox-spacing fix">
+            <div class="container">
+                <div class="tp-blog-heading mb-70">
+                    <div class="tp-section-title-wrap tp-text-center">
+                        <span class="tp-section-sub-title mb-12 tp_fade_anim">Our blog post</span>
+                        <h2 class="tp-section-title margin-0 tp_fade_anim" data-delay=".2">Discover inspiration<span>and trends</span></h2>
+                    </div>   
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tppostbox br-20 mb-30 tp_fade_anim" data-delay=".3">
+                            <div class="tppostbox__thumb p-relative br-20">
+                                <img src="assets/img/blog/blog-thumb-4.jpg" alt="">
+                                <div class="tppostbox__shape">
+                                    <span class="tppostbox__meta">15 March, 2025</span>
+                                </div>
+                                <div class="tppostbox__btn tpportfolio__button p-absolute">
+                                    <a href="blog-details.html">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 21L21 1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H21V21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="tppostbox__title pt-20">
+                                <a href="blog-details.html">We design with intention creating
+                                spaces that reflect your style</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-delay=".5">
+                        <div class="tppostbox br-20 mb-30">
+                            <div class="tppostbox__thumb p-relative br-20">
+                                <img src="assets/img/blog/blog-thumb-5.jpg" alt="">
+                                <div class="tppostbox__shape">
+                                    <span class="tppostbox__meta">15 March, 2025</span>
+                                </div>
+                                <div class="tppostbox__btn tpportfolio__button p-absolute">
+                                    <a href="blog-details.html">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 21L21 1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H21V21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="tppostbox__title pt-20">
+                                <a href="blog-details.html">Naming your real estate company
+                                just got a whole lot easier.</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-delay=".7">
+                        <div class="tppostbox br-20 mb-30">
+                            <div class="tppostbox__thumb p-relative br-20">
+                                <img src="assets/img/blog/blog-thumb-6.jpg" alt="">
+                                <div class="tppostbox__shape">
+                                    <span class="tppostbox__meta">15 March, 2025</span>
+                                </div>
+                                <div class="tppostbox__btn tpportfolio__button p-absolute">
+                                    <a href="blog-details.html">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 21L21 1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1H21V21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="tppostbox__title pt-20">
+                                <a href="blog-details.html">150+ Real estate company names
+                                for a thriving business</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row tp-justify-center">
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="tppostbox br-20 mb-30">
-                        <div class="tppostbox__thumb p-relative br-20">
-                            <img src="assets/img/blog/blog-thumb-4.jpg" alt="">
-                            <div class="tppostbox__shape">
-                                <span class="tppostbox__meta">15 March, 2025</span>
-                            </div>
-                            <div class="tppostbox__btn tpportfolio__button p-absolute">
-                                <a href="#">
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 21L21 1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M1 1H21V21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="tppostbox__title pt-20">
-                            <a href="#">We design with intention creating
-                            spaces that reflect your style</a>
-                        </h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="tppostbox br-20 mb-30">
-                        <div class="tppostbox__thumb p-relative br-20">
-                            <img src="assets/img/blog/blog-thumb-5.jpg" alt="">
-                            <div class="tppostbox__shape">
-                                <span class="tppostbox__meta">15 March, 2025</span>
-                            </div>
-                            <div class="tppostbox__btn tpportfolio__button p-absolute">
-                                <a href="#">
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 21L21 1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M1 1H21V21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="tppostbox__title pt-20">
-                            <a href="#">Naming your real estate company
-                            just got a whole lot easier.</a>
-                        </h3>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="tppostbox br-20 mb-30">
-                        <div class="tppostbox__thumb p-relative br-20">
-                            <img src="assets/img/blog/blog-thumb-6.jpg" alt="">
-                            <div class="tppostbox__shape">
-                                <span class="tppostbox__meta">15 March, 2025</span>
-                            </div>
-                            <div class="tppostbox__btn tpportfolio__button p-absolute">
-                                <a href="#">
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 21L21 1" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M1 1H21V21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="tppostbox__title pt-20">
-                            <a href="#">150+ Real estate company names
-                            for a thriving business</a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     <!-- blog-area,end  -->
      </main>
     <!-- main,end  -->
@@ -896,12 +944,12 @@
                 <div class="tp-footer-wrap pb-65">
                     <div class="row">
                         <div class="col-lg-5 col-md-7 col-sm-8">
-                            <div class="tp-footer-widgets mb-30">
+                            <div class="tp-footer-widgets mb-30 tp_fade_anim" data-delay=".1">
                                 <div class="tp-footer-info">
                                     <div class="tp-footer-content mb-45">
                                         <h3 class="tp-footer-info-title mb-20 tp-text-white">Ha ve questions?</h3>
-                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="#">on demo.landor@gmail.com</a> <br>
-                                            or submit <a href="#">an contact</a> form.</p>
+                                        <p class="tp-footer-info-deg white-rgba">Email us <a href="mailto:demo.landor@gmail.com">on demo.landor@gmail.com</a> <br>
+                                            or submit <a href="contect.html">an contact</a> form.</p>
                                     </div>
                                     <div class="tp-footer-social tp-footer-social-white">
                                         <ul>
@@ -931,7 +979,7 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-5 col-sm-4">
-                            <div class="tp-footer-widgets tp-footer-widgets-white mb-30">
+                            <div class="tp-footer-widgets tp-footer-widgets-white mb-30 tp_fade_anim" data-delay=".2">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">Company</h4>
                                 <ul>
                                     <li><a href="#">About us</a></li>
@@ -944,7 +992,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-7 col-sm-8">
-                            <div class="tp-footer-widgets tp-footer-widgets-white">
+                            <div class="tp-footer-widgets tp-footer-widgets-white tp_fade_anim" data-delay=".3">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">SERVICES</h4>
                                 <ul>
                                     <li><a href="#">Real estate development</a></li>
@@ -957,7 +1005,7 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-5 col-sm-4">
-                            <div class="tp-footer-widgets tp-footer-widgets-white">
+                            <div class="tp-footer-widgets tp-footer-widgets-white tp_fade_anim" data-delay=".4">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">PAGES</h4>
                                 <ul>
                                     <li><a href="#">Testimonials</a></li>
@@ -974,7 +1022,7 @@
                     <div class="row tp-justify-center">
                         <div class="col-xl-5 col-lg-4 col-md-4">
                             <div class="tp-footer-logo">
-                                <a href="#"><img src="assets/img/logo/logo-white-larg.png" alt=""></a>
+                                <a href="index.html"><img data-width="365" src="assets/img/logo/logo-white-larg.png" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -988,13 +1036,11 @@
     <!-- script,start -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/vandor/waypoints.js"></script>
-    <script src="assets/js/counterUp.js"></script>
     <script src="assets/js/ajex-form.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/mobile-menu-scripts.js"></script>
     <script src="assets/js/nice-select.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/scrol-smooth.js"></script>
@@ -1002,6 +1048,7 @@
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/splitText.min.js"></script>
     <script src="assets/js/Vanilla-marquee.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- script,end -->
 </body>
