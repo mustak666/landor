@@ -77,7 +77,8 @@ img{
 		}
 	}
 	&-15{
-		& > img{
+		border-radius: 15px;
+		& > img, & > a img {
 			border-radius: 15px;
 		}
 	}
@@ -427,4 +428,7 @@ img{
 }
 .fixed_attachment{
 	background-attachment: fixed;
+}
+samp{
+	font-family: var(--tp-theme-font);
 }

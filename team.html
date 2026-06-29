@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
+<body class="tp-magic-cursor">
     
     <!-- header,start  -->
      <header>
@@ -122,10 +122,11 @@
      </header>
     <!-- header,end  -->
 
-    <!-- mouse-cursor -->
-    <div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
-    <!-- mouse-cursor -->
+ <!-- Begin magic cursor -->
+    <div id="magic-cursor" class="cursor-black-bg">
+        <div id="ball"></div>
+    </div>
+ <!-- End magic cursor -->
 
     <!-- back to top start -->
     <div class="back-to-top-wrapper">
@@ -163,25 +164,59 @@
                 <a class="popup-image" href="assets/img/project/project-gullary-1.jpg"><img src="assets/img/project/project-gullary-1.jpg" alt=""></a>
             </div>
             <div class="tp-offcanvas-cta mb-30">
-            <h3 class="tp-offcanvas-title mb-7">Information</h3>
+               <h3 class="tp-offcanvas-title mb-7">Information</h3>
                 <ul>
                     <li><a href="tel:+99926542563">+999 2654 2563</a></li>
                     <li><a href="mailto:landor@info@.com">landor@info@.com</a></li>
-                    <li><a href="#">Kushtia Khulna Bangladesh</a></li>
                 </ul>
             </div>
             <div class="tp-offcanvas-contect-social">
                 <ul>
-                    <li><a target="_blank" href="https://www.facebook.com/rion.khan.75873708"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/mustak666"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/mostak-ahmed-rion-186769380/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a target="_blank" href="https://x.com/AhmmedRion91701"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#">
+                        <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0H5.81818C4.85376 0 3.92883 0.383116 3.24688 1.06507C2.56493 1.74702 2.18182 2.67194 2.18182 3.63636V5.81818H0V8.72727H2.18182V14.5455H5.09091V8.72727H7.27273L8 5.81818H5.09091V3.63636C5.09091 3.44348 5.16753 3.25849 5.30392 3.1221C5.44031 2.98571 5.6253 2.90909 5.81818 2.90909H8V0Z" fill="currentcolor"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.7127 0.00672484C14.0723 0.458456 13.3632 0.803959 12.6128 1.02993C12.21 0.566818 11.6748 0.238578 11.0794 0.0896016C10.484 -0.0593751 9.85717 -0.021901 9.28377 0.196956C8.71036 0.415812 8.21801 0.805492 7.87329 1.31329C7.52857 1.82109 7.34812 2.42251 7.35635 3.0362V3.70496C6.18109 3.73544 5.01654 3.47478 3.96642 2.94622C2.91629 2.41765 2.01318 1.63758 1.33752 0.675484C1.33752 0.675484 -1.33752 6.69432 4.68131 9.36935C3.30402 10.3043 1.66331 10.773 0 10.7069C6.01883 14.0507 13.3752 10.7069 13.3752 3.01614C13.3746 2.82986 13.3567 2.64404 13.3217 2.46107C14.0042 1.78796 14.4859 0.938114 14.7127 0.00672484Z" fill="currentcolor"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.79961 4.2002C10.9135 4.2002 11.9818 4.64269 12.7695 5.43035C13.5571 6.218 13.9996 7.28629 13.9996 8.4002V13.3002H11.1996V8.4002C11.1996 8.02889 11.0521 7.6728 10.7896 7.41025C10.527 7.1477 10.1709 7.0002 9.79961 7.0002C9.42831 7.0002 9.07221 7.1477 8.80966 7.41025C8.54711 7.6728 8.39961 8.02889 8.39961 8.4002V13.3002H5.59961V8.4002C5.59961 7.28629 6.04211 6.218 6.82976 5.43035C7.61741 4.64269 8.6857 4.2002 9.79961 4.2002Z" fill="currentcolor"></path>
+                        <path d="M2.8 4.90039H0V13.3004H2.8V4.90039Z" fill="currentcolor"></path>
+                        <path d="M1.4 2.8C2.1732 2.8 2.8 2.1732 2.8 1.4C2.8 0.626801 2.1732 0 1.4 0C0.626801 0 0 0.626801 0 1.4C0 2.1732 0.626801 2.8 1.4 2.8Z" fill="currentcolor"></path>
+                        </svg>
+                    </a></li>
+                    <li><a href="#">
+                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9331 1.56533C13.8563 1.25835 13.6998 0.977084 13.4794 0.749939C13.2591 0.522795 12.9827 0.357817 12.6782 0.271669C11.5657 5.78312e-08 7.11551 0 7.11551 0C7.11551 0 2.66531 1.92771e-08 1.55276 0.297542C1.24827 0.38369 0.971895 0.548668 0.751564 0.775813C0.531234 1.00296 0.374748 1.28422 0.297912 1.5912C0.094299 2.72028 -0.00529911 3.86566 0.000369757 5.01294C-0.00688814 6.16885 0.0927163 7.32296 0.297912 8.46054C0.38262 8.75799 0.542612 9.02855 0.762429 9.24611C0.982246 9.46366 1.25446 9.62084 1.55276 9.70246C2.66531 10 7.11551 10 7.11551 10C7.11551 10 11.5657 10 12.6782 9.70246C12.9827 9.61631 13.2591 9.45133 13.4794 9.22419C13.6998 8.99704 13.8563 8.71578 13.9331 8.4088C14.1351 7.28822 14.2347 6.15157 14.2306 5.01294C14.2379 3.85702 14.1383 2.70291 13.9331 1.56533Z" fill="currentcolor"></path>
+                        <path d="M5.66016 7.12773L9.37943 5.0126L5.66016 2.89746V7.12773Z" fill="white"></path>
+                        </svg>
+                    </a></li>
                 </ul>
             </div>
         </div>
     </section>
     <div class="tp-offcanvas-overlay"></div>
     <!-- offcanvas-start -->
+
+     <!-- preloader,start  -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_four"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_one"></div>
+                </div>
+            </div>
+        
+        </div>
+     <!-- preloader,end  -->
+      <div id="smooth-wrapper">
+        <div id="smooth-content"> 
 
     <!-- main,start  -->
      <main>
@@ -208,12 +243,17 @@
         <section class="tp-team-area tp-team-spacing tp-team-spacing-4 fix">
             <div class="container">
                 <div class="row tp-justify-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpexperts tpexperts__2 br-20 p-relative hover fix mb-30">
-                            <a href="team-details.html" class="tpexperts__btn tpexperts__btn-2 z-index-1"></a>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-duration=".9" data-delay=".3">
+                        <div class="tpexperts br-20 p-relative mb-30 fix">
+                            <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
+                               <button class="tpexperts__btn z-index-1 team-open"></button>
+                                <div class="tpexperts__thumb br-20">
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-1.jpg" alt=""></a>
+                                </div>
+                            </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h2 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h2>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -243,17 +283,22 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="tpexperts__shape tpexperts__shape-2">
+                            <div class="tpexperts__shape">
                                 <img src="assets/img/team/team-member-1.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpexperts active tpexperts__2 br-20 p-relative hover fix mb-30">
-                            <a href="team-details.html" class="tpexperts__btn tpexperts__btn-2 z-index-1"></a>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-duration=".9" data-delay=".4">
+                        <div class="tpexperts mb-30 br-20 p-relative fix">
+                            <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
+                                <button class="tpexperts__btn z-index-1 team-open"></button>
+                                <div class="tpexperts__thumb br-20">
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-2.jpg" alt=""></a>
+                                </div>
+                            </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h2 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h2>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -283,17 +328,22 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="tpexperts__shape tpexperts__shape-2">
+                            <div class="tpexperts__shape">
                                 <img src="assets/img/team/team-member-2.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpexperts tpexperts__2 br-20 p-relative hover fix mb-30">
-                            <a href="team-details.html" class="tpexperts__btn tpexperts__btn-2 z-index-1"></a>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-duration=".9" data-delay=".5">
+                        <div class="tpexperts mb-30 br-20 p-relative fix">
+                            <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
+                                <button class="tpexperts__btn z-index-1 team-open"></button>
+                                <div class="tpexperts__thumb br-20">
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-3.jpg" alt=""></a>
+                                </div>
+                            </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h2 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h2>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -323,17 +373,22 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="tpexperts__shape tpexperts__shape-2">
+                            <div class="tpexperts__shape">
                                 <img src="assets/img/team/team-member-3.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpexperts tpexperts__2 br-20 p-relative hover fix mb-30">
-                            <a href="team-details.html" class="tpexperts__btn tpexperts__btn-2 z-index-1"></a>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-duration=".9" data-delay=".5">
+                        <div class="tpexperts mb-30 br-20 p-relative fix">
+                            <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
+                                <button class="tpexperts__btn z-index-1 team-open"></button>
+                                <div class="tpexperts__thumb br-20">
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-8.jpg" alt=""></a>
+                                </div>
+                            </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h2 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h2>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -363,57 +418,22 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="tpexperts__shape tpexperts__shape-2">
-                                <img src="assets/img/team/team-member-7.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpexperts tpexperts__2 br-20 p-relative hover fix mb-30">
-                            <a href="team-details.html" class="tpexperts__btn tpexperts__btn-2 z-index-1"></a>
-                            <div class="tpexperts__content-wrap">
-                                <div class="tpexperts__content">
-                                    <h2 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h2>
-                                    <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
-                                    agency with passionate</p>
-                                </div>
-                                <div class="tpexperts__social">
-                                    <a href="#">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 7C14 3.13401 10.866 0 7 0C3.134 0 0 3.13401 0 7C0 10.4939 2.55979 13.3898 5.90625 13.915V9.02344H4.12891V7H5.90625V5.45781C5.90625 3.70344 6.95133 2.73438 8.55025 2.73438C9.31588 2.73438 10.1172 2.87109 10.1172 2.87109V4.59375H9.23453C8.365 4.59375 8.09375 5.13338 8.09375 5.6875V7H10.0352L9.7248 9.02344H8.09375V13.915C11.4402 13.3898 14 10.4939 14 7Z" fill="currentcolor"/>
-                                        <path d="M9.7248 9.02344L10.0352 7H8.09375V5.6875C8.09375 5.13393 8.365 4.59375 9.23453 4.59375H10.1172V2.87109C10.1172 2.87109 9.31615 2.73438 8.55025 2.73438C6.95133 2.73438 5.90625 3.70344 5.90625 5.45781V7H4.12891V9.02344H5.90625V13.915C6.63101 14.0283 7.36899 14.0283 8.09375 13.915V9.02344H9.7248Z" fill="white"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#">
-                                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.5352 0.269231C15.849 0.673077 15.1074 0.953526 14.3105 1.11058C13.6243 0.370192 12.7721 0 11.7539 0C10.8021 0 9.98307 0.347756 9.29688 1.04327C8.61068 1.73878 8.26758 2.56891 8.26758 3.53365C8.26758 3.80288 8.30078 4.07212 8.36719 4.34135C6.95052 4.27404 5.61133 3.91506 4.34961 3.26442C3.11003 2.61378 2.05859 1.73878 1.19531 0.639423C0.863281 1.17788 0.697266 1.77244 0.697266 2.42308C0.697266 3.67949 1.21745 4.65545 2.25781 5.35096C1.70443 5.35096 1.18424 5.20513 0.697266 4.91346V4.98077C0.697266 5.8109 0.951823 6.55128 1.46094 7.20192C1.99219 7.85256 2.66732 8.26763 3.48633 8.44712C3.17643 8.51442 2.86654 8.54808 2.55664 8.54808C2.33529 8.54808 2.11393 8.52564 1.89258 8.48077C2.13607 9.19872 2.54557 9.79327 3.12109 10.2644C3.71875 10.7131 4.39388 10.9375 5.14648 10.9375C3.88477 11.9471 2.44596 12.4519 0.830078 12.4519C0.564453 12.4519 0.28776 12.4407 0 12.4183C1.63802 13.4728 3.41992 14 5.3457 14C6.89518 14 8.31185 13.6971 9.5957 13.0913C10.8796 12.4856 11.9199 11.7003 12.7168 10.7356C13.5358 9.7484 14.1667 8.67147 14.6094 7.50481C15.0521 6.31571 15.2734 5.1266 15.2734 3.9375C15.2734 3.78045 15.2734 3.63462 15.2734 3.5C15.9596 2.98397 16.5352 2.36699 17 1.64904C16.3581 1.94071 15.694 2.13141 15.0078 2.22115C15.7604 1.75 16.2695 1.09936 16.5352 0.269231Z" fill="currentcolor"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 0C3.13359 0 0 3.13359 0 7C0 9.9668 1.8457 12.4988 4.44883 13.5187C4.38867 12.9637 4.33125 12.116 4.47344 11.5117C4.60195 10.9648 5.29375 8.03359 5.29375 8.03359C5.29375 8.03359 5.0832 7.61523 5.0832 6.99453C5.0832 6.02109 5.64648 5.29375 6.34922 5.29375C6.94531 5.29375 7.23516 5.74219 7.23516 6.28086C7.23516 6.88242 6.85234 7.7793 6.65547 8.61055C6.49141 9.30781 7.00547 9.87656 7.6918 9.87656C8.93594 9.87656 9.89297 8.56406 9.89297 6.67188C9.89297 4.9957 8.68984 3.82266 6.96992 3.82266C4.9793 3.82266 3.80898 5.31562 3.80898 6.86055C3.80898 7.46211 4.04141 8.10742 4.33125 8.45742C4.38867 8.52578 4.39687 8.58867 4.38047 8.65703C4.32852 8.87852 4.2082 9.3543 4.18633 9.45C4.15625 9.57852 4.08516 9.60586 3.95117 9.54297C3.07617 9.13555 2.5293 7.85859 2.5293 6.83047C2.5293 4.62109 4.13438 2.59492 7.15313 2.59492C9.58125 2.59492 11.468 4.32578 11.468 6.63906C11.468 9.05078 9.94766 10.9922 7.83672 10.9922C7.12852 10.9922 6.46133 10.623 6.23164 10.1883C6.23164 10.1883 5.88164 11.5254 5.79688 11.8535C5.63828 12.4605 5.21172 13.2234 4.92734 13.6883C5.58359 13.8906 6.27812 14 7 14C10.8664 14 14 10.8664 14 7C14 3.13359 10.8664 0 7 0Z" fill="currentcolor"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.00574 1.26079C8.87759 1.26079 9.09926 1.269 9.83541 1.30182C10.5196 1.3319 10.889 1.44677 11.1353 1.54249C11.461 1.66829 11.6963 1.82145 11.9399 2.06486C12.1862 2.311 12.3367 2.54347 12.4626 2.86892C12.5583 3.11506 12.6733 3.48701 12.7034 4.168C12.7362 4.90643 12.7444 5.12795 12.7444 6.9959C12.7444 8.86658 12.7362 9.0881 12.7034 9.82379C12.6733 10.5075 12.5583 10.8767 12.4626 11.1229C12.3367 11.4483 12.1834 11.6835 11.9399 11.9269C11.6936 12.1731 11.461 12.3235 11.1353 12.4493C10.889 12.545 10.5168 12.6599 9.83541 12.69C9.09652 12.7228 8.87486 12.731 7.00574 12.731C5.1339 12.731 4.91223 12.7228 4.17608 12.69C3.49193 12.6599 3.12248 12.545 2.87619 12.4493C2.55053 12.3235 2.31518 12.1703 2.07162 11.9269C1.82532 11.6808 1.67481 11.4483 1.54893 11.1229C1.45314 10.8767 1.33821 10.5048 1.3081 9.82379C1.27526 9.08537 1.26705 8.86384 1.26705 6.9959C1.26705 5.12522 1.27526 4.90369 1.3081 4.168C1.33821 3.48427 1.45314 3.11506 1.54893 2.86892C1.67481 2.54347 1.82806 2.30826 2.07162 2.06486C2.31792 1.81871 2.55053 1.66829 2.87619 1.54249C3.12248 1.44677 3.49466 1.3319 4.17608 1.30182C4.91223 1.269 5.1339 1.26079 7.00574 1.26079ZM7.00574 0C5.10379 0 4.86571 0.00820473 4.11861 0.0410236C3.37425 0.0738425 2.8625 0.194179 2.41917 0.366478C1.95668 0.546982 1.56535 0.784919 1.17675 1.17601C0.78541 1.56437 0.547324 1.95546 0.366707 2.41492C0.1943 2.86072 0.0738887 3.36941 0.0410493 4.1133C0.00820986 4.86267 0 5.10061 0 7.00137C0 8.90213 0.00820986 9.14007 0.0410493 9.8867C0.0738887 10.6306 0.1943 11.142 0.366707 11.5851C0.547324 12.0473 0.78541 12.4384 1.17675 12.8267C1.56535 13.2151 1.95668 13.4558 2.41643 13.6335C2.8625 13.8058 3.37151 13.9262 4.11587 13.959C4.86297 13.9918 5.10106 14 7.00301 14C8.90496 14 9.14304 13.9918 9.89014 13.959C10.6345 13.9262 11.1462 13.8058 11.5896 13.6335C12.0493 13.4558 12.4407 13.2151 12.8293 12.8267C13.2179 12.4384 13.4587 12.0473 13.6366 11.5878C13.809 11.142 13.9294 10.6333 13.9622 9.88943C13.9951 9.1428 14.0033 8.90486 14.0033 7.0041C14.0033 5.10334 13.9951 4.8654 13.9622 4.11877C13.9294 3.37488 13.809 2.86345 13.6366 2.42039C13.4642 1.95546 13.2261 1.56437 12.8347 1.17601C12.4461 0.787654 12.0548 0.546982 11.5951 0.369213C11.149 0.196913 10.64 0.0765775 9.89561 0.0437585C9.14578 0.00820473 8.90769 0 7.00574 0Z" fill="currentcolor"/>
-                                        <path d="M7.00686 3.40527C5.02007 3.40527 3.4082 5.01614 3.4082 7.00168C3.4082 8.98722 5.02007 10.5981 7.00686 10.5981C8.99364 10.5981 10.6055 8.98722 10.6055 7.00168C10.6055 5.01614 8.99364 3.40527 7.00686 3.40527ZM7.00686 9.33456C5.71791 9.33456 4.67252 8.28982 4.67252 7.00168C4.67252 5.71354 5.71791 4.6688 7.00686 4.6688C8.2958 4.6688 9.34119 5.71354 9.34119 7.00168C9.34119 8.28982 8.2958 9.33456 7.00686 9.33456Z" fill="currentcolor"/>
-                                        <path d="M11.5865 3.26149C11.5865 3.72643 11.2089 4.10111 10.7464 4.10111C10.2812 4.10111 9.90625 3.72369 9.90625 3.26149C9.90625 2.79656 10.2839 2.42188 10.7464 2.42188C11.2089 2.42188 11.5865 2.79929 11.5865 3.26149Z" fill="currentcolor"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="tpexperts__shape tpexperts__shape-2">
+                            <div class="tpexperts__shape">
                                 <img src="assets/img/team/team-member-8.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpexperts tpexperts__2 br-20 p-relative hover fix mb-30">
-                            <a href="team-details.html" class="tpexperts__btn tpexperts__btn-2 z-index-1"></a>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-duration=".9" data-delay=".5">
+                        <div class="tpexperts br-20 mb-30 p-relative fix">
+                            <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
+                                <button class="tpexperts__btn z-index-1 team-open"></button>
+                                <div class="tpexperts__thumb br-20">
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-5.jpg" alt=""></a>
+                                </div>
+                            </div>
                             <div class="tpexperts__content-wrap">
                                 <div class="tpexperts__content">
-                                    <h2 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h2>
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
                                     <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
                                     agency with passionate</p>
                                 </div>
@@ -443,8 +463,53 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="tpexperts__shape tpexperts__shape-2">
-                                <img src="assets/img/team/team-member-9.jpg" alt="">
+                            <div class="tpexperts__shape">
+                                <img src="assets/img/team/team-member-5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 tp_fade_anim" data-duration=".9" data-delay=".5">
+                        <div class="tpexperts mb-30 br-20 p-relative fix">
+                            <div class="tpexperts__thumb-wrap tp-flex tp-justify-between mb-55">
+                                <button class="tpexperts__btn z-index-1 team-open"></button>
+                                <div class="tpexperts__thumb br-20">
+                                    <a href="team-details.html"><img src="assets/img/team/team-member-6.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="tpexperts__content-wrap">
+                                <div class="tpexperts__content">
+                                    <h3 class="tpexperts__title tp-fs-24"><a href="team-details.html">Crsitopher Miller</a></h3>
+                                    <p class="tp-text-black mb-15">Experience: 7 years of real estate <br>
+                                    agency with passionate</p>
+                                </div>
+                                <div class="tpexperts__social">
+                                    <a href="#">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 7C14 3.13401 10.866 0 7 0C3.134 0 0 3.13401 0 7C0 10.4939 2.55979 13.3898 5.90625 13.915V9.02344H4.12891V7H5.90625V5.45781C5.90625 3.70344 6.95133 2.73438 8.55025 2.73438C9.31588 2.73438 10.1172 2.87109 10.1172 2.87109V4.59375H9.23453C8.365 4.59375 8.09375 5.13338 8.09375 5.6875V7H10.0352L9.7248 9.02344H8.09375V13.915C11.4402 13.3898 14 10.4939 14 7Z" fill="currentcolor"/>
+                                        <path d="M9.7248 9.02344L10.0352 7H8.09375V5.6875C8.09375 5.13393 8.365 4.59375 9.23453 4.59375H10.1172V2.87109C10.1172 2.87109 9.31615 2.73438 8.55025 2.73438C6.95133 2.73438 5.90625 3.70344 5.90625 5.45781V7H4.12891V9.02344H5.90625V13.915C6.63101 14.0283 7.36899 14.0283 8.09375 13.915V9.02344H9.7248Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5352 0.269231C15.849 0.673077 15.1074 0.953526 14.3105 1.11058C13.6243 0.370192 12.7721 0 11.7539 0C10.8021 0 9.98307 0.347756 9.29688 1.04327C8.61068 1.73878 8.26758 2.56891 8.26758 3.53365C8.26758 3.80288 8.30078 4.07212 8.36719 4.34135C6.95052 4.27404 5.61133 3.91506 4.34961 3.26442C3.11003 2.61378 2.05859 1.73878 1.19531 0.639423C0.863281 1.17788 0.697266 1.77244 0.697266 2.42308C0.697266 3.67949 1.21745 4.65545 2.25781 5.35096C1.70443 5.35096 1.18424 5.20513 0.697266 4.91346V4.98077C0.697266 5.8109 0.951823 6.55128 1.46094 7.20192C1.99219 7.85256 2.66732 8.26763 3.48633 8.44712C3.17643 8.51442 2.86654 8.54808 2.55664 8.54808C2.33529 8.54808 2.11393 8.52564 1.89258 8.48077C2.13607 9.19872 2.54557 9.79327 3.12109 10.2644C3.71875 10.7131 4.39388 10.9375 5.14648 10.9375C3.88477 11.9471 2.44596 12.4519 0.830078 12.4519C0.564453 12.4519 0.28776 12.4407 0 12.4183C1.63802 13.4728 3.41992 14 5.3457 14C6.89518 14 8.31185 13.6971 9.5957 13.0913C10.8796 12.4856 11.9199 11.7003 12.7168 10.7356C13.5358 9.7484 14.1667 8.67147 14.6094 7.50481C15.0521 6.31571 15.2734 5.1266 15.2734 3.9375C15.2734 3.78045 15.2734 3.63462 15.2734 3.5C15.9596 2.98397 16.5352 2.36699 17 1.64904C16.3581 1.94071 15.694 2.13141 15.0078 2.22115C15.7604 1.75 16.2695 1.09936 16.5352 0.269231Z" fill="currentcolor"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 0C3.13359 0 0 3.13359 0 7C0 9.9668 1.8457 12.4988 4.44883 13.5187C4.38867 12.9637 4.33125 12.116 4.47344 11.5117C4.60195 10.9648 5.29375 8.03359 5.29375 8.03359C5.29375 8.03359 5.0832 7.61523 5.0832 6.99453C5.0832 6.02109 5.64648 5.29375 6.34922 5.29375C6.94531 5.29375 7.23516 5.74219 7.23516 6.28086C7.23516 6.88242 6.85234 7.7793 6.65547 8.61055C6.49141 9.30781 7.00547 9.87656 7.6918 9.87656C8.93594 9.87656 9.89297 8.56406 9.89297 6.67188C9.89297 4.9957 8.68984 3.82266 6.96992 3.82266C4.9793 3.82266 3.80898 5.31562 3.80898 6.86055C3.80898 7.46211 4.04141 8.10742 4.33125 8.45742C4.38867 8.52578 4.39687 8.58867 4.38047 8.65703C4.32852 8.87852 4.2082 9.3543 4.18633 9.45C4.15625 9.57852 4.08516 9.60586 3.95117 9.54297C3.07617 9.13555 2.5293 7.85859 2.5293 6.83047C2.5293 4.62109 4.13438 2.59492 7.15313 2.59492C9.58125 2.59492 11.468 4.32578 11.468 6.63906C11.468 9.05078 9.94766 10.9922 7.83672 10.9922C7.12852 10.9922 6.46133 10.623 6.23164 10.1883C6.23164 10.1883 5.88164 11.5254 5.79688 11.8535C5.63828 12.4605 5.21172 13.2234 4.92734 13.6883C5.58359 13.8906 6.27812 14 7 14C10.8664 14 14 10.8664 14 7C14 3.13359 10.8664 0 7 0Z" fill="currentcolor"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00574 1.26079C8.87759 1.26079 9.09926 1.269 9.83541 1.30182C10.5196 1.3319 10.889 1.44677 11.1353 1.54249C11.461 1.66829 11.6963 1.82145 11.9399 2.06486C12.1862 2.311 12.3367 2.54347 12.4626 2.86892C12.5583 3.11506 12.6733 3.48701 12.7034 4.168C12.7362 4.90643 12.7444 5.12795 12.7444 6.9959C12.7444 8.86658 12.7362 9.0881 12.7034 9.82379C12.6733 10.5075 12.5583 10.8767 12.4626 11.1229C12.3367 11.4483 12.1834 11.6835 11.9399 11.9269C11.6936 12.1731 11.461 12.3235 11.1353 12.4493C10.889 12.545 10.5168 12.6599 9.83541 12.69C9.09652 12.7228 8.87486 12.731 7.00574 12.731C5.1339 12.731 4.91223 12.7228 4.17608 12.69C3.49193 12.6599 3.12248 12.545 2.87619 12.4493C2.55053 12.3235 2.31518 12.1703 2.07162 11.9269C1.82532 11.6808 1.67481 11.4483 1.54893 11.1229C1.45314 10.8767 1.33821 10.5048 1.3081 9.82379C1.27526 9.08537 1.26705 8.86384 1.26705 6.9959C1.26705 5.12522 1.27526 4.90369 1.3081 4.168C1.33821 3.48427 1.45314 3.11506 1.54893 2.86892C1.67481 2.54347 1.82806 2.30826 2.07162 2.06486C2.31792 1.81871 2.55053 1.66829 2.87619 1.54249C3.12248 1.44677 3.49466 1.3319 4.17608 1.30182C4.91223 1.269 5.1339 1.26079 7.00574 1.26079ZM7.00574 0C5.10379 0 4.86571 0.00820473 4.11861 0.0410236C3.37425 0.0738425 2.8625 0.194179 2.41917 0.366478C1.95668 0.546982 1.56535 0.784919 1.17675 1.17601C0.78541 1.56437 0.547324 1.95546 0.366707 2.41492C0.1943 2.86072 0.0738887 3.36941 0.0410493 4.1133C0.00820986 4.86267 0 5.10061 0 7.00137C0 8.90213 0.00820986 9.14007 0.0410493 9.8867C0.0738887 10.6306 0.1943 11.142 0.366707 11.5851C0.547324 12.0473 0.78541 12.4384 1.17675 12.8267C1.56535 13.2151 1.95668 13.4558 2.41643 13.6335C2.8625 13.8058 3.37151 13.9262 4.11587 13.959C4.86297 13.9918 5.10106 14 7.00301 14C8.90496 14 9.14304 13.9918 9.89014 13.959C10.6345 13.9262 11.1462 13.8058 11.5896 13.6335C12.0493 13.4558 12.4407 13.2151 12.8293 12.8267C13.2179 12.4384 13.4587 12.0473 13.6366 11.5878C13.809 11.142 13.9294 10.6333 13.9622 9.88943C13.9951 9.1428 14.0033 8.90486 14.0033 7.0041C14.0033 5.10334 13.9951 4.8654 13.9622 4.11877C13.9294 3.37488 13.809 2.86345 13.6366 2.42039C13.4642 1.95546 13.2261 1.56437 12.8347 1.17601C12.4461 0.787654 12.0548 0.546982 11.5951 0.369213C11.149 0.196913 10.64 0.0765775 9.89561 0.0437585C9.14578 0.00820473 8.90769 0 7.00574 0Z" fill="currentcolor"/>
+                                        <path d="M7.00686 3.40527C5.02007 3.40527 3.4082 5.01614 3.4082 7.00168C3.4082 8.98722 5.02007 10.5981 7.00686 10.5981C8.99364 10.5981 10.6055 8.98722 10.6055 7.00168C10.6055 5.01614 8.99364 3.40527 7.00686 3.40527ZM7.00686 9.33456C5.71791 9.33456 4.67252 8.28982 4.67252 7.00168C4.67252 5.71354 5.71791 4.6688 7.00686 4.6688C8.2958 4.6688 9.34119 5.71354 9.34119 7.00168C9.34119 8.28982 8.2958 9.33456 7.00686 9.33456Z" fill="currentcolor"/>
+                                        <path d="M11.5865 3.26149C11.5865 3.72643 11.2089 4.10111 10.7464 4.10111C10.2812 4.10111 9.90625 3.72369 9.90625 3.26149C9.90625 2.79656 10.2839 2.42188 10.7464 2.42188C11.2089 2.42188 11.5865 2.79929 11.5865 3.26149Z" fill="currentcolor"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tpexperts__shape">
+                                <img src="assets/img/team/team-member-6.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -463,7 +528,7 @@
                 <div class="tp-footer-wrap pb-65">
                     <div class="row">
                         <div class="col-lg-5 col-md-7 col-sm-8">
-                            <div class="tp-footer-widgets mb-30">
+                            <div class="tp-footer-widgets mb-30 tp_fade_anim" data-delay=".1">
                                 <div class="tp-footer-info">
                                     <div class="tp-footer-content mb-45">
                                         <h3 class="tp-footer-info-title mb-20 tp-text-white">Ha ve questions?</h3>
@@ -498,7 +563,7 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-5 col-sm-4">
-                            <div class="tp-footer-widgets tp-footer-widgets-white mb-30">
+                            <div class="tp-footer-widgets tp-footer-widgets-white mb-30 tp_fade_anim" data-delay=".2">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">Company</h4>
                                 <ul>
                                     <li><a href="#">About us</a></li>
@@ -511,7 +576,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-7 col-sm-8">
-                            <div class="tp-footer-widgets tp-footer-widgets-white">
+                            <div class="tp-footer-widgets tp-footer-widgets-white tp_fade_anim" data-delay=".3">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">SERVICES</h4>
                                 <ul>
                                     <li><a href="#">Real estate development</a></li>
@@ -524,7 +589,7 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-5 col-sm-4">
-                            <div class="tp-footer-widgets tp-footer-widgets-white">
+                            <div class="tp-footer-widgets tp-footer-widgets-white tp_fade_anim" data-delay=".4">
                                 <h4 class="tp-footer-widgets-title white-rgba mb-25">PAGES</h4>
                                 <ul>
                                     <li><a href="#">Testimonials</a></li>
@@ -550,7 +615,8 @@
         </div>
      </footer>
     <!-- footer,end  -->
-
+        </div>
+    </div>
 
     <!-- script,start -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -567,6 +633,8 @@
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/splitText.min.js"></script>
     <script src="assets/js/Vanilla-marquee.min.js"></script>
+    <script src="assets/js/jaralax.min.js"></script>
+    <script src="assets/js/cursor.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- script,end -->
 </body>

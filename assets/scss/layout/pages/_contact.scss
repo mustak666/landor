@@ -5,6 +5,7 @@
         & textarea {
             height: 140px;
             border-radius: 20px;
+            resize: none;
             @media #{$md,$sm,$xs}{
                margin-top: 20px;
             }

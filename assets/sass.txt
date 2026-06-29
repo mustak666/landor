@@ -1,1 +1,1 @@
-sass --watch C:\Users\USER\OneDrive\Desktop\landor\assets\scss\main.scss:C:\Users\USER\OneDrive\Desktop\landor\assets\css\main.css
+sass --watch C:\Users\USER\Dropbox\Rion\landor-test\assets\scss\main.scss:C:\Users\USER\Dropbox\Rion\landor-test\assets\css\main.css

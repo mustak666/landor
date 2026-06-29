@@ -257,6 +257,7 @@ input[type="password"],
 input[type="search"],
 input[type="url"],
 textarea{
+	resize: none;
 	outline: none;
 	background-color: transparent;
 	height: 58px;

@@ -1,5 +1,16 @@
 (function ($) {
     "use strict";
+	// 17. scroll wrapper //
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+	if($('#smooth-wrapper').length && $('#smooth-content').length){
+		ScrollSmoother.create({
+			smooth: .5,
+			effects: true,
+			smoothTouch: .1,
+			ignoreMobileResize: true
+		})
+	}
+
     var windowOn = $(window);
     var TPMenu = {
         init: function () {
@@ -44,12 +55,13 @@
 	$(window).on('load', function () {
 		$("#loading").fadeOut(500);
 	});
-
-    
     $(document).ready(function () {
         TPMenu.init();
     });
-    
+    // team-open
+    $(".team-open").on('click', function() {
+        $(this).closest(".tpexperts").toggleClass("active");
+    });
     // services button 
     $(".tp-services-button").on("click", function(){
         var target = $(this).closest(".tp-services-item").next();
@@ -74,7 +86,6 @@
             $(this).addClass("active");
         }
     );
-
     // popup image 
 	$('.popup-image').magnificPopup({
 		type: 'image',
@@ -93,40 +104,12 @@
     $(document).ready(function(){
         $('select').niceSelect();
     });
-
-    // mousecursor
-    function mousecursor() {
-    if ($("body")) {
-        const e = document.querySelector(".cursor-inner"),
-            t = document.querySelector(".cursor-outer");
-        let n,
-            i = 0,
-            o = !1;
-        (window.onmousemove = function(s) {
-            o ||
-                (t.style.transform =
-                    "translate(" + s.clientX + "px, " + s.clientY + "px)"),
-                (e.style.transform =
-                    "translate(" + s.clientX + "px, " + s.clientY + "px)"),
-                (n = s.clientY),
-                (i = s.clientX);
-        }),
-        $("body").on("mouseenter", "a, .cursor-pointer", function() {
-                e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
-            }),
-            $("body").on("mouseleave", "a, .cursor-pointer", function() {
-                ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
-                (e.classList.remove("cursor-hover"),
-                    t.classList.remove("cursor-hover"));
-            }),
-            (e.style.visibility = "visible"),
-            (t.style.visibility = "visible");
-    }
-    }
-    $(function() {
-    mousecursor();
-    });
     
+    // jarallax
+    jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0.2
+    });
+
     // backToTopBtn 
     var backToTopBtn     = $('#back_to_top');
     var backToTopWrapper = $('.back-to-top-wrapper');
@@ -431,7 +414,7 @@
         autoplay:{
             delay:2000,
         },
-        speed: 1000,
+        speed: 1500,
         keyboard: {
             enabled: true
         },
@@ -518,17 +501,12 @@
     // project slider 
     if (document.querySelector(".project-slider-wrap")) {
         const pr = ScrollTrigger.matchMedia();
-
         pr.add("(min-width: 1199px)", () => {
-
             const sections = document.querySelectorAll(".project-slider-panel");
             const wrap = document.querySelector(".project-slider-wrap");
-
             if (!sections.length || !wrap) return;
-
             // Initial state
             gsap.set(sections, { scale: 1 });
-
             // Animate each section except the last one
             sections.forEach((section, index) => {
                 const isLast = index === sections.length - 1;
@@ -537,7 +515,7 @@
                     ease: "none",
                     scrollTrigger: {
                         trigger: section,
-                        start: "top 10%",
+                        start: "top top",
                         end: "bottom bottom",
                         scrub: true,
                         pin: true,
@@ -554,31 +532,32 @@
             };
         });
     }
-    // project pin 
-    if (document.querySelector(".tp-project-pin")) {
-        const pr = ScrollTrigger.matchMedia();
-        pr.add("(min-width: 1199px)", () => {
-            const sections = document.querySelectorAll(".tp-project-panel");
-            const wrap = document.querySelector(".tp-project-pin");
-            if (!sections.length || !wrap) return;
-            sections.forEach((section) => {
-                ScrollTrigger.create({
-                    trigger: section,
-                    start: "top -5%",
-                    end: "bottom 95%",
-                    pin: true,
-                    scrub: true,
-                    pinSpacing: false,
-                    endTrigger: wrap,
-                    markers: false
+	function perspective() {
+        if ($('.tp-perspective-slider').length) {
+            gsap.set('.tp-perspective-slider .tp-perspective-main .tp-perspective-inner', { perspective: 150 });
+            $('.tp-perspective-slider .tp-perspective-main .tp-perspective-inner .tp-perspective-image').each(function () {
+                var slide = $(this);
+                gsap.fromTo(this, {
+                    scaleX: 1,
+                    z: '0vh'
+                }, {
+                    scaleX: .8,
+                    z: '-2vh',
+                    scrollTrigger: {
+                        trigger: slide,
+                        start: "top+=150px bottom",
+                        end: "bottom top",
+                        immediateRender: false,
+                        scrub: 0.1,
+                    }
                 });
             });
-            return () => {
-                ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-            };
-        });
-    }
 
+        }
+    }
+    perspective()
+
+    // choose-slider-1
     var globalTimeline = gsap.timeline();
     var mm4 = gsap.matchMedia();
     mm4.add('(min-width: 992px)', function () {
@@ -589,7 +568,7 @@
                     trigger: '.tp-choose-slide-wrap',
                     pin: '.tp-choose-slide',
                     scrub: 1,
-                    start: 'top 20%',
+                    start: 'top 10%',
                     end: 'bottom 2%',
                     endTrigger: '.tp-choose-slide-wrap',
                     pinSpacing: false,
@@ -599,6 +578,44 @@
         });
     });
 
+    // ScrollTrigger register korte hobe
+    gsap.registerPlugin(ScrollTrigger);
+    // Ekhane apnar deya code-ti hobe
+    var globalTimeline = gsap.timeline();
+    var mm4 = gsap.matchMedia();
+    mm4.add('(min-width: 992px)', function () {
+        var heroAreas = document.querySelectorAll('.tp-choose-slide-2');
+        heroAreas.forEach(function (area) {
+            globalTimeline.to(area, {
+                scrollTrigger: {
+                    trigger: '.tp-choose-slide-wrap-2',
+                    pin: '.tp-choose-slide-2',
+                    scrub: 1,
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    endTrigger: '.tp-choose-slide-wrap-2',
+                    pinSpacing: false,
+                }
+            });
+        });
+        var parallaxItems = document.querySelectorAll('[data-parallax-y]');
+        parallaxItems.forEach(function (item) {
+            var yVal = item.getAttribute('data-parallax-y') || 0;
+            var scrubVal = item.getAttribute('data-parallax-scrub') || 1;
+            gsap.to(item, {
+                y: yVal,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top bottom", 
+                    end: "bottom top",
+                    scrub: parseFloat(scrubVal), 
+                }
+            });
+        });
+    });
+
+    // hover-reveal-img
     var hoverRevealItems = document.querySelectorAll('.hover-reveal-img');
     function updateRevealPosition(e, el) {
         var rect   = el.getBoundingClientRect();
@@ -616,7 +633,7 @@
 
     function moving_text() {
         if ($('.moving-text').length > 0) {
-            gsap.utils.toArray('.moving-text').forEach((section) => {
+        gsap.utils.toArray('.moving-text').forEach((section) => {
                 const w = section.querySelector('.wrapper-text');
                 gsap.fromTo(w, { 
                     x: 500,
@@ -690,7 +707,7 @@
     });
 
 	// 18.Section to title zoom and item uper
-	gsap.matchMedia().add("(min-width: 1200px)", () => {
+	gsap.matchMedia().add("(min-width: 993px)", () => {
 		const portfolioArea = document.querySelector(".portfolio-area");
 		const portfolioText = document.querySelector(".portfolio-text");
 		if (portfolioArea && portfolioText) {
@@ -724,10 +741,8 @@
 
     // 51. zoom in //
 	$(".anim-zoomin").each(function() {
-
 		// Add wrap <div>.
 		$(this).wrap('<div class="anim-zoomin-wrap"></div>');
-
 		// Add overflow hidden.
 		$(".anim-zoomin-wrap").css({ "overflow": "hidden" })
 
@@ -742,7 +757,6 @@
 			}
 		});
 		tp_ZoomIn.from($this, { duration: 2, autoAlpha: 0, scale: 1.2, ease: Power2.easeOut, clearProps:"all" });
-
 	});
 
 	// 27. carachter Animation //
@@ -798,89 +812,75 @@
         });
     }
 
- 
+	// 54. tp-text-revel-anim //
+	const tp_anim_reveal = document.querySelectorAll(".text-line-anim");
+	tp_anim_reveal.forEach(areveal => {
+		const getAttributeValue = (attr, defaultValue) => areveal.getAttribute(attr) || defaultValue;
+		const duration_value = parseFloat(getAttributeValue("data-duration", 1));
+		const onscroll_value = parseInt(getAttributeValue("data-on-scroll", 1));
+		const stagger_value = parseFloat(getAttributeValue("data-stagger", 0.02));
+		const data_delay = parseFloat(getAttributeValue("data-delay", 0.05));
+		const ease_value = getAttributeValue("data-ease", "circ.out");
+
+		areveal.split = new SplitText(areveal, { type: "lines,words,chars", linesClass: "tp-revel-line" });
+		const animationProps = {
+			duration: duration_value,
+			delay: data_delay,
+			ease: ease_value,
+			y: 80,
+			stagger: stagger_value,
+			opacity: 0,
+		};
+		if (onscroll_value === 1) {
+			areveal.anim = gsap.from(areveal.split.chars, {
+				scrollTrigger: {
+					trigger: areveal,
+					start: 'top 80%',
+				},
+				...animationProps,
+			});
+		} else {
+			areveal.anim = gsap.from(areveal.split.chars, animationProps);
+		}
+	});
+
 })(jQuery);
 
 
-
-	// 41. Fade Effect With Scroll //
-	document.querySelectorAll(".tp_reveal_anim").forEach(areveal => {
-		const duration = areveal.getAttribute("data-duration") || 1.5;
-		const onScroll = areveal.getAttribute("data-on-scroll") || 1;
-		const stagger = areveal.getAttribute("data-stagger") || 0.02;
-		const delay = areveal.getAttribute("data-delay") || 0.05;
-		areveal.split = new SplitText(areveal, {
-			type: "lines,words,chars",
-			linesClass: "tp-reveal-line"
-		});
-		const animConfig = {
-			duration,
-			delay,
-			ease: "circ.out",
-			y: 80,
-			stagger,
-			opacity: 0,
-		};
-		if (onScroll == 1) {
-			animConfig.scrollTrigger = {
-				trigger: areveal,
-				start: 'top 85%',
-			};   
-		}
-		areveal.anim = gsap.from(areveal.split.chars, animConfig);
-	});
-    
-
-
-	// 43. choose anim //
-	if (document.querySelectorAll('.design-choose-item-wrap')) {
-		const pw = gsap.matchMedia();
-		pw.add("(min-width: 1200px)", () => {
-			document.querySelectorAll('.design-choose-item-wrap').forEach(item => {
-				gsap.set(item.querySelector('.design-choose-item-1'), { x: -400, rotate: -40 });
-				gsap.set(item.querySelector('.design-choose-item-2'), { x: 400, rotate: 40 });
-				let tl = gsap.timeline({
-					scrollTrigger: {
-						trigger: item,
-						start: 'top 120%',
-						end: 'top 20%',
-						scrub: 1,
-					}
-				});
-				tl.to(item.querySelector('.design-choose-item-1'), { x: 0, rotate: 0 })
-				.to(item.querySelector('.design-choose-item-2'), { x: 0, rotate: 0 }, 0);
+	////////////////////////////////////////////////////
+	// 14. webgl images hover animation
+	if ($('.tp--hover-item').length) {
+		let hoverAnimation__do = function (t, n) {
+			let a = new hoverEffect({
+				parent: t.get(0),
+				intensity: t.data("intensity") || void 0,
+				speedIn: t.data("speedin") || void 0,
+				speedOut: t.data("speedout") || void 0,
+				easing: t.data("easing") || void 0,
+				hover: t.data("hover") || void 0,
+				image1: n.eq(0).attr("src"),
+				image2: n.eq(0).attr("src"),
+				displacementImage: t.data("displacement"),
+				imagesRatio: n[0].height / n[0].width,
+				hover: !1
 			});
-		});
+			t.closest(".tp--hover-item").on("mouseenter", function () {
+				a.next()
+			}).on("mouseleave", function () {
+				a.previous()
+			})
+		}
+		let hoverAnimation = function () {
+			$(".tp--hover-img").each(function () {
+				let n = $(this);
+				let e = n.find("img");
+				let i = e.eq(0);
+				i[0].complete ? hoverAnimation__do(n, e) : i.on("load", function () {
+					hoverAnimation__do(n, e)
+				})
+			})
+		}
+		hoverAnimation();
 	}
-	// // 39. tp-text-invert-2 //
 
-
-    function tp_fade_line(){
-        // register plugin (important)
-        gsap.registerPlugin(ScrollTrigger);
-        // loop all sections
-        gsap.utils.toArray(".tp_fade_line_wrap").forEach((section) => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%", 
-                    toggleActions: "play none none none"
-                }
-            });
-            const animateMe = section.querySelectorAll(".tp_fade_line");
-            animateMe.forEach((chunk) => {
-                const split = new SplitText(chunk, {
-                    type: "words",
-                    wordsClass: "word++"
-                });
-                tl.from(split.words, {
-                    autoAlpha: 0,
-                    y: 30,
-                    duration: 0.8,
-                    stagger: 0.05,
-                    ease: "power2.out"
-                });
-            });
-        });
-    }
-    tp_fade_line();
+	////////////////////////////////////////////////////

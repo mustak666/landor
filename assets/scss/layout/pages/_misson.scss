@@ -25,11 +25,8 @@
     }
     &-shape{
         & img{
-            @media #{$xl}{
-                max-width: 19%;
-            }
             @media #{$lg}{
-                max-width: 16%;
+               max-width: 85%;
             }
             @media #{$md}{
                 max-width: 20%;

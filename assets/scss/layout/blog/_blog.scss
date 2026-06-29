@@ -5,6 +5,11 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 10px;
     @include transition(.3s);
+    @media #{$xs}{
+        border-color: transparent;
+        background-color: var(--tp-white-color);
+        height: 100%;
+    }
     &__meta{
         & span{
             display: inline-block;
@@ -46,6 +51,8 @@
                 margin-right: 10px;
             }      
            & img{
+                width: 60px;
+                height: 60px;
                 @media #{$md,$xs,$sm}{
                     width: 40px;
                     height: 40px;
@@ -66,43 +73,9 @@
             margin-bottom: 20px;
         }
     }
-    &__thumb{
-        height: 100px;
-        @include transition(.4s);
-        @media #{$md,$xs,$sm}{
-            height: 60px;
-        }
-        @media #{$xs,$sm}{
-            margin-bottom: 20px;
-        }
-        & a{
-            & img{
-                border-radius: 15px;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                @include transition(.5s);
-            }
-        }
-    }
     &__content {
         @media #{$lg,$md,$xs,$sm}{
             padding-top: 10px;
-        }
-        &-down{
-            margin-bottom: -198px;
-            opacity: 0;
-            visibility: hidden;
-            @include transition(.4s);
-            @media #{$lg}{
-               margin-bottom: -162px;
-            }
-            @media #{$md}{
-              margin-bottom: -126px;
-            }
-            @media #{$xs,$sm}{
-              margin-bottom: -120px;
-            }
         }
     }
     &__button{
@@ -118,31 +91,24 @@
            transform: translateY(-8px);
         }
     }
-    &:hover,&.active{
+    &__thumb{
+        @media #{$xs,$sm}{
+            margin-bottom: 20px;
+        }
+        & img{
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+    &:hover{
         border-color: transparent;
         background-color: var(--tp-white-color);
+        height: 100%;
         & .tpblogpost__meta{
             & span{
                 border-color: rgba(0, 0, 0, 0.15);
                 background-color: transparent;
             }
-        }
-        & .tpblogpost__thumb{
-            height: 300px;
-            @media #{$xl}{
-               height: 250px;
-            }
-            @media #{$lg}{
-               height: 200px;
-            }
-            @media #{$md,$xs,$sm}{
-               height: 150px;
-            }
-        }
-        & .tpblogpost__content-down{
-            margin-bottom: 0%;
-            opacity: 1;
-            visibility: visible;
         }
         & .tpblogpost__button{
             & .tp-btn.tp-btn-border{
@@ -545,8 +511,7 @@
                     margin-left: 5px;
                 }
                 &:hover{
-                    background-color: var(--tp-orange-color);
-                    color: var(--tp-white-color);
+                    background-color: var(--tp-gray-color);
                 }
             }
         }
@@ -723,12 +688,10 @@
             visibility: visible;
         }
         & .tppostbox__thumb{
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             & img{
                 transform: scale(1.1);
             }
         }
-
     }
 }
 
@@ -823,3 +786,5 @@
         }
     }
 }
+
+

@@ -34,13 +34,11 @@
     &:hover{
         border-color: rgba(0, 0, 0, 0.1);;
     }
-
     &:active,
     &.open,
     &:focus{
         border-color: rgba(0, 0, 0, 0.1);;
     }
-
     &::after{
         position: absolute;
 		content: '\f078';
@@ -56,7 +54,6 @@
 		transform-origin: center;
 		@include transform(translateY(-50%));
     }
-
     &.open{
         &::after{
             @include transform(translateY(-50%) rotate(-180deg));
@@ -70,7 +67,6 @@
             transform: scale(1) translateY(0);
         }
     }
-
     &.disabled{
         border-color: #ededed;
         color: #999;
@@ -83,7 +79,6 @@
 
     &.wide{
         width: 100%;
-
         & .list{
             left: 0 !important;
 	        right: 0 !important;
@@ -116,7 +111,7 @@
     }
 
     & .list {
-        background-color: #F5F5F5;
+        background-color: var(--tp-white-color);
         border-radius: 5px;
         box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
         box-sizing: border-box;
@@ -139,24 +134,25 @@
         z-index: 9;
         color: var(--tp-theme-color);
         font-weight: 500;
+        width: 100%;
+        padding: 10px 3px;
+        height: auto;
     }
 
     & .option{
         cursor: pointer;
         font-weight: 400;
-        line-height: 40px;
         list-style: none;
-        min-height: 40px;
+        line-height: 35px;
+        min-height: 35px;
         outline: none;
         padding-left: 18px;
         padding-right: 29px;
         text-align: left;
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
-
         &.selected{
             font-weight: bold;
-            color: var(--tp-secoundery-color);
         }
 
         &.disabled{

@@ -6,19 +6,18 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    &-bg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     &-spacing{
-        padding: 374px 0;
-        min-height: 930px;
-        padding-top: 150px;
-        @media #{$xl}{
-           padding: 340px 0;
+        height: 100vh;
+        @media #{$md}{
+            height: 65vh;
         }
-        @media #{$lg,$md}{
-           padding: 300px 0;
-           padding-top: 120px;
-        }
-        @media #{$xs,$sm}{
-            padding: 70px 0;
+        @media #{$sm,$xs}{
+            height: 85vh;
         }
         &-2{
             @media #{$lg,$md}{
@@ -85,8 +84,15 @@
         }
     }
     &-heading{
-        @media #{$md,$sm,$xs}{
-            margin-bottom: 40px;
+        @media #{$md}{
+           transform: translateY(-210px);
+        }
+        @media #{$sm,$xs}{
+          transform: translateY(-260px);
+          margin-top: -100px;
+        }
+        @media #{$sm}{
+          margin-top: -130px;
         }
     }
     &-2{
@@ -135,12 +141,32 @@
             grid-gap: 10px;
             justify-content: center;
         }  
+        &-spacing{
+            @media #{$md,$sm,$xs}{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                z-index: 2;
+            }
+        }
     }
     &-button{
         @media #{$xs}{
            justify-content: start;
            padding-top: 10px;
         } 
+    }
+    &-slide{
+        &-item{
+            @media #{$md}{
+                padding-bottom: 30px;
+            }
+            @media #{$sm,$xs}{
+                padding-bottom: 0;
+            }
+        }
     }
 }
 .tpchoose{
@@ -152,8 +178,12 @@
     @media #{$xl}{
        padding: 25px;
     }
-    @media #{$lg,$md}{
+    @media #{$lg}{
        max-width: 250px;
+       padding: 20px;
+    }
+    @media #{$md}{
+       max-width: 100%;
        padding: 20px;
     }
     @media #{$xs,$sm}{
@@ -161,9 +191,7 @@
        max-width: 100%;
        padding: 20px;
        padding-bottom: 5px;
-    }
-    @media #{$sm}{
-       max-width: 49%;
+       margin-bottom: 20px;
     }
     &__icon{
         & svg{
@@ -185,79 +213,6 @@
         &-bg{
             background: linear-gradient(239.18deg, rgba(0, 0, 0, 0.2) 17.93%, rgba(0, 0, 0, 0.05) 81.51%);
             backdrop-filter: blur(20px);
-        }
-    }
-    &__item{
-        &-1{
-            bottom: -200px;
-            left: 13%;
-            @media #{$xxl}{
-                left: 7%;
-            }
-            @media #{$xl,$lg}{
-                left: 0;
-            }
-        }
-        &-2{
-            right: 18%;
-            bottom: -30px; 
-            @media #{$xl}{
-               right: 130px;
-            }
-            @media #{$lg}{
-                right: 90px;
-                bottom: -65px;
-            }
-            @media #{$md}{
-                right: 0;
-                bottom: -50px;
-            }
-        }   
-        &-3{
-            left: 31%;
-            bottom: -60px;
-            @media #{$lg}{
-              bottom: -90px;
-            }
-            @media #{$md}{
-             left: 0;
-             bottom: 0;
-            }
-        }
-        &-4{
-            bottom: 140px;
-            right: 8%;
-            @media #{$xxl}{
-               right: 2%;
-            }
-            @media #{$xl}{
-               right: 0;
-            }
-            @media #{$lg}{
-                bottom: 45px;
-                right: 0;
-            }
-            @media #{$md}{
-                bottom: 0;
-                right: 34%;
-            }
-        }
-        &-5{
-            top: 25%;
-            left: 10%;
-            @media #{$xxl}{
-                left: 0;
-            }
-            @media #{$xl,$lg}{
-                left: 0;
-            }
-            @media #{$lg}{
-                top: 50%;
-            }
-            @media #{$md}{
-               left: 0;
-               top: -82px;
-            }
         }
     }
     &__title{
@@ -330,6 +285,26 @@
                     right: 58px;
                     bottom: 110px;
                 }
+            }
+        }
+    }
+    &__item{
+        &-2{
+            transform: translateY(50px);
+            @media #{$md,$sm,$xs}{
+              transform: translateY(0);
+            }
+        }
+        &-3{
+            margin-right: 150px;
+            @media #{$md,$sm,$xs}{
+              margin-right: 0;
+            }
+        }
+        &-4{
+            margin-left: 150px;
+            @media #{$md,$sm,$xs}{
+              margin-right: 0;
             }
         }
     }

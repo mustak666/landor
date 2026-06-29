@@ -100,20 +100,32 @@
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 25px 27px;
     &__title {
+        width: 55%;
         font-size: 20px;
         transform: translateY(-2px);
         @include transition(.3s);
         @media #{$xs,$sm}{
           margin-bottom: 10px;
+           width: 100%;
         } 
     }
     &__arrow {
+        width: 12%;
+        text-align: end;
         transform: translateY(-1px);
+        @media #{$xs,$sm}{
+            text-align: start;
+        } 
     }
     &__year{
+        width: 18%;
          @include transition(.3s);
+        @media #{$lg,$md}{
+         width: 12%;
+        }
         @media #{$xs,$sm}{
           margin-bottom: 10px;
+           width: 100%;
         } 
     }
     &__shape {
@@ -134,12 +146,16 @@
     }
     &__content{
         @include transition(.3s);
-        @media #{$xs}{
-           display: inline-block;
-        }
+        justify-content: start;
+        flex-wrap: wrap;
         & p{
-            @media #{$xs}{
-            margin-bottom: 10px;
+            width: 15%;
+            @media #{$lg,$md}{
+              width: 21%;
+            }
+            @media #{$xs,$sm}{
+              width: 100%;
+              margin-bottom: 10px;
             } 
         }
     }

@@ -92,7 +92,7 @@
 		}
 	}
 	&-meta{
-		& a {
+		& span,& a {
 			line-height: 1;
 			display: inline-block;
 			font-weight: 500;
@@ -101,6 +101,7 @@
 			border: 1px solid rgba(0, 0, 0, 0.35);
 			border-radius: 30px;
 			margin-right: 5px;
+			@include transition(.3s);
 			@media #{$lg,$md,$xs,$sm}{
 				font-size: 15px;
 				padding: 5px 10px;
@@ -116,7 +117,7 @@
 			justify-content: end;
 			align-items: center;
 			flex-wrap: wrap;
-			& a{
+			& span{
 				background-color: var(--tp-white-color);
 				border-color: transparent;
 				&:hover{
@@ -184,14 +185,8 @@
 		}
 		&-3{
 			padding: 145px 0;
-			@media #{$x4l}{
-				padding-bottom: 250px;
-			}
-			@media #{$x3l,$xxl}{
-				padding-bottom: 320px;
-			}
 			@media #{$xl}{
-				padding-bottom: 420px;
+				padding: 120px 0;
 			}
 			@media #{$lg,$md}{
 				padding: 100px 0;
@@ -239,6 +234,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		@media #{$xl}{
+			min-height: 700px;
+			margin-bottom: 20px;
+		}
 		@media #{$lg}{
 			min-height: 550px;
 			margin-bottom: 20px;
@@ -668,8 +667,9 @@
 			opacity: 0;
 			visibility: hidden;
 			transition: .3;
-			transition-duration: .3s;
+			transition-duration: .5s;
 			transition-delay: .2s;
+			transform: translateY(10px);
 			& a{
 				&:hover{
 					color: var(--tp-secoundery-color);
@@ -709,6 +709,7 @@
 			width: 100%;
 			left: 0;
 			top: 0;
+			transition-duration: 1s;
 			transition: all .3s;
 		}
 	}
@@ -749,6 +750,7 @@
 		& .tpproject2__title-larg{
 			opacity: 1;
 			visibility: visible;
+			transform: translateY(0);
 		}
 	}
 }

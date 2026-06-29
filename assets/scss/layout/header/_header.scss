@@ -221,8 +221,8 @@
         }
         &.tp-header-spacing-3 {
             padding-top: 20px;
-            @media #{$xs,$sm}{
-                padding-top: 10px;
+            @media #{$lg,$md,$xs,$sm}{
+                padding-top: 0;
             }
         }
     }
@@ -263,6 +263,8 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         padding-bottom: 7px;
+        z-index: 2;
+        position: relative;
         @media #{$xs,$sm}{
             padding: 5px;
             margin: 0 10px;
@@ -346,6 +348,24 @@
                     }
                 }
             }
+        }
+    }
+    & .tp-header-spacing{
+        padding: 12px 0;
+    }
+    &.media{
+        padding: 12px 0;
+        @media #{$xxl}{
+            padding: 12px 20px;
+        }
+        @media #{$xl}{
+            padding: 12px 20px;
+        }
+        @media #{$lg}{
+            padding: 12px 15px;
+        }
+        @media #{$md,$xs,$sm}{
+            padding: 12px 10px;
         }
     }
 }
